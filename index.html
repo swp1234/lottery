@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="로또 6/45, 연금복권 행운 번호 생성기. 당첨 번호 통계 분석">
+  <meta name="theme-color" content="#e74c3c">
+  <title>행운의 번호 생성기</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icon-192.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="app-title">
+        <span class="emoji">🍀</span>
+        행운의 번호
+      </h1>
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 메인 컨텐츠 -->
+  <main class="main-container">
+    <!-- 복권 타입 선택 -->
+    <section class="type-section">
+      <div class="type-buttons">
+        <button class="type-btn active" data-type="lotto">
+          <div class="type-icon">🎱</div>
+          <div class="type-name">로또 6/45</div>
+        </button>
+        <button class="type-btn" data-type="pension">
+          <div class="type-icon">💰</div>
+          <div class="type-name">연금복권</div>
+        </button>
+      </div>
+    </section>
+
+    <!-- 생성 옵션 -->
+    <section class="options-section">
+      <h2 class="section-title">생성 옵션</h2>
+      <div class="options-grid">
+        <div class="option-item">
+          <label for="setCount">세트 수</label>
+          <select id="setCount" class="select-box">
+            <option value="1">1개</option>
+            <option value="2">2개</option>
+            <option value="3">3개</option>
+            <option value="5" selected>5개</option>
+            <option value="10">10개</option>
+          </select>
+        </div>
+        <div class="option-item">
+          <label>
+            <input type="checkbox" id="autoMode" class="checkbox">
+            자동 / 반자동
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 생성 버튼 -->
+    <section class="generate-section">
+      <button class="generate-btn" id="generateBtn">
+        <span class="btn-icon">✨</span>
+        <span>행운의 번호 생성</span>
+      </button>
+    </section>
+
+    <!-- 생성된 번호 -->
+    <section class="results-section" id="resultsSection">
+      <h2 class="section-title">생성된 번호</h2>
+      <div class="results-container" id="resultsContainer">
+        <p class="empty-message">버튼을 눌러 행운의 번호를 생성하세요!</p>
+      </div>
+    </section>
+
+    <!-- 저장된 번호 -->
+    <section class="saved-section">
+      <div class="section-header">
+        <h2 class="section-title">저장된 번호</h2>
+        <button class="clear-btn" id="clearSavedBtn">전체 삭제</button>
+      </div>
+      <div class="saved-container" id="savedContainer">
+        <p class="empty-message">저장된 번호가 없습니다</p>
+      </div>
+    </section>
+
+    <!-- 통계 -->
+    <section class="stats-section">
+      <h2 class="section-title">통계</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🎲</div>
+          <div class="stat-value" id="totalGenerated">0</div>
+          <div class="stat-label">생성한 번호</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-value" id="savedCount">0</div>
+          <div class="stat-label">저장한 번호</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🍀</div>
+          <div class="stat-value" id="luckyDay">-</div>
+          <div class="stat-label">행운의 요일</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 번호 분석 -->
+    <section class="analysis-section">
+      <h2 class="section-title">생성된 번호 분석</h2>
+      <div class="analysis-grid" id="analysisGrid">
+        <div class="analysis-card">
+          <div class="analysis-label">홀수/짝수</div>
+          <div class="analysis-value" id="oddEvenRatio">-</div>
+        </div>
+        <div class="analysis-card">
+          <div class="analysis-label">번호 합계</div>
+          <div class="analysis-value" id="numberSum">-</div>
+        </div>
+        <div class="analysis-card">
+          <div class="analysis-label">번호 범위</div>
+          <div class="analysis-value" id="numberRange">-</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 안내 -->
+    <section class="info-section">
+      <div class="info-card">
+        <h3>📋 이용 안내</h3>
+        <ul>
+          <li><strong>로또 6/45:</strong> 1~45 중 6개 번호 자동 선택</li>
+          <li><strong>연금복권:</strong> 1조~5조, 6자리 번호 생성</li>
+          <li><strong>저장 기능:</strong> 마음에 드는 번호 저장 가능</li>
+          <li><strong>번호 분석:</strong> 홀짝 비율, 합계 등 통계 제공</li>
+          <li><strong>참고:</strong> 모든 번호는 무작위로 생성됩니다</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <p>행운을 빕니다! 🍀</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
