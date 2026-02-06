@@ -5,6 +5,9 @@
 class LotteryApp {
   constructor() {
     this.currentType = 'lotto'; // 'lotto' or 'pension'
+    this.semiAutoMode = false;
+    this.fixedNumbers = [];
+    this.lastResults = [];
     this.saved = this.loadFromStorage('saved', []);
     this.stats = this.loadFromStorage('stats', {
       totalGenerated: 0,
@@ -18,8 +21,57 @@ class LotteryApp {
   init() {
     this.renderSaved();
     this.renderStats();
+    this.buildNumberPicker();
     this.setupEventListeners();
     this.setupTheme();
+  }
+
+  // 번호 선택기 생성 (반자동 모드용)
+  buildNumberPicker() {
+    const picker = document.getElementById('numberPicker');
+    let html = '';
+    for (let i = 1; i <= 45; i++) {
+      html += `<button class="pick-num" data-num="${i}">${i}</button>`;
+    }
+    picker.innerHTML = html;
+  }
+
+  // 반자동 모드 토글
+  toggleSemiAuto() {
+    this.semiAutoMode = document.getElementById('autoMode').checked;
+    const section = document.getElementById('semiAutoSection');
+    const hint = document.getElementById('semiAutoHint');
+
+    if (this.semiAutoMode && this.currentType === 'lotto') {
+      section.classList.remove('hidden');
+      hint.style.display = 'block';
+    } else {
+      section.classList.add('hidden');
+      hint.style.display = 'none';
+    }
+  }
+
+  // 고정 번호 선택/해제
+  toggleFixedNumber(num) {
+    const idx = this.fixedNumbers.indexOf(num);
+    if (idx > -1) {
+      this.fixedNumbers.splice(idx, 1);
+    } else if (this.fixedNumbers.length < 5) {
+      this.fixedNumbers.push(num);
+    }
+    this.fixedNumbers.sort((a, b) => a - b);
+    this.updatePickerUI();
+  }
+
+  updatePickerUI() {
+    document.querySelectorAll('.pick-num').forEach(btn => {
+      const num = parseInt(btn.dataset.num);
+      btn.classList.toggle('picked', this.fixedNumbers.includes(num));
+    });
+    const display = document.getElementById('selectedDisplay');
+    display.textContent = this.fixedNumbers.length > 0
+      ? this.fixedNumbers.join(', ')
+      : '없음';
   }
 
   // LocalStorage 관리
@@ -41,9 +93,9 @@ class LotteryApp {
     }
   }
 
-  // 로또 번호 생성 (1~45 중 6개)
+  // 로또 번호 생성 (1~45 중 6개, 반자동 지원)
   generateLotto() {
-    const numbers = [];
+    const numbers = [...this.fixedNumbers];
     while (numbers.length < 6) {
       const num = Math.floor(Math.random() * 45) + 1;
       if (!numbers.includes(num)) {
@@ -87,9 +139,13 @@ class LotteryApp {
       }
     }
 
+    this.lastResults = results;
     this.renderResults(results);
     this.updateStats();
     this.analyzeNumbers(results);
+
+    // 프리미엄 버튼 표시
+    document.getElementById('premiumSection').style.display = 'block';
   }
 
   // 번호 분석
@@ -400,6 +456,120 @@ class LotteryApp {
     localStorage.setItem('lottery_theme', isLight ? 'light' : 'dark');
   }
 
+  // 전면 광고 표시
+  showInterstitialAd() {
+    return new Promise((resolve) => {
+      const overlay = document.getElementById('interstitialAd');
+      const closeBtn = document.getElementById('closeAdBtn');
+      const countdown = document.getElementById('adCountdown');
+
+      overlay.classList.remove('hidden');
+      closeBtn.disabled = true;
+      let seconds = 5;
+      countdown.textContent = seconds;
+
+      const timer = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          closeBtn.disabled = false;
+          closeBtn.textContent = '닫기';
+        }
+      }, 1000);
+
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.add('hidden');
+        closeBtn.disabled = true;
+        countdown.textContent = '5';
+        resolve();
+      }, { once: true });
+    });
+  }
+
+  // 프리미엄 콘텐츠
+  async showPremiumContent() {
+    if (this.lastResults.length === 0) return;
+
+    await this.showInterstitialAd();
+
+    const premiumBody = document.getElementById('premiumBody');
+    const result = this.lastResults[0];
+
+    if (result.type === 'lotto') {
+      const numbers = result.numbers;
+      const sum = numbers.reduce((a, b) => a + b, 0);
+      const oddCount = numbers.filter(n => n % 2 === 1).length;
+      const lowCount = numbers.filter(n => n <= 22).length;
+      const highCount = 6 - lowCount;
+
+      const luckyMessages = [
+        '이 번호 조합은 균형 잡힌 분포를 보입니다. 역대 당첨 번호의 70%가 유사한 패턴입니다.',
+        '홀짝 비율이 안정적입니다. 통계적으로 3:3 또는 4:2 비율의 당첨 확률이 높습니다.',
+        '번호 합계가 적정 범위(100~175)에 있어 좋은 조합입니다.',
+        '연번이 포함되어 있으면 당첨 확률에 긍정적 영향을 줍니다.',
+        '번호 간 간격이 고르게 분포되어 있어 이상적인 조합입니다.'
+      ];
+
+      const consecutivePairs = [];
+      for (let i = 0; i < numbers.length - 1; i++) {
+        if (numbers[i + 1] - numbers[i] === 1) {
+          consecutivePairs.push(`${numbers[i]}-${numbers[i + 1]}`);
+        }
+      }
+
+      premiumBody.innerHTML = `
+        <div class="premium-numbers">
+          ${numbers.map(n => `<span class="premium-ball">${n}</span>`).join('')}
+        </div>
+        <div class="premium-analysis-item">
+          <h3>번호 합계 분석</h3>
+          <p>합계: <strong>${sum}</strong> ${sum >= 100 && sum <= 175 ? '(적정 범위 ✅)' : '(범위 초과 ⚠️)'}</p>
+          <p>역대 당첨 번호의 합계 평균은 약 130~140입니다.</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>홀짝 비율</h3>
+          <p>홀수 ${oddCount}개 / 짝수 ${6 - oddCount}개</p>
+          <p>${oddCount >= 2 && oddCount <= 4 ? '균형 잡힌 비율입니다 ✅' : '편중된 비율입니다 ⚠️'}</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>고저 비율</h3>
+          <p>저번호(1~22) ${lowCount}개 / 고번호(23~45) ${highCount}개</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>연번 분석</h3>
+          <p>${consecutivePairs.length > 0 ? `연번: ${consecutivePairs.join(', ')} 포함` : '연번 없음'}</p>
+          <p>역대 당첨 번호의 약 60%에 연번이 포함되어 있습니다.</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>AI 운세 메시지</h3>
+          <p class="lucky-message">${luckyMessages[Math.floor(Math.random() * luckyMessages.length)]}</p>
+        </div>
+      `;
+    } else {
+      const { group, numbers } = result.data;
+      premiumBody.innerHTML = `
+        <div class="premium-pension">
+          <p class="pension-display">${group}조 ${numbers.join('')}</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>조 분석</h3>
+          <p>${group}조 번호입니다. 연금복권은 각 조마다 동일한 당첨 확률을 가집니다.</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>번호 특성</h3>
+          <p>6자리 번호의 각 자리는 독립적으로 추첨됩니다. 모든 조합이 동일한 확률을 가집니다.</p>
+        </div>
+        <div class="premium-analysis-item">
+          <h3>AI 운세 메시지</h3>
+          <p class="lucky-message">행운은 준비된 자에게 찾아옵니다. 오늘의 번호가 좋은 에너지를 담고 있습니다.</p>
+        </div>
+      `;
+    }
+
+    document.getElementById('premiumModal').classList.remove('hidden');
+  }
+
   // 이벤트 리스너 설정
   setupEventListeners() {
     // 생성 버튼
@@ -423,11 +593,43 @@ class LotteryApp {
     document.getElementById('themeToggle').addEventListener('click', () => {
       this.toggleTheme();
     });
+
+    // 반자동 모드 체크박스
+    document.getElementById('autoMode').addEventListener('change', () => {
+      this.toggleSemiAuto();
+    });
+
+    // 번호 선택기 이벤트
+    document.getElementById('numberPicker').addEventListener('click', (e) => {
+      const btn = e.target.closest('.pick-num');
+      if (btn) {
+        this.toggleFixedNumber(parseInt(btn.dataset.num));
+      }
+    });
+
+    // 프리미엄 버튼
+    document.getElementById('premiumBtn').addEventListener('click', () => {
+      this.showPremiumContent();
+    });
+
+    // 프리미엄 모달 닫기
+    document.getElementById('closePremiumBtn').addEventListener('click', () => {
+      document.getElementById('premiumModal').classList.add('hidden');
+    });
   }
 }
 
 // 앱 초기화
 const app = new LotteryApp();
+
+// Service Worker 등록
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+      .then((reg) => console.log('SW registered:', reg.scope))
+      .catch((err) => console.log('SW registration failed:', err));
+  });
+}
 
 // PWA 설치 프롬프트
 let deferredPrompt;
