@@ -47,7 +47,7 @@
     <div class="header-content">
       <h1 class="app-title">
         <span class="emoji">🍀</span>
-        행운의 번호
+        <span data-i18n="header.title">행운의 번호</span>
       </h1>
       <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
         <span class="theme-icon">🌙</span>
@@ -55,9 +55,21 @@
     </div>
   </header>
 
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button id="lang-toggle" class="lang-btn" aria-label="Language">🌐</button>
+    <div id="lang-menu" class="lang-menu hidden">
+      <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+      <button class="lang-option" data-lang="en">🇺🇸 English</button>
+      <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+      <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+      <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
+    </div>
+  </div>
+
   <!-- 광고 영역 (상단) -->
   <div class="ad-banner ad-top">
-    <span class="ad-placeholder">광고 영역</span>
+    <span class="ad-placeholder" data-i18n="ads.banner">광고 영역</span>
   </div>
 
   <!-- 메인 컨텐츠 -->
@@ -67,35 +79,35 @@
       <div class="type-buttons">
         <button class="type-btn active" data-type="lotto">
           <div class="type-icon">🎱</div>
-          <div class="type-name">로또 6/45</div>
+          <div class="type-name" data-i18n="type.lotto">로또 6/45</div>
         </button>
         <button class="type-btn" data-type="pension">
           <div class="type-icon">💰</div>
-          <div class="type-name">연금복권</div>
+          <div class="type-name" data-i18n="type.pension">연금복권</div>
         </button>
       </div>
     </section>
 
     <!-- 생성 옵션 -->
     <section class="options-section">
-      <h2 class="section-title">생성 옵션</h2>
+      <h2 class="section-title" data-i18n="options.title">생성 옵션</h2>
       <div class="options-grid">
         <div class="option-item">
-          <label for="setCount">세트 수</label>
+          <label for="setCount" data-i18n="options.setCount">세트 수</label>
           <select id="setCount" class="select-box">
-            <option value="1">1개</option>
-            <option value="2">2개</option>
-            <option value="3">3개</option>
-            <option value="5" selected>5개</option>
-            <option value="10">10개</option>
+            <option value="1">1 <span data-i18n="units.sets">개</span></option>
+            <option value="2">2 <span data-i18n="units.sets">개</span></option>
+            <option value="3">3 <span data-i18n="units.sets">개</span></option>
+            <option value="5" selected>5 <span data-i18n="units.sets">개</span></option>
+            <option value="10">10 <span data-i18n="units.sets">개</span></option>
           </select>
         </div>
         <div class="option-item">
           <label>
             <input type="checkbox" id="autoMode" class="checkbox">
-            반자동 모드
+            <span data-i18n="options.semiAuto">반자동 모드</span>
           </label>
-          <div class="semi-auto-hint" id="semiAutoHint" style="display:none;">
+          <div class="semi-auto-hint" id="semiAutoHint" style="display:none;" data-i18n="options.semiAutoHint">
             고정할 번호를 선택하세요
           </div>
         </div>
@@ -104,12 +116,12 @@
 
     <!-- 반자동 번호 선택 (로또용) -->
     <section class="semi-auto-section hidden" id="semiAutoSection">
-      <h2 class="section-title">고정 번호 선택</h2>
-      <p class="semi-auto-desc">고정할 번호를 터치하세요 (최대 5개)</p>
+      <h2 class="section-title" data-i18n="semiAuto.title">고정 번호 선택</h2>
+      <p class="semi-auto-desc" data-i18n="semiAuto.desc">고정할 번호를 터치하세요 (최대 5개)</p>
       <div class="number-picker" id="numberPicker"></div>
       <div class="selected-numbers" id="selectedNumbers">
-        <span class="selected-label">고정 번호:</span>
-        <span class="selected-display" id="selectedDisplay">없음</span>
+        <span class="selected-label" data-i18n="semiAuto.label">고정 번호:</span>
+        <span class="selected-display" id="selectedDisplay" data-i18n="semiAuto.none">없음</span>
       </div>
     </section>
 
@@ -117,15 +129,15 @@
     <section class="generate-section">
       <button class="generate-btn" id="generateBtn">
         <span class="btn-icon">✨</span>
-        <span>행운의 번호 생성</span>
+        <span data-i18n="generate.button">행운의 번호 생성</span>
       </button>
     </section>
 
     <!-- 생성된 번호 -->
     <section class="results-section" id="resultsSection">
-      <h2 class="section-title">생성된 번호</h2>
+      <h2 class="section-title" data-i18n="generate.results">생성된 번호</h2>
       <div class="results-container" id="resultsContainer">
-        <p class="empty-message">버튼을 눌러 행운의 번호를 생성하세요!</p>
+        <p class="empty-message" data-i18n="generate.empty">버튼을 눌러 행운의 번호를 생성하세요!</p>
       </div>
     </section>
 
@@ -133,58 +145,58 @@
     <section class="premium-section" id="premiumSection" style="display:none;">
       <button class="premium-btn" id="premiumBtn">
         <span class="premium-icon">🔮</span>
-        <span>AI 번호 운세 분석</span>
-        <span class="premium-badge">PREMIUM</span>
+        <span data-i18n="premium.button">AI 번호 운세 분석</span>
+        <span class="premium-badge" data-i18n="premium.badge">PREMIUM</span>
       </button>
     </section>
 
     <!-- 저장된 번호 -->
     <section class="saved-section">
       <div class="section-header">
-        <h2 class="section-title">저장된 번호</h2>
-        <button class="clear-btn" id="clearSavedBtn">전체 삭제</button>
+        <h2 class="section-title" data-i18n="saved.title">저장된 번호</h2>
+        <button class="clear-btn" id="clearSavedBtn" data-i18n="saved.clear">전체 삭제</button>
       </div>
       <div class="saved-container" id="savedContainer">
-        <p class="empty-message">저장된 번호가 없습니다</p>
+        <p class="empty-message" data-i18n="saved.empty">저장된 번호가 없습니다</p>
       </div>
     </section>
 
     <!-- 통계 -->
     <section class="stats-section">
-      <h2 class="section-title">통계</h2>
+      <h2 class="section-title" data-i18n="stats.title">통계</h2>
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-icon">🎲</div>
           <div class="stat-value" id="totalGenerated">0</div>
-          <div class="stat-label">생성한 번호</div>
+          <div class="stat-label" data-i18n="stats.generated">생성한 번호</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">⭐</div>
           <div class="stat-value" id="savedCount">0</div>
-          <div class="stat-label">저장한 번호</div>
+          <div class="stat-label" data-i18n="stats.saved">저장한 번호</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">🍀</div>
           <div class="stat-value" id="luckyDay">-</div>
-          <div class="stat-label">행운의 요일</div>
+          <div class="stat-label" data-i18n="stats.luckyDay">행운의 요일</div>
         </div>
       </div>
     </section>
 
     <!-- 번호 분석 -->
     <section class="analysis-section">
-      <h2 class="section-title">생성된 번호 분석</h2>
+      <h2 class="section-title" data-i18n="analysis.title">생성된 번호 분석</h2>
       <div class="analysis-grid" id="analysisGrid">
         <div class="analysis-card">
-          <div class="analysis-label">홀수/짝수</div>
+          <div class="analysis-label" data-i18n="analysis.oddEven">홀수/짝수</div>
           <div class="analysis-value" id="oddEvenRatio">-</div>
         </div>
         <div class="analysis-card">
-          <div class="analysis-label">번호 합계</div>
+          <div class="analysis-label" data-i18n="analysis.sum">번호 합계</div>
           <div class="analysis-value" id="numberSum">-</div>
         </div>
         <div class="analysis-card">
-          <div class="analysis-label">번호 범위</div>
+          <div class="analysis-label" data-i18n="analysis.range">번호 범위</div>
           <div class="analysis-value" id="numberRange">-</div>
         </div>
       </div>
@@ -193,19 +205,19 @@
     <!-- 안내 -->
     <section class="info-section">
       <div class="info-card">
-        <h3>📋 이용 안내</h3>
+        <h3 data-i18n="info.title">📋 이용 안내</h3>
         <ul>
-          <li><strong>로또 6/45:</strong> 1~45 중 6개 번호 자동 선택</li>
-          <li><strong>연금복권:</strong> 1조~5조, 6자리 번호 생성</li>
-          <li><strong>저장 기능:</strong> 마음에 드는 번호 저장 가능</li>
-          <li><strong>번호 분석:</strong> 홀짝 비율, 합계 등 통계 제공</li>
-          <li><strong>참고:</strong> 모든 번호는 무작위로 생성됩니다</li>
+          <li><strong data-i18n="info.lotto">로또 6/45: 1~45 중 6개 번호 자동 선택</strong></li>
+          <li><strong data-i18n="info.pension">연금복권: 1조~5조, 6자리 번호 생성</strong></li>
+          <li><strong data-i18n="info.save">저장 기능: 마음에 드는 번호 저장 가능</strong></li>
+          <li><strong data-i18n="info.analysisDesc">번호 분석: 홀짝 비율, 합계 등 통계 제공</strong></li>
+          <li><strong data-i18n="info.note">참고: 모든 번호는 무작위로 생성됩니다</strong></li>
         </ul>
       </div>
     </section>
 
     <div class="recommendations-section">
-      <div class="rec-title">이것도 해보세요</div>
+      <div class="rec-title" data-i18n="rec.title">이것도 해보세요</div>
       <div class="rec-grid">
         <a href="https://dopabrain.com/dream-fortune/" class="rec-card" target="_blank">
           <span class="rec-icon">🔮</span>
@@ -241,20 +253,20 @@
 
   <!-- 광고 영역 (하단) -->
   <div class="ad-banner ad-bottom">
-    <span class="ad-placeholder">광고 영역</span>
+    <span class="ad-placeholder" data-i18n="ads.banner">광고 영역</span>
   </div>
 
   <!-- 푸터 -->
   <footer class="footer">
-    <p>행운을 빕니다! 🍀</p>
+    <p data-i18n="footer.text">행운을 빕니다! 🍀</p>
   </footer>
 
   <!-- 전면 광고 -->
   <div id="interstitialAd" class="interstitial-overlay hidden">
     <div class="interstitial-content">
-      <p class="interstitial-label">광고</p>
-      <div class="ad-placeholder-large">광고 영역</div>
-      <button id="closeAdBtn" class="close-ad-btn" disabled>닫기 (<span id="adCountdown">5</span>)</button>
+      <p class="interstitial-label" data-i18n="ads.interstitial">광고</p>
+      <div class="ad-placeholder-large" data-i18n="ads.banner">광고 영역</div>
+      <button id="closeAdBtn" class="close-ad-btn" disabled><span data-i18n="ads.close">닫기</span> (<span id="adCountdown">5</span>)</button>
     </div>
   </div>
 
@@ -264,13 +276,14 @@
       <button class="premium-close" id="closePremiumBtn">&times;</button>
       <div class="premium-header">
         <span class="premium-modal-icon">🍀</span>
-        <h2>AI 번호 심층 분석</h2>
+        <h2 data-i18n="premium.title">AI 번호 심층 분석</h2>
       </div>
       <div class="premium-body" id="premiumBody"></div>
     </div>
   </div>
 
   <!-- Scripts -->
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

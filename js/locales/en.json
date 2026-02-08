@@ -1,0 +1,18 @@
+{
+  "app": { "title": "Lottery Number Generator - Free Lucky Numbers | DopaBrain", "description": "Lotto 6/45 number generator, pension lottery lucky numbers, and winning number analysis." },
+  "header": { "title": "🍀 Lucky Numbers" },
+  "type": { "lotto": "Lotto 6/45", "pension": "Pension Lottery" },
+  "options": { "title": "Generation Options", "setCount": "Sets", "semiAuto": "Semi-Auto Mode", "semiAutoHint": "Select numbers to fix" },
+  "semiAuto": { "title": "Select Fixed Numbers", "desc": "Tap numbers to fix (max 5)", "label": "Fixed numbers:", "none": "None" },
+  "generate": { "button": "Generate Lucky Numbers", "results": "Generated Numbers", "empty": "Press the button to generate lucky numbers!" },
+  "premium": { "button": "AI Number Fortune Analysis", "badge": "PREMIUM", "title": "AI Number Deep Analysis" },
+  "saved": { "title": "Saved Numbers", "clear": "Clear All", "empty": "No saved numbers" },
+  "stats": { "title": "Statistics", "generated": "Generated", "saved": "Saved", "luckyDay": "Lucky Day" },
+  "analysis": { "title": "Number Analysis", "oddEven": "Odd/Even", "sum": "Sum", "range": "Range" },
+  "info": { "title": "📋 How to Use", "lotto": "Lotto 6/45: Auto-pick 6 numbers from 1-45", "pension": "Pension Lottery: Group 1-5, 6-digit number", "save": "Save: Save your favorite numbers", "analysisDesc": "Analysis: Odd/even ratio, sum, and more", "note": "Note: All numbers are randomly generated" },
+  "footer": { "text": "Good luck! 🍀" },
+  "ads": { "banner": "Advertisement", "interstitial": "Ad", "close": "Close" },
+  "rec": { "title": "Try these too" },
+  "theme": { "toggle": "Toggle dark mode" },
+  "units": { "sets": "sets" }
+}

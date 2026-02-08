@@ -1,0 +1,18 @@
+{
+  "app": { "title": "로또 번호 생성기·연금복권 - 무료 번호 추천 | DopaBrain", "description": "로또 6/45 번호 생성기, 연금복권 행운 번호, 당첨 번호 통계 분석." },
+  "header": { "title": "🍀 행운의 번호" },
+  "type": { "lotto": "로또 6/45", "pension": "연금복권" },
+  "options": { "title": "생성 옵션", "setCount": "세트 수", "semiAuto": "반자동 모드", "semiAutoHint": "고정할 번호를 선택하세요" },
+  "semiAuto": { "title": "고정 번호 선택", "desc": "고정할 번호를 터치하세요 (최대 5개)", "label": "고정 번호:", "none": "없음" },
+  "generate": { "button": "행운의 번호 생성", "results": "생성된 번호", "empty": "버튼을 눌러 행운의 번호를 생성하세요!" },
+  "premium": { "button": "AI 번호 운세 분석", "badge": "PREMIUM", "title": "AI 번호 심층 분석" },
+  "saved": { "title": "저장된 번호", "clear": "전체 삭제", "empty": "저장된 번호가 없습니다" },
+  "stats": { "title": "통계", "generated": "생성한 번호", "saved": "저장한 번호", "luckyDay": "행운의 요일" },
+  "analysis": { "title": "생성된 번호 분석", "oddEven": "홀수/짝수", "sum": "번호 합계", "range": "번호 범위" },
+  "info": { "title": "📋 이용 안내", "lotto": "로또 6/45: 1~45 중 6개 번호 자동 선택", "pension": "연금복권: 1조~5조, 6자리 번호 생성", "save": "저장 기능: 마음에 드는 번호 저장 가능", "analysisDesc": "번호 분석: 홀짝 비율, 합계 등 통계 제공", "note": "참고: 모든 번호는 무작위로 생성됩니다" },
+  "footer": { "text": "행운을 빕니다! 🍀" },
+  "ads": { "banner": "광고 영역", "interstitial": "광고", "close": "닫기" },
+  "rec": { "title": "이것도 해보세요" },
+  "theme": { "toggle": "다크모드 전환" },
+  "units": { "sets": "개" }
+}
