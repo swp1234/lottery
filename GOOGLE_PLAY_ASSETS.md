@@ -319,7 +319,7 @@ lottery, lotto, number generator, lucky numbers, lottery picker, random numbers,
 - 도박: 시뮬레이션 (실제 도박 아님, 오락 목적 고지)
 
 **개인정보 처리방침**:
-- URL: https://swp1234.github.io/lottery/privacy-policy.html
+- URL: https://dopabrain.com/lottery/privacy-policy.html
 - 수집 정보: 없음 (로컬 저장소만 사용)
 - 연락처: woodori1234@gmail.com
 
@@ -359,7 +359,7 @@ lottery, lotto, number generator, lucky numbers, lottery picker, random numbers,
    - 도메인 소유권 검증
 
 3. **manifest.xml 설정**
-   - TWA URL: https://swp1234.github.io/lottery/
+   - TWA URL: https://dopabrain.com/lottery/
    - Theme color: #e74c3c
    - App name (각 언어별 values 폴더)
      - `values/strings.xml`: 로또 번호 생성기
