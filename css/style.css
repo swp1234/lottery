@@ -1031,3 +1031,7 @@ body {
 .light-theme .lang-option { color: #1a1a1a; }
 .light-theme .lang-option:hover { background: rgba(231,76,60,0.1); }
 .light-theme .lang-option.active { background: rgba(231,76,60,0.2); }
+
+/* Footer with Back Link */
+.back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; padding: 12px 0; transition: color 0.2s; margin-top: 12px; }
+.back-link:hover { color: rgba(255,255,255,0.7); }
