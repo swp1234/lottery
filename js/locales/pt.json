@@ -1,0 +1,19 @@
+{
+  "app": { "title": "Gerador de Números da Sorte - Números da Sorte Gratuitos | DopaBrain", "description": "Gerador de números da Loteria 6/45, números da sorte da loteria de pensão e análise de números vencedores." },
+  "header": { "title": "🍀 Números da Sorte" },
+  "type": { "lotto": "Loteria 6/45", "pension": "Loteria de Pensão" },
+  "options": { "title": "Opções de Geração", "setCount": "Conjuntos", "semiAuto": "Modo Semi-Automático", "semiAutoHint": "Selecione números para fixar" },
+  "semiAuto": { "title": "Selecione Números Fixos", "desc": "Toque em números para fixar (máx 5)", "label": "Números fixos:", "none": "Nenhum" },
+  "generate": { "button": "Gerar Números da Sorte", "results": "Números Gerados", "empty": "Pressione o botão para gerar números da sorte!" },
+  "premium": { "button": "Análise de Fortuna de Número com IA", "badge": "PREMIUM", "title": "Análise Profunda de Número com IA" },
+  "saved": { "title": "Números Salvos", "clear": "Limpar Tudo", "empty": "Nenhum número salvo" },
+  "stats": { "title": "Estatísticas", "generated": "Gerados", "saved": "Salvos", "luckyDay": "Dia da Sorte" },
+  "analysis": { "title": "Análise de Número", "oddEven": "Par/Ímpar", "sum": "Soma", "range": "Intervalo" },
+  "info": { "title": "📋 Como Usar", "lotto": "Loteria 6/45: Escolha automática de 6 números de 1-45", "pension": "Loteria de Pensão: Grupo 1-5, número de 6 dígitos", "save": "Salvar: Salve seus números favoritos", "analysisDesc": "Análise: Taxa par/ímpar, soma e muito mais", "note": "Nota: Todos os números são gerados aleatoriamente" },
+  "footer": { "text": "Boa sorte! 🍀" },
+  "ads": { "banner": "Publicidade", "interstitial": "Anúncio", "close": "Fechar" },
+  "rec": { "title": "Experimente também" },
+  "theme": { "toggle": "Alternar modo escuro" },
+  "units": { "sets": "conjuntos" },
+  "frequency": { "title": "📊 Análise de Frequência de Números", "frequent": "Números frequentes", "rare": "Números nunca sorteados" }
+}

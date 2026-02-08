@@ -1,0 +1,19 @@
+{
+  "app": { "title": "Generator Nomor Lotre - Nomor Keberuntungan Gratis | DopaBrain", "description": "Generator nomor Loto 6/45, nomor lotre pensiun yang beruntung, dan analisis nomor pemenang." },
+  "header": { "title": "🍀 Nomor Keberuntungan" },
+  "type": { "lotto": "Loto 6/45", "pension": "Lotre Pensiun" },
+  "options": { "title": "Opsi Pembuatan", "setCount": "Set", "semiAuto": "Mode Semi-Otomatis", "semiAutoHint": "Pilih nomor untuk menguncinya" },
+  "semiAuto": { "title": "Pilih Nomor yang Dikunci", "desc": "Ketuk nomor untuk menguncinya (maks 5)", "label": "Nomor terkunci:", "none": "Tidak ada" },
+  "generate": { "button": "Hasilkan Nomor Keberuntungan", "results": "Nomor yang Dihasilkan", "empty": "Tekan tombol untuk menghasilkan nomor keberuntungan!" },
+  "premium": { "button": "Analisis Keberuntungan Nomor AI", "badge": "PREMIUM", "title": "Analisis Mendalam Nomor AI" },
+  "saved": { "title": "Nomor Tersimpan", "clear": "Hapus Semua", "empty": "Tidak ada nomor tersimpan" },
+  "stats": { "title": "Statistik", "generated": "Dihasilkan", "saved": "Tersimpan", "luckyDay": "Hari Keberuntungan" },
+  "analysis": { "title": "Analisis Nomor", "oddEven": "Ganjil/Genap", "sum": "Jumlah", "range": "Rentang" },
+  "info": { "title": "📋 Cara Menggunakan", "lotto": "Loto 6/45: Pilih 6 nomor dari 1-45 secara otomatis", "pension": "Lotre Pensiun: Grup 1-5, angka 6 digit", "save": "Simpan: Simpan nomor favorit Anda", "analysisDesc": "Analisis: Rasio ganjil/genap, jumlah, dan lainnya", "note": "Catatan: Semua nomor dihasilkan secara acak" },
+  "footer": { "text": "Semoga beruntung! 🍀" },
+  "ads": { "banner": "Iklan", "interstitial": "Iklan", "close": "Tutup" },
+  "rec": { "title": "Coba juga" },
+  "theme": { "toggle": "Aktifkan mode gelap" },
+  "units": { "sets": "set" },
+  "frequency": { "title": "📊 Analisis Frekuensi Nomor", "frequent": "Nomor sering keluar", "rare": "Nomor jarang keluar" }
+}

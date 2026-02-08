@@ -14,5 +14,6 @@
   "ads": { "banner": "Advertisement", "interstitial": "Ad", "close": "Close" },
   "rec": { "title": "Try these too" },
   "theme": { "toggle": "Toggle dark mode" },
-  "units": { "sets": "sets" }
+  "units": { "sets": "sets" },
+  "frequency": { "title": "📊 Number Frequency Analysis", "frequent": "Frequently drawn numbers", "rare": "Never drawn numbers" }
 }

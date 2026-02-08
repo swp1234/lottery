@@ -36,6 +36,8 @@ class LotteryApp {
       generationDates: [],
       luckyDayOfWeek: null
     });
+    // Number frequency tracking
+    this.frequency = this.loadFromStorage('frequency', {});
 
     this.init();
   }
@@ -46,6 +48,47 @@ class LotteryApp {
     this.buildNumberPicker();
     this.setupEventListeners();
     this.setupTheme();
+    this.renderFrequency();
+  }
+
+  // Get ball color class by number range (Korean lottery standard)
+  getBallRangeClass(num) {
+    if (num <= 10) return 'range-1';
+    if (num <= 20) return 'range-2';
+    if (num <= 30) return 'range-3';
+    if (num <= 40) return 'range-4';
+    return 'range-5';
+  }
+
+  // Update frequency data
+  updateFrequency(numbers) {
+    numbers.forEach(n => {
+      this.frequency[n] = (this.frequency[n] || 0) + 1;
+    });
+    this.saveToStorage('frequency', this.frequency);
+    this.renderFrequency();
+  }
+
+  // Render frequency analysis grid
+  renderFrequency() {
+    const container = document.getElementById('freqGrid');
+    if (!container) return;
+
+    const counts = [];
+    for (let i = 1; i <= 45; i++) {
+      counts.push({ num: i, count: this.frequency[i] || 0 });
+    }
+
+    const maxCount = Math.max(...counts.map(c => c.count), 1);
+    const avg = counts.reduce((s, c) => s + c.count, 0) / 45;
+
+    container.innerHTML = counts.map(c => {
+      const cls = c.count > avg * 1.5 ? 'hot' : c.count < avg * 0.5 && c.count > 0 ? '' : c.count === 0 ? 'cold' : '';
+      return `<div class="freq-cell ${cls}">
+        ${c.num}
+        ${c.count > 0 ? `<span class="freq-count">${c.count}</span>` : ''}
+      </div>`;
+    }).join('');
   }
 
   // 번호 선택기 생성 (반자동 모드용)
@@ -166,6 +209,11 @@ class LotteryApp {
     this.updateStats();
     this.analyzeNumbers(results);
 
+    // Update frequency for lotto results
+    results.forEach(r => {
+      if (r.type === 'lotto') this.updateFrequency(r.numbers);
+    });
+
     // 프리미엄 버튼 표시
     document.getElementById('premiumSection').style.display = 'block';
   }
@@ -216,7 +264,7 @@ class LotteryApp {
   // 로또 결과 렌더링
   renderLottoResult(result, index) {
     const balls = result.numbers.map((num, i) => `
-      <div class="number-ball lotto" style="animation-delay: ${i * 0.1}s">
+      <div class="number-ball lotto ${this.getBallRangeClass(num)} spinning" style="animation-delay: ${i * 0.1}s">
         ${num}
       </div>
     `).join('');

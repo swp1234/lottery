@@ -1,0 +1,19 @@
+{
+  "app": { "title": "Generador de Números de Lotería - Números de Suerte Gratuitos | DopaBrain", "description": "Generador de números Lotto 6/45, números de suerte de lotería de pensiones y análisis de números ganadores." },
+  "header": { "title": "🍀 Números de Suerte" },
+  "type": { "lotto": "Lotto 6/45", "pension": "Lotería de Pensiones" },
+  "options": { "title": "Opciones de Generación", "setCount": "Juegos", "semiAuto": "Modo Semi-Automático", "semiAutoHint": "Selecciona números para fijar" },
+  "semiAuto": { "title": "Seleccionar Números Fijos", "desc": "Toca números para fijar (máx 5)", "label": "Números fijos:", "none": "Ninguno" },
+  "generate": { "button": "Generar Números de Suerte", "results": "Números Generados", "empty": "¡Presiona el botón para generar números de suerte!" },
+  "premium": { "button": "Análisis de Fortuna de Números de IA", "badge": "PREMIUM", "title": "Análisis Profundo de Números de IA" },
+  "saved": { "title": "Números Guardados", "clear": "Limpiar Todo", "empty": "Sin números guardados" },
+  "stats": { "title": "Estadísticas", "generated": "Generados", "saved": "Guardados", "luckyDay": "Día de Suerte" },
+  "analysis": { "title": "Análisis de Números", "oddEven": "Impar/Par", "sum": "Suma", "range": "Rango" },
+  "info": { "title": "📋 Cómo Usar", "lotto": "Lotto 6/45: Selecciona automáticamente 6 números del 1-45", "pension": "Lotería de Pensiones: Grupo 1-5, número de 6 dígitos", "save": "Guardar: Guarda tus números favoritos", "analysisDesc": "Análisis: Razón impar/par, suma y más", "note": "Nota: Todos los números se generan aleatoriamente" },
+  "footer": { "text": "¡Buena suerte! 🍀" },
+  "ads": { "banner": "Publicidad", "interstitial": "Anuncio", "close": "Cerrar" },
+  "rec": { "title": "Prueba estos también" },
+  "theme": { "toggle": "Alternar modo oscuro" },
+  "units": { "sets": "juegos" },
+  "frequency": { "title": "📊 Análisis de Frecuencia de Números", "frequent": "Números frecuentes", "rare": "Números nunca dibujados" }
+}

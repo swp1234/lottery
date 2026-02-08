@@ -61,7 +61,14 @@
     <div id="lang-menu" class="lang-menu hidden">
       <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
       <button class="lang-option" data-lang="en">🇺🇸 English</button>
+      <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
+      <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+      <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
       <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+      <button class="lang-option" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+      <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+      <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+      <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
       <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
       <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
     </div>
@@ -184,6 +191,23 @@
     </section>
 
     <!-- 번호 분석 -->
+    <!-- Frequency Analysis -->
+    <section class="freq-section">
+      <h2 class="section-title" data-i18n="frequency.title">📊 번호 빈도 분석</h2>
+      <div class="freq-grid" id="freqGrid"></div>
+      <div class="freq-legend">
+        <span><span class="freq-dot hot-dot"></span> <span data-i18n="frequency.frequent">자주 나온 번호</span></span>
+        <span><span class="freq-dot cold-dot"></span> <span data-i18n="frequency.rare">아직 안 나온 번호</span></span>
+      </div>
+      <div class="range-legend">
+        <span class="range-item"><span class="range-dot" style="background:linear-gradient(135deg,#fbc531,#e1b12c)"></span>1~10</span>
+        <span class="range-item"><span class="range-dot" style="background:linear-gradient(135deg,#4a90d9,#2d6cb4)"></span>11~20</span>
+        <span class="range-item"><span class="range-dot" style="background:linear-gradient(135deg,#e74c3c,#c0392b)"></span>21~30</span>
+        <span class="range-item"><span class="range-dot" style="background:linear-gradient(135deg,#7f8c8d,#636e72)"></span>31~40</span>
+        <span class="range-item"><span class="range-dot" style="background:linear-gradient(135deg,#27ae60,#1e8449)"></span>41~45</span>
+      </div>
+    </section>
+
     <section class="analysis-section">
       <h2 class="section-title" data-i18n="analysis.title">생성된 번호 분석</h2>
       <div class="analysis-grid" id="analysisGrid">

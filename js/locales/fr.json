@@ -1,0 +1,19 @@
+{
+  "app": { "title": "Générateur de Numéros de Loterie - Numéros Chanceux Gratuits | DopaBrain", "description": "Générateur de numéros Lotto 6/45, numéros de loterie retraite chanceux et analyse des numéros gagnants." },
+  "header": { "title": "🍀 Numéros Chanceux" },
+  "type": { "lotto": "Lotto 6/45", "pension": "Loterie Retraite" },
+  "options": { "title": "Options de Génération", "setCount": "Séries", "semiAuto": "Mode Semi-Auto", "semiAutoHint": "Sélectionne les numéros à fixer" },
+  "semiAuto": { "title": "Sélectionne les Numéros Fixes", "desc": "Tape les numéros pour fixer (max 5)", "label": "Numéros fixes:", "none": "Aucun" },
+  "generate": { "button": "Générer les Numéros Chanceux", "results": "Numéros Générés", "empty": "Appuie sur le bouton pour générer les numéros chanceux!" },
+  "premium": { "button": "Analyse de Fortune des Numéros IA", "badge": "PREMIUM", "title": "Analyse Profonde des Numéros IA" },
+  "saved": { "title": "Numéros Enregistrés", "clear": "Tout Effacer", "empty": "Aucun numéro enregistré" },
+  "stats": { "title": "Statistiques", "generated": "Générés", "saved": "Enregistrés", "luckyDay": "Jour Chanceux" },
+  "analysis": { "title": "Analyse des Numéros", "oddEven": "Impair/Pair", "sum": "Somme", "range": "Plage" },
+  "info": { "title": "📋 Comment Utiliser", "lotto": "Lotto 6/45: Sélectionne automatiquement 6 numéros de 1 à 45", "pension": "Loterie Retraite: Groupes 1-5, numéro à 6 chiffres", "save": "Enregistrement: Enregistre tes numéros préférés", "analysisDesc": "Analyse: Ratio impair/pair, somme, et plus", "note": "Remarque: Tous les numéros sont générés aléatoirement" },
+  "footer": { "text": "Bonne chance! 🍀" },
+  "ads": { "banner": "Publicité", "interstitial": "Annonce", "close": "Fermer" },
+  "rec": { "title": "Essaie aussi" },
+  "theme": { "toggle": "Basculer le mode sombre" },
+  "units": { "sets": "séries" },
+  "frequency": { "title": "📊 Analyse de la Fréquence des Numéros", "frequent": "Numéros fréquemment tirés", "rare": "Numéros jamais tirés" }
+}

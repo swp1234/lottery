@@ -1,0 +1,82 @@
+{
+  "app": {
+    "title": "ロト番号生成器 - 無料ラッキーナンバー | DopaBrain",
+    "description": "ロト6/45番号生成器、年金ロットラッキーナンバー、当選番号分析。"
+  },
+  "header": {
+    "title": "🍀 ラッキーナンバー"
+  },
+  "type": {
+    "lotto": "ロト 6/45",
+    "pension": "年金ロット"
+  },
+  "options": {
+    "title": "生成オプション",
+    "setCount": "セット数",
+    "semiAuto": "セミオートモード",
+    "semiAutoHint": "固定する番号を選択"
+  },
+  "semiAuto": {
+    "title": "固定番号を選択",
+    "desc": "番号をタップして固定（最大5個）",
+    "label": "固定番号:",
+    "none": "なし"
+  },
+  "generate": {
+    "button": "ラッキーナンバーを生成",
+    "results": "生成された番号",
+    "empty": "ボタンを押してラッキーナンバーを生成してください！"
+  },
+  "premium": {
+    "button": "AI番号運勢分析",
+    "badge": "プレミアム",
+    "title": "AI番号深い分析"
+  },
+  "saved": {
+    "title": "保存された番号",
+    "clear": "すべてクリア",
+    "empty": "保存された番号がありません"
+  },
+  "stats": {
+    "title": "統計",
+    "generated": "生成",
+    "saved": "保存",
+    "luckyDay": "ラッキーデー"
+  },
+  "analysis": {
+    "title": "番号分析",
+    "oddEven": "奇数/偶数",
+    "sum": "合計",
+    "range": "範囲"
+  },
+  "info": {
+    "title": "📋 使い方",
+    "lotto": "ロト6/45：1～45から6番号を自動選択",
+    "pension": "年金ロット：グループ1～5、6桁番号",
+    "save": "保存：お気に入りの番号を保存",
+    "analysisDesc": "分析：奇数/偶数比率、合計など",
+    "note": "注：すべての番号はランダムに生成されます"
+  },
+  "footer": {
+    "text": "幸運を祈ります！ 🍀"
+  },
+  "ads": {
+    "banner": "広告",
+    "interstitial": "広告",
+    "close": "閉じる"
+  },
+  "rec": {
+    "title": "こちらも試してみてください"
+  },
+  "theme": {
+    "toggle": "ダークモードを切り替える"
+  },
+  "units": {
+    "sets": "セット"
+  },
+  "frequency": {
+    "title": "📊 番号頻度分析",
+    "frequent": "よく出た番号",
+    "rare": "まだ出ていない番号"
+  }
+}

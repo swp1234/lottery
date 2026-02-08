@@ -1,0 +1,19 @@
+{
+  "app": { "title": "Lotto-Zahlengenerator - Kostenlose Glückszahlen | DopaBrain", "description": "Lotto 6/45 Zahlengenerator, Rentenlotterie Glückszahlen und Gewinnzahlanalyse." },
+  "header": { "title": "🍀 Glückszahlen" },
+  "type": { "lotto": "Lotto 6/45", "pension": "Rentenlotterie" },
+  "options": { "title": "Generierungsoptionen", "setCount": "Sätze", "semiAuto": "Halb-Auto-Modus", "semiAutoHint": "Wähle Zahlen zum Fixieren" },
+  "semiAuto": { "title": "Wähle fixierte Zahlen", "desc": "Tippe auf Zahlen zum Fixieren (max 5)", "label": "Fixierte Zahlen:", "none": "Keine" },
+  "generate": { "button": "Glückszahlen generieren", "results": "Generierte Zahlen", "empty": "Drücke den Button um Glückszahlen zu generieren!" },
+  "premium": { "button": "KI Zahlen-Schicksal-Analyse", "badge": "PREMIUM", "title": "KI Zahlen-Tiefenanalyse" },
+  "saved": { "title": "Gespeicherte Zahlen", "clear": "Alle löschen", "empty": "Keine gespeicherten Zahlen" },
+  "stats": { "title": "Statistik", "generated": "Generiert", "saved": "Gespeichert", "luckyDay": "Glückstag" },
+  "analysis": { "title": "Zahlenanalyse", "oddEven": "Ungerade/Gerade", "sum": "Summe", "range": "Bereich" },
+  "info": { "title": "📋 So verwendest du es", "lotto": "Lotto 6/45: Auto-Wahl von 6 Zahlen von 1-45", "pension": "Rentenlotterie: Gruppe 1-5, 6-stellige Zahl", "save": "Speichern: Speichere deine Lieblingszahlen", "analysisDesc": "Analyse: Ungerade/Gerade-Verhältnis, Summe und mehr", "note": "Hinweis: Alle Zahlen werden zufällig generiert" },
+  "footer": { "text": "Viel Glück! 🍀" },
+  "ads": { "banner": "Werbung", "interstitial": "Anzeige", "close": "Schließen" },
+  "rec": { "title": "Probiere auch diese" },
+  "theme": { "toggle": "Dunklen Modus umschalten" },
+  "units": { "sets": "Sätze" },
+  "frequency": { "title": "📊 Zahlenhäufigkeitsanalyse", "frequent": "Häufig gezogene Zahlen", "rare": "Nie gezogene Zahlen" }
+}
