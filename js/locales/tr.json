@@ -1,20 +1,88 @@
 {
-  "app": { "title": "Şans Numarası Üreteci - Ücretsiz Şanslı Numaralar | DopaBrain", "description": "Loto 6/45 numara üreteci, emeklilik piyangosunun şanslı numaraları ve kazanan numara analizi." },
-  "header": { "title": "🍀 Şanslı Numaralar" },
-  "type": { "loto": "Loto 6/45", "pension": "Emeklilik Piyangosу" },
-  "options": { "title": "Üretim Seçenekleri", "setCount": "Setler", "semiAuto": "Yarı-Otomatik Modu", "semiAutoHint": "Sabitleme için numaraları seç" },
-  "semiAuto": { "title": "Sabitlenmiş Numaraları Seç", "desc": "Sabitlemek için numaralara dokunun (max 5)", "label": "Sabitlenmiş numaralar:", "none": "Hiçbiri" },
-  "generate": { "button": "Şanslı Numaralar Üret", "results": "Üretilen Numaralar", "empty": "Şanslı numaralar üretmek için düğmeye basın!" },
-  "simulation": { "title": "Kazanma Olasılığı Simülasyonu", "desc": "Son 100 çekilişe dayalı", "button": "Kazanan Seviyesini Kontrol Et" },
-  "premium": { "button": "YZ Numarası Talih Analizi", "badge": "PREMIUM", "title": "YZ Numara Derinlemesine Analizi" },
-  "saved": { "title": "Kaydedilen Numaralar", "clear": "Tümünü Temizle", "empty": "Kaydedilen numara yok" },
-  "stats": { "title": "İstatistikler", "generated": "Üretilen", "saved": "Kaydedilen", "luckyDay": "Şanslı Gün" },
-  "analysis": { "title": "Numara Analizi", "oddEven": "Tek/Çift", "sum": "Toplam", "range": "Aralık" },
-  "info": { "title": "📋 Nasıl Kullanılır", "lotto": "Loto 6/45: 1-45 arasından otomatik 6 numara seç", "pension": "Emeklilik Piyangosу: Grup 1-5, 6 haneli numara", "save": "Kaydet: Favori numaralarını kaydet", "analysisDesc": "Analiz: Tek/çift oranı, toplam ve daha fazlası", "note": "Not: Tüm numaralar rastgele üretilmiştir" },
-  "footer": { "text": "İyi şanslar! 🍀" },
-  "ads": { "banner": "Reklam", "interstitial": "Reklam", "close": "Kapat" },
-  "rec": { "title": "Bunları da dene" },
-  "theme": { "toggle": "Karanlık modu aç/kapat" },
-  "units": { "sets": "set" },
-  "frequency": { "title": "📊 Numara Frekans Analizi", "frequent": "Sık çıkan numaralar", "rare": "Hiç çıkmayan numaralar" }
+  "app": {
+    "title": "Şans Numarası Üreteci - Ücretsiz Şanslı Numaralar | DopaBrain",
+    "description": "Loto 6/45 numara üreteci, emeklilik piyangosunun şanslı numaraları ve kazanan numara analizi."
+  },
+  "header": {
+    "title": "🍀 Şanslı Numaralar"
+  },
+  "type": {
+    "loto": "Loto 6/45",
+    "pension": "Emeklilik Piyangosу",
+    "lotto": "로또 6/45"
+  },
+  "options": {
+    "title": "Üretim Seçenekleri",
+    "setCount": "Setler",
+    "semiAuto": "Yarı-Otomatik Modu",
+    "semiAutoHint": "Sabitleme için numaraları seç"
+  },
+  "semiAuto": {
+    "title": "Sabitlenmiş Numaraları Seç",
+    "desc": "Sabitlemek için numaralara dokunun (max 5)",
+    "label": "Sabitlenmiş numaralar:",
+    "none": "Hiçbiri"
+  },
+  "generate": {
+    "button": "Şanslı Numaralar Üret",
+    "results": "Üretilen Numaralar",
+    "empty": "Şanslı numaralar üretmek için düğmeye basın!"
+  },
+  "simulation": {
+    "title": "Kazanma Olasılığı Simülasyonu",
+    "desc": "Son 100 çekilişe dayalı",
+    "button": "Kazanan Seviyesini Kontrol Et"
+  },
+  "premium": {
+    "button": "YZ Numarası Talih Analizi",
+    "badge": "PREMIUM",
+    "title": "YZ Numara Derinlemesine Analizi"
+  },
+  "saved": {
+    "title": "Kaydedilen Numaralar",
+    "clear": "Tümünü Temizle",
+    "empty": "Kaydedilen numara yok"
+  },
+  "stats": {
+    "title": "İstatistikler",
+    "generated": "Üretilen",
+    "saved": "Kaydedilen",
+    "luckyDay": "Şanslı Gün"
+  },
+  "analysis": {
+    "title": "Numara Analizi",
+    "oddEven": "Tek/Çift",
+    "sum": "Toplam",
+    "range": "Aralık"
+  },
+  "info": {
+    "title": "📋 Nasıl Kullanılır",
+    "lotto": "Loto 6/45: 1-45 arasından otomatik 6 numara seç",
+    "pension": "Emeklilik Piyangosу: Grup 1-5, 6 haneli numara",
+    "save": "Kaydet: Favori numaralarını kaydet",
+    "analysisDesc": "Analiz: Tek/çift oranı, toplam ve daha fazlası",
+    "note": "Not: Tüm numaralar rastgele üretilmiştir"
+  },
+  "footer": {
+    "text": "İyi şanslar! 🍀"
+  },
+  "ads": {
+    "banner": "Reklam",
+    "interstitial": "Reklam",
+    "close": "Kapat"
+  },
+  "rec": {
+    "title": "Bunları da dene"
+  },
+  "theme": {
+    "toggle": "Karanlık modu aç/kapat"
+  },
+  "units": {
+    "sets": "set"
+  },
+  "frequency": {
+    "title": "📊 Numara Frekans Analizi",
+    "frequent": "Sık çıkan numaralar",
+    "rare": "Hiç çıkmayan numaralar"
+  }
 }
