@@ -250,10 +250,10 @@ class LotteryApp {
     const container = document.getElementById('resultsContainer');
     const resultsSection = document.getElementById('resultsSection');
 
-    resultsSection.scrollIntoView({ behavior: 'smooth' });
+    resultsSection?.scrollIntoView({ behavior: 'smooth' });
 
     container.innerHTML = results.map((result, index) => {
-      if (result.type === 'lotto') {
+      if (result?.type === 'lotto') {
         return this.renderLottoResult(result, index);
       } else {
         return this.renderPensionResult(result, index);
