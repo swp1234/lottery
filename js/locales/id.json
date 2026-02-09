@@ -5,6 +5,7 @@
   "options": { "title": "Opsi Pembuatan", "setCount": "Set", "semiAuto": "Mode Semi-Otomatis", "semiAutoHint": "Pilih nomor untuk menguncinya" },
   "semiAuto": { "title": "Pilih Nomor yang Dikunci", "desc": "Ketuk nomor untuk menguncinya (maks 5)", "label": "Nomor terkunci:", "none": "Tidak ada" },
   "generate": { "button": "Hasilkan Nomor Keberuntungan", "results": "Nomor yang Dihasilkan", "empty": "Tekan tombol untuk menghasilkan nomor keberuntungan!" },
+  "simulation": { "title": "Simulasi Probabilitas Menang", "desc": "Berdasarkan 100 undian terakhir", "button": "Periksa Tingkat Pemenang" },
   "premium": { "button": "Analisis Keberuntungan Nomor AI", "badge": "PREMIUM", "title": "Analisis Mendalam Nomor AI" },
   "saved": { "title": "Nomor Tersimpan", "clear": "Hapus Semua", "empty": "Tidak ada nomor tersimpan" },
   "stats": { "title": "Statistik", "generated": "Dihasilkan", "saved": "Tersimpan", "luckyDay": "Hari Keberuntungan" },

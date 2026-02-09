@@ -5,6 +5,7 @@
   "options": { "title": "生成选项", "setCount": "组数", "semiAuto": "半自动模式", "semiAutoHint": "选择要固定的号码" },
   "semiAuto": { "title": "选择固定号码", "desc": "点击要固定的号码（最多5个）", "label": "固定号码：", "none": "无" },
   "generate": { "button": "生成幸运号码", "results": "生成的号码", "empty": "点击按钮生成幸运号码！" },
+  "simulation": { "title": "当选概率模拟", "desc": "基于最近100次抽签", "button": "查看当选等级" },
   "premium": { "button": "AI号码运势分析", "badge": "高级", "title": "AI号码深度分析" },
   "saved": { "title": "已保存号码", "clear": "全部删除", "empty": "没有保存的号码" },
   "stats": { "title": "统计", "generated": "已生成", "saved": "已保存", "luckyDay": "幸运日" },

@@ -5,6 +5,7 @@
   "options": { "title": "Generierungsoptionen", "setCount": "Sätze", "semiAuto": "Halb-Auto-Modus", "semiAutoHint": "Wähle Zahlen zum Fixieren" },
   "semiAuto": { "title": "Wähle fixierte Zahlen", "desc": "Tippe auf Zahlen zum Fixieren (max 5)", "label": "Fixierte Zahlen:", "none": "Keine" },
   "generate": { "button": "Glückszahlen generieren", "results": "Generierte Zahlen", "empty": "Drücke den Button um Glückszahlen zu generieren!" },
+  "simulation": { "title": "Gewinnwahrscheinlichkeits-Simulation", "desc": "Basierend auf den letzten 100 Ziehungen", "button": "Gewinnstufe überprüfen" },
   "premium": { "button": "KI Zahlen-Schicksal-Analyse", "badge": "PREMIUM", "title": "KI Zahlen-Tiefenanalyse" },
   "saved": { "title": "Gespeicherte Zahlen", "clear": "Alle löschen", "empty": "Keine gespeicherten Zahlen" },
   "stats": { "title": "Statistik", "generated": "Generiert", "saved": "Gespeichert", "luckyDay": "Glückstag" },

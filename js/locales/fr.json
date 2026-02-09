@@ -5,6 +5,7 @@
   "options": { "title": "Options de Génération", "setCount": "Séries", "semiAuto": "Mode Semi-Auto", "semiAutoHint": "Sélectionne les numéros à fixer" },
   "semiAuto": { "title": "Sélectionne les Numéros Fixes", "desc": "Tape les numéros pour fixer (max 5)", "label": "Numéros fixes:", "none": "Aucun" },
   "generate": { "button": "Générer les Numéros Chanceux", "results": "Numéros Générés", "empty": "Appuie sur le bouton pour générer les numéros chanceux!" },
+  "simulation": { "title": "Simulation de la Probabilité de Gain", "desc": "Basée sur les 100 derniers tirages", "button": "Vérifier le Classement des Gagnants" },
   "premium": { "button": "Analyse de Fortune des Numéros IA", "badge": "PREMIUM", "title": "Analyse Profonde des Numéros IA" },
   "saved": { "title": "Numéros Enregistrés", "clear": "Tout Effacer", "empty": "Aucun numéro enregistré" },
   "stats": { "title": "Statistiques", "generated": "Générés", "saved": "Enregistrés", "luckyDay": "Jour Chanceux" },

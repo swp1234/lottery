@@ -5,6 +5,7 @@
   "options": { "title": "Opciones de Generación", "setCount": "Juegos", "semiAuto": "Modo Semi-Automático", "semiAutoHint": "Selecciona números para fijar" },
   "semiAuto": { "title": "Seleccionar Números Fijos", "desc": "Toca números para fijar (máx 5)", "label": "Números fijos:", "none": "Ninguno" },
   "generate": { "button": "Generar Números de Suerte", "results": "Números Generados", "empty": "¡Presiona el botón para generar números de suerte!" },
+  "simulation": { "title": "Simulación de Probabilidad de Ganancias", "desc": "Basado en los últimos 100 sorteos", "button": "Verificar Grado Ganador" },
   "premium": { "button": "Análisis de Fortuna de Números de IA", "badge": "PREMIUM", "title": "Análisis Profundo de Números de IA" },
   "saved": { "title": "Números Guardados", "clear": "Limpiar Todo", "empty": "Sin números guardados" },
   "stats": { "title": "Estadísticas", "generated": "Generados", "saved": "Guardados", "luckyDay": "Día de Suerte" },

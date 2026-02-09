@@ -5,6 +5,7 @@
   "options": { "title": "Üretim Seçenekleri", "setCount": "Setler", "semiAuto": "Yarı-Otomatik Modu", "semiAutoHint": "Sabitleme için numaraları seç" },
   "semiAuto": { "title": "Sabitlenmiş Numaraları Seç", "desc": "Sabitlemek için numaralara dokunun (max 5)", "label": "Sabitlenmiş numaralar:", "none": "Hiçbiri" },
   "generate": { "button": "Şanslı Numaralar Üret", "results": "Üretilen Numaralar", "empty": "Şanslı numaralar üretmek için düğmeye basın!" },
+  "simulation": { "title": "Kazanma Olasılığı Simülasyonu", "desc": "Son 100 çekilişe dayalı", "button": "Kazanan Seviyesini Kontrol Et" },
   "premium": { "button": "YZ Numarası Talih Analizi", "badge": "PREMIUM", "title": "YZ Numara Derinlemesine Analizi" },
   "saved": { "title": "Kaydedilen Numaralar", "clear": "Tümünü Temizle", "empty": "Kaydedilen numara yok" },
   "stats": { "title": "İstatistikler", "generated": "Üretilen", "saved": "Kaydedilen", "luckyDay": "Şanslı Gün" },

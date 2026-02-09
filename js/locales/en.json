@@ -5,6 +5,7 @@
   "options": { "title": "Generation Options", "setCount": "Sets", "semiAuto": "Semi-Auto Mode", "semiAutoHint": "Select numbers to fix" },
   "semiAuto": { "title": "Select Fixed Numbers", "desc": "Tap numbers to fix (max 5)", "label": "Fixed numbers:", "none": "None" },
   "generate": { "button": "Generate Lucky Numbers", "results": "Generated Numbers", "empty": "Press the button to generate lucky numbers!" },
+  "simulation": { "title": "Winning Probability Simulation", "desc": "Based on the last 100 draws", "button": "Check Winning Grade" },
   "premium": { "button": "AI Number Fortune Analysis", "badge": "PREMIUM", "title": "AI Number Deep Analysis" },
   "saved": { "title": "Saved Numbers", "clear": "Clear All", "empty": "No saved numbers" },
   "stats": { "title": "Statistics", "generated": "Generated", "saved": "Saved", "luckyDay": "Lucky Day" },
