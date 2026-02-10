@@ -800,6 +800,13 @@ class LotteryApp {
 // 앱 초기화
 const app = new LotteryApp();
 
+// Hide app loader
+const appLoader = document.getElementById('app-loader');
+if (appLoader) {
+    appLoader.classList.add('hidden');
+    setTimeout(() => appLoader.remove(), 300);
+}
+
 // Service Worker 등록
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
