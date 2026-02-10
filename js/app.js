@@ -277,7 +277,7 @@ class LotteryApp {
         <div class="result-header">
           <span class="result-label">로또 6/45 - ${index + 1}번째</span>
           <button class="save-btn" onclick="app.saveNumber(${index})">
-            저장
+            ${window.i18n?.t('buttons.save') || '저장'}
           </button>
         </div>
         <div class="numbers-display">
@@ -297,7 +297,7 @@ class LotteryApp {
         <div class="result-header">
           <span class="result-label">연금복권 - ${index + 1}번째</span>
           <button class="save-btn" onclick="app.saveNumber(${index})">
-            저장
+            ${window.i18n?.t('buttons.save') || '저장'}
           </button>
         </div>
         <div class="numbers-display">
@@ -330,7 +330,7 @@ class LotteryApp {
     });
 
     if (isDuplicate) {
-      alert('이미 저장된 번호입니다.');
+      alert(window.i18n?.t('alerts.duplicate') || '이미 저장된 번호입니다.');
       return;
     }
 
@@ -342,7 +342,7 @@ class LotteryApp {
     // 버튼 상태 변경
     const btn = document.querySelectorAll('.save-btn')[index];
     if (btn) {
-      btn.textContent = '저장됨';
+      btn.textContent = window.i18n?.t('buttons.saved') || '저장됨';
       btn.classList.add('saved');
     }
   }
@@ -437,7 +437,7 @@ class LotteryApp {
 
   // 저장된 번호 삭제
   deleteSaved(index) {
-    if (confirm('이 번호를 삭제하시겠습니까?')) {
+    if (confirm(window.i18n?.t('alerts.confirmDelete') || '이 번호를 삭제하시겠습니까?')) {
       this.saved.splice(index, 1);
       this.saveToStorage('saved', this.saved);
       this.renderSaved();
@@ -447,7 +447,7 @@ class LotteryApp {
 
   // 전체 삭제
   clearAllSaved() {
-    if (confirm('저장된 모든 번호를 삭제하시겠습니까?')) {
+    if (confirm(window.i18n?.t('alerts.confirmClearAll') || '저장된 모든 번호를 삭제하시겠습니까?')) {
       this.saved = [];
       this.saveToStorage('saved', []);
       this.renderSaved();
@@ -484,8 +484,10 @@ class LotteryApp {
     const maxCount = Math.max(...dayCounts);
     const luckyDayIndex = dayCounts.indexOf(maxCount);
 
-    const dayNames = ['일', '월', '화', '수', '목', '금', '토'];
-    this.stats.luckyDayOfWeek = dayNames[luckyDayIndex] + '요일';
+    const dayNamesKeys = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    const dayName = window.i18n?.t(`days.${dayNamesKeys[luckyDayIndex]}`) || ['일', '월', '화', '수', '목', '금', '토'][luckyDayIndex];
+    const suffix = window.i18n?.t('days.suffix') || '요일';
+    this.stats.luckyDayOfWeek = dayName + suffix;
   }
 
   // 통계 렌더링
