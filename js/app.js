@@ -790,25 +790,35 @@ class LotteryApp {
     }
 
     // 프리미엄 버튼
-    document.getElementById('premiumBtn').addEventListener('click', () => {
-      this.showPremiumContent();
-    });
+    const premiumBtn = document.getElementById('premiumBtn');
+    if (premiumBtn) {
+      premiumBtn.addEventListener('click', () => {
+        this.showPremiumContent();
+      });
+    }
 
     // 프리미엄 모달 닫기
-    document.getElementById('closePremiumBtn').addEventListener('click', () => {
-      document.getElementById('premiumModal').classList.add('hidden');
-    });
+    const closePremiumBtn = document.getElementById('closePremiumBtn');
+    if (closePremiumBtn) {
+      closePremiumBtn.addEventListener('click', () => {
+        document.getElementById('premiumModal')?.classList.add('hidden');
+      });
+    }
   }
 }
 
 // 앱 초기화
-const app = new LotteryApp();
-
-// Hide app loader
-const appLoader = document.getElementById('app-loader');
-if (appLoader) {
-    appLoader.classList.add('hidden');
-    setTimeout(() => appLoader.remove(), 300);
+let app;
+try {
+    app = new LotteryApp();
+} catch (e) {
+    console.error('LotteryApp init error:', e);
+} finally {
+    const appLoader = document.getElementById('app-loader');
+    if (appLoader) {
+        appLoader.classList.add('hidden');
+        setTimeout(() => appLoader.remove(), 300);
+    }
 }
 
 // Service Worker 등록
@@ -827,3 +837,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
 });
+
+// Failsafe: ensure loader is hidden even if everything above fails
+setTimeout(() => { const l = document.getElementById('app-loader'); if (l) { l.classList.add('hidden'); setTimeout(() => l.remove(), 300); } }, 3000);
