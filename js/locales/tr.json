@@ -83,5 +83,17 @@
   },
   "units": {
     "sets": "set"
+  },
+  "alerts": { "duplicate": "Bu numara zaten kaydedilmiş.", "confirmDelete": "Bu numarayı sil?", "confirmClearAll": "Kayıtlı tüm numaraları sil?" },
+  "days": { "sun": "Paz", "mon": "Pzt", "tue": "Sal", "wed": "Çar", "thu": "Per", "fri": "Cum", "sat": "Cts", "suffix": "" },
+  "buttons": { "save": "Kaydet", "saved": "Kaydedildi" },
+  "labels": { "none": "Hiçbiri" },
+  "results": {
+    "lotto": "Loto 6/45 - {index}inci",
+    "pension": "Emeklilik Piyangosу - {index}inci",
+    "group": "Grup {group}",
+    "empty": "Kaydedilen numara yok",
+    "lottoLabel": "Loto 6/45",
+    "pensionLabel": "Emeklilik Piyangosу"
   }
 }

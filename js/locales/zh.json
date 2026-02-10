@@ -19,5 +19,14 @@
   "frequency": { "title": "📊 号码频率分析", "frequent": "经常出现的号码", "rare": "从未出现的号码" },
   "alerts": { "duplicate": "该号码已保存。", "confirmDelete": "删除此号码?", "confirmClearAll": "删除所有保存号码?" },
   "days": { "sun": "日", "mon": "一", "tue": "二", "wed": "三", "thu": "四", "fri": "五", "sat": "六", "suffix": "" },
-  "buttons": { "save": "保存", "saved": "已保存" }
+  "buttons": { "save": "保存", "saved": "已保存" },
+  "labels": { "none": "无" },
+  "results": {
+    "lotto": "乐透 6/45 - 第{index}组",
+    "pension": "年金彩票 - 第{index}组",
+    "group": "{group}组",
+    "empty": "没有保存的号码",
+    "lottoLabel": "乐透 6/45",
+    "pensionLabel": "年金彩票"
+  }
 }

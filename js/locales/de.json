@@ -16,5 +16,17 @@
   "rec": { "title": "Probiere auch diese" },
   "theme": { "toggle": "Dunklen Modus umschalten" },
   "units": { "sets": "Sätze" },
-  "frequency": { "title": "📊 Zahlenhäufigkeitsanalyse", "frequent": "Häufig gezogene Zahlen", "rare": "Nie gezogene Zahlen" }
+  "frequency": { "title": "📊 Zahlenhäufigkeitsanalyse", "frequent": "Häufig gezogene Zahlen", "rare": "Nie gezogene Zahlen" },
+  "alerts": { "duplicate": "Diese Zahl ist bereits gespeichert.", "confirmDelete": "Diese Zahl löschen?", "confirmClearAll": "Alle gespeicherten Zahlen löschen?" },
+  "days": { "sun": "So", "mon": "Mo", "tue": "Di", "wed": "Mi", "thu": "Do", "fri": "Fr", "sat": "Sa", "suffix": "" },
+  "buttons": { "save": "Speichern", "saved": "Gespeichert" },
+  "labels": { "none": "Keine" },
+  "results": {
+    "lotto": "Lotto 6/45 - {index}te",
+    "pension": "Rentenlotterie - {index}te",
+    "group": "Gruppe {group}",
+    "empty": "Keine gespeicherten Zahlen",
+    "lottoLabel": "Lotto 6/45",
+    "pensionLabel": "Rentenlotterie"
+  }
 }

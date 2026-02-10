@@ -16,5 +16,17 @@
   "rec": { "title": "Coba juga" },
   "theme": { "toggle": "Aktifkan mode gelap" },
   "units": { "sets": "set" },
-  "frequency": { "title": "📊 Analisis Frekuensi Nomor", "frequent": "Nomor sering keluar", "rare": "Nomor jarang keluar" }
+  "frequency": { "title": "📊 Analisis Frekuensi Nomor", "frequent": "Nomor sering keluar", "rare": "Nomor jarang keluar" },
+  "alerts": { "duplicate": "Nomor ini sudah tersimpan.", "confirmDelete": "Hapus nomor ini?", "confirmClearAll": "Hapus semua nomor tersimpan?" },
+  "days": { "sun": "Ming", "mon": "Sen", "tue": "Sel", "wed": "Rab", "thu": "Kam", "fri": "Jum", "sat": "Sab", "suffix": "" },
+  "buttons": { "save": "Simpan", "saved": "Tersimpan" },
+  "labels": { "none": "Tidak ada" },
+  "results": {
+    "lotto": "Loto 6/45 - {index}ke",
+    "pension": "Lotre Pensiun - {index}ke",
+    "group": "Grup {group}",
+    "empty": "Tidak ada nomor tersimpan",
+    "lottoLabel": "Loto 6/45",
+    "pensionLabel": "Lotre Pensiun"
+  }
 }

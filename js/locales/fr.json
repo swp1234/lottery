@@ -16,5 +16,17 @@
   "rec": { "title": "Essaie aussi" },
   "theme": { "toggle": "Basculer le mode sombre" },
   "units": { "sets": "séries" },
-  "frequency": { "title": "📊 Analyse de la Fréquence des Numéros", "frequent": "Numéros fréquemment tirés", "rare": "Numéros jamais tirés" }
+  "frequency": { "title": "📊 Analyse de la Fréquence des Numéros", "frequent": "Numéros fréquemment tirés", "rare": "Numéros jamais tirés" },
+  "alerts": { "duplicate": "Ce numéro est déjà enregistré.", "confirmDelete": "Supprimer ce numéro?", "confirmClearAll": "Supprimer tous les numéros enregistrés?" },
+  "days": { "sun": "Dim", "mon": "Lun", "tue": "Mar", "wed": "Mer", "thu": "Jeu", "fri": "Ven", "sat": "Sam", "suffix": "" },
+  "buttons": { "save": "Enregistrer", "saved": "Enregistré" },
+  "labels": { "none": "Aucun" },
+  "results": {
+    "lotto": "Lotto 6/45 - {index}er",
+    "pension": "Loterie Retraite - {index}er",
+    "group": "Groupe {group}",
+    "empty": "Aucun numéro enregistré",
+    "lottoLabel": "Lotto 6/45",
+    "pensionLabel": "Loterie Retraite"
+  }
 }

@@ -136,7 +136,7 @@ class LotteryApp {
     const display = document.getElementById('selectedDisplay');
     display.textContent = this.fixedNumbers.length > 0
       ? this.fixedNumbers.join(', ')
-      : '없음';
+      : (window.i18n?.t('labels.none') || 'None');
   }
 
   // LocalStorage 관리
@@ -275,7 +275,7 @@ class LotteryApp {
     return `
       <div class="result-item" style="animation-delay: ${index * 0.1}s">
         <div class="result-header">
-          <span class="result-label">로또 6/45 - ${index + 1}번째</span>
+          <span class="result-label">${(window.i18n?.t('results.lotto') || 'Lotto 6/45 - {index}').replace('{index}', index + 1)}</span>
           <button class="save-btn" onclick="app.saveNumber(${index})">
             ${window.i18n?.t('buttons.save') || '저장'}
           </button>
@@ -295,14 +295,14 @@ class LotteryApp {
     return `
       <div class="result-item" style="animation-delay: ${index * 0.1}s">
         <div class="result-header">
-          <span class="result-label">연금복권 - ${index + 1}번째</span>
+          <span class="result-label">${(window.i18n?.t('results.pension') || 'Pension Lottery - {index}').replace('{index}', index + 1)}</span>
           <button class="save-btn" onclick="app.saveNumber(${index})">
             ${window.i18n?.t('buttons.save') || '저장'}
           </button>
         </div>
         <div class="numbers-display">
           <div class="pension-group">
-            <span class="pension-label">${group}조</span>
+            <span class="pension-label">${(window.i18n?.t('results.group') || 'Group {group}').replace('{group}', group)}</span>
             <span style="font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #e74c3c, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
               ${numbersStr}
             </span>
@@ -386,7 +386,7 @@ class LotteryApp {
     const container = document.getElementById('savedContainer');
 
     if (this.saved.length === 0) {
-      container.innerHTML = '<p class="empty-message">저장된 번호가 없습니다</p>';
+      container.innerHTML = `<p class="empty-message">${window.i18n?.t('results.empty') || 'No saved numbers'}</p>`;
       return;
     }
 
@@ -399,7 +399,7 @@ class LotteryApp {
         return `
           <div class="result-item">
             <div class="result-header">
-              <span class="result-label">로또 6/45</span>
+              <span class="result-label">${window.i18n?.t('results.lottoLabel') || 'Lotto 6/45'}</span>
               <button class="delete-btn" onclick="app.deleteSaved(${index})">
                 ✕
               </button>
@@ -416,14 +416,14 @@ class LotteryApp {
         return `
           <div class="result-item">
             <div class="result-header">
-              <span class="result-label">연금복권</span>
+              <span class="result-label">${window.i18n?.t('results.pensionLabel') || 'Pension Lottery'}</span>
               <button class="delete-btn" onclick="app.deleteSaved(${index})">
                 ✕
               </button>
             </div>
             <div class="numbers-display">
               <div class="pension-group">
-                <span class="pension-label">${group}조</span>
+                <span class="pension-label">${(window.i18n?.t('results.group') || 'Group {group}').replace('{group}', group)}</span>
                 <span style="font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #e74c3c, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                   ${numbersStr}
                 </span>

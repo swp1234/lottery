@@ -19,5 +19,14 @@
   "frequency": { "title": "📊 Number Frequency Analysis", "frequent": "Frequently drawn numbers", "rare": "Never drawn numbers" },
   "alerts": { "duplicate": "Number already saved.", "confirmDelete": "Delete this number?", "confirmClearAll": "Delete all saved numbers?" },
   "days": { "sun": "Sun", "mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "suffix": "" },
-  "buttons": { "save": "Save", "saved": "Saved" }
+  "buttons": { "save": "Save", "saved": "Saved" },
+  "labels": { "none": "None" },
+  "results": {
+    "lotto": "Lotto 6/45 - {index}th",
+    "pension": "Pension Lottery - {index}th",
+    "group": "Group {group}",
+    "empty": "No saved numbers",
+    "lottoLabel": "Lotto 6/45",
+    "pensionLabel": "Pension Lottery"
+  }
 }

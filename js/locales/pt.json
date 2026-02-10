@@ -16,5 +16,17 @@
   "rec": { "title": "Experimente também" },
   "theme": { "toggle": "Alternar modo escuro" },
   "units": { "sets": "conjuntos" },
-  "frequency": { "title": "📊 Análise de Frequência de Números", "frequent": "Números frequentes", "rare": "Números nunca sorteados" }
+  "frequency": { "title": "📊 Análise de Frequência de Números", "frequent": "Números frequentes", "rare": "Números nunca sorteados" },
+  "alerts": { "duplicate": "Este número já está salvo.", "confirmDelete": "Excluir este número?", "confirmClearAll": "Excluir todos os números salvos?" },
+  "days": { "sun": "Dom", "mon": "Seg", "tue": "Ter", "wed": "Qua", "thu": "Qui", "fri": "Sex", "sat": "Sab", "suffix": "" },
+  "buttons": { "save": "Salvar", "saved": "Salvo" },
+  "labels": { "none": "Nenhum" },
+  "results": {
+    "lotto": "Loteria 6/45 - {index}º",
+    "pension": "Loteria de Pensão - {index}º",
+    "group": "Grupo {group}",
+    "empty": "Nenhum número salvo",
+    "lottoLabel": "Loteria 6/45",
+    "pensionLabel": "Loteria de Pensão"
+  }
 }
