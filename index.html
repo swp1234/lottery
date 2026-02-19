@@ -89,6 +89,7 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link" data-i18n="accessibility.skipMain">Skip to main content</a>
   <div class="app-loader" id="app-loader">
     <div class="loader-content">
       <div class="loader-emoji">🍀</div>
@@ -135,7 +136,7 @@
   </div>
 
   <!-- 메인 컨텐츠 -->
-  <main class="main-container">
+  <main class="main-container" id="main-content">
     <!-- 복권 타입 선택 -->
     <section class="type-section">
       <div class="type-buttons">
@@ -329,6 +330,8 @@
   <script src="js/app.js"></script>
   <!-- Social Share Buttons CSS & JS -->
   <style>
+      .skip-link { position: absolute; top: -40px; left: 0; background: #000; color: #fff; padding: 8px 16px; text-decoration: none; z-index: 10000; border-radius: 0 0 4px 0; font-size: 14px; transition: top 0.2s; }
+      .skip-link:focus { top: 0; }
       .share-section{display:flex;gap:8px;justify-content:center;margin:20px auto;flex-wrap:wrap;max-width:400px}
       .share-btn{min-height:44px;padding:10px 20px;border:none;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;font-family:inherit}
       .share-btn:hover{transform:translateY(-1px)}
