@@ -1,26 +1,111 @@
 {
-  "app": { "title": "Lottery Number Generator - Free Lucky Numbers | DopaBrain", "description": "Lotto 6/45 number generator, pension lottery lucky numbers, and winning number analysis." },
-  "header": { "title": "🍀 Lucky Numbers" },
-  "type": { "lotto": "Lotto 6/45", "pension": "Pension Lottery" },
-  "options": { "title": "Generation Options", "setCount": "Sets", "semiAuto": "Semi-Auto Mode", "semiAutoHint": "Select numbers to fix" },
-  "semiAuto": { "title": "Select Fixed Numbers", "desc": "Tap numbers to fix (max 5)", "label": "Fixed numbers:", "none": "None" },
-  "generate": { "button": "Generate Lucky Numbers", "results": "Generated Numbers", "empty": "Press the button to generate lucky numbers!" },
-  "simulation": { "title": "Winning Probability Simulation", "desc": "Based on the last 100 draws", "button": "Check Winning Grade" },
-  "premium": { "button": "AI Number Fortune Analysis", "badge": "PREMIUM", "title": "AI Number Deep Analysis" },
-  "saved": { "title": "Saved Numbers", "clear": "Clear All", "empty": "No saved numbers" },
-  "stats": { "title": "Statistics", "generated": "Generated", "saved": "Saved", "luckyDay": "Lucky Day" },
-  "analysis": { "title": "Number Analysis", "oddEven": "Odd/Even", "sum": "Sum", "range": "Range" },
-  "info": { "title": "📋 How to Use", "lotto": "Lotto 6/45: Auto-pick 6 numbers from 1-45", "pension": "Pension Lottery: Group 1-5, 6-digit number", "save": "Save: Save your favorite numbers", "analysisDesc": "Analysis: Odd/even ratio, sum, and more", "note": "Note: All numbers are randomly generated" },
-  "footer": { "text": "Good luck! 🍀" },
-  "ads": { "banner": "Advertisement", "interstitial": "Ad", "close": "Close" },
-  "rec": { "title": "Try these too" },
-  "theme": { "toggle": "Toggle dark mode" },
-  "units": { "sets": "sets" },
-  "frequency": { "title": "📊 Number Frequency Analysis", "frequent": "Frequently drawn numbers", "rare": "Never drawn numbers" },
-  "alerts": { "duplicate": "Number already saved.", "confirmDelete": "Delete this number?", "confirmClearAll": "Delete all saved numbers?" },
-  "days": { "sun": "Sun", "mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "suffix": "" },
-  "buttons": { "save": "Save", "saved": "Saved" },
-  "labels": { "none": "None" },
+  "app": {
+    "title": "Lottery Number Generator - Free Lucky Numbers | DopaBrain",
+    "description": "Lotto 6/45 number generator, pension lottery lucky numbers, and winning number analysis."
+  },
+  "header": {
+    "title": "🍀 Lucky Numbers"
+  },
+  "type": {
+    "lotto": "Lotto 6/45",
+    "pension": "Pension Lottery"
+  },
+  "options": {
+    "title": "Generation Options",
+    "setCount": "Sets",
+    "semiAuto": "Semi-Auto Mode",
+    "semiAutoHint": "Select numbers to fix"
+  },
+  "semiAuto": {
+    "title": "Select Fixed Numbers",
+    "desc": "Tap numbers to fix (max 5)",
+    "label": "Fixed numbers:",
+    "none": "None"
+  },
+  "generate": {
+    "button": "Generate Lucky Numbers",
+    "results": "Generated Numbers",
+    "empty": "Press the button to generate lucky numbers!"
+  },
+  "simulation": {
+    "title": "Winning Probability Simulation",
+    "desc": "Based on the last 100 draws",
+    "button": "Check Winning Grade"
+  },
+  "premium": {
+    "button": "AI Number Fortune Analysis",
+    "badge": "PREMIUM",
+    "title": "AI Number Deep Analysis"
+  },
+  "saved": {
+    "title": "Saved Numbers",
+    "clear": "Clear All",
+    "empty": "No saved numbers"
+  },
+  "stats": {
+    "title": "Statistics",
+    "generated": "Generated",
+    "saved": "Saved",
+    "luckyDay": "Lucky Day"
+  },
+  "analysis": {
+    "title": "Number Analysis",
+    "oddEven": "Odd/Even",
+    "sum": "Sum",
+    "range": "Range"
+  },
+  "info": {
+    "title": "📋 How to Use",
+    "lotto": "Lotto 6/45: Auto-pick 6 numbers from 1-45",
+    "pension": "Pension Lottery: Group 1-5, 6-digit number",
+    "save": "Save: Save your favorite numbers",
+    "analysisDesc": "Analysis: Odd/even ratio, sum, and more",
+    "note": "Note: All numbers are randomly generated"
+  },
+  "footer": {
+    "text": "Good luck! 🍀"
+  },
+  "ads": {
+    "banner": "Advertisement",
+    "interstitial": "Ad",
+    "close": "Close"
+  },
+  "rec": {
+    "title": "Try these too"
+  },
+  "theme": {
+    "toggle": "Toggle dark mode"
+  },
+  "units": {
+    "sets": "sets"
+  },
+  "frequency": {
+    "title": "📊 Number Frequency Analysis",
+    "frequent": "Frequently drawn numbers",
+    "rare": "Never drawn numbers"
+  },
+  "alerts": {
+    "duplicate": "Number already saved.",
+    "confirmDelete": "Delete this number?",
+    "confirmClearAll": "Delete all saved numbers?"
+  },
+  "days": {
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "suffix": ""
+  },
+  "buttons": {
+    "save": "Save",
+    "saved": "Saved"
+  },
+  "labels": {
+    "none": "None"
+  },
   "results": {
     "lotto": "Lotto 6/45 - {index}th",
     "pension": "Pension Lottery - {index}th",
@@ -28,5 +113,86 @@
     "empty": "No saved numbers",
     "lottoLabel": "Lotto 6/45",
     "pensionLabel": "Pension Lottery"
+  },
+  "setOpt": {
+    "1": "1 set",
+    "2": "2 sets",
+    "3": "3 sets",
+    "5": "5 sets",
+    "10": "10 sets"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copy URL",
+    "copied": "✅ Copied!"
+  },
+  "nav": {
+    "backHome": "DopaBrain Home"
+  },
+  "accessibility": {
+    "skipMain": "Skip to main content"
+  },
+  "sim": {
+    "heading": "Winning Grade Simulation",
+    "intro": "Simulation results based on the last 100 draws.",
+    "match": "{count} numbers matched",
+    "expected": "Expected: ~{freq} times (per 100 draws)",
+    "prizeAmount": "Prize: ~{prize}",
+    "noteTitle": "Analysis Info",
+    "note": "This simulation is based on statistical expected values. Actual probabilities may differ."
+  },
+  "prize": {
+    "p1": {
+      "label": "1st (Jackpot!)",
+      "freq": "~0",
+      "amount": "₩2-4B"
+    },
+    "p2": {
+      "label": "2nd (Big Win!)",
+      "freq": "~0",
+      "amount": "₩500M-1B"
+    },
+    "p3": {
+      "label": "3rd (High Win)",
+      "freq": "~0",
+      "amount": "₩1-2M"
+    },
+    "p4": {
+      "label": "4th (Winner)",
+      "freq": "~0",
+      "amount": "₩50K"
+    },
+    "p5": {
+      "label": "5th (Nice)",
+      "freq": "~2",
+      "amount": "₩5K"
+    }
+  },
+  "prem": {
+    "sumTitle": "Number Sum Analysis",
+    "sumOk": "(Optimal range ✅)",
+    "sumBad": "(Out of range ⚠️)",
+    "sumNote": "Historical winning sum averages about 130-140.",
+    "oddEvenTitle": "Odd/Even Ratio",
+    "oddEvenOk": "Balanced ratio ✅",
+    "oddEvenBad": "Skewed ratio ⚠️",
+    "highLowTitle": "High/Low Ratio",
+    "consTitle": "Consecutive Number Analysis",
+    "consFound": "Consecutive: {pairs} included",
+    "consNone": "No consecutive numbers",
+    "consNote": "About 60% of winning numbers include consecutive numbers.",
+    "fortuneTitle": "AI Fortune Message",
+    "groupTitle": "Group Analysis",
+    "groupDesc": "Group {group}. Each group has equal winning probability.",
+    "numTitle": "Number Characteristics",
+    "numDesc": "Each digit is drawn independently. All combinations have equal probability.",
+    "fortune": "Luck comes to those prepared. Today's numbers carry positive energy."
+  },
+  "luckyMsg": {
+    "m1": "This combination shows balanced distribution. 70% of winning numbers have similar patterns.",
+    "m2": "Stable odd/even ratio. 3:3 or 4:2 ratios statistically have higher odds.",
+    "m3": "The sum is in optimal range (100-175), making it a good combination.",
+    "m4": "Consecutive numbers positively affect winning probability.",
+    "m5": "Evenly distributed spacing makes this an ideal combination."
   }
 }

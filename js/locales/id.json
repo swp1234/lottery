@@ -1,26 +1,111 @@
 {
-  "app": { "title": "Generator Nomor Lotre - Nomor Keberuntungan Gratis | DopaBrain", "description": "Generator nomor Loto 6/45, nomor lotre pensiun yang beruntung, dan analisis nomor pemenang." },
-  "header": { "title": "🍀 Nomor Keberuntungan" },
-  "type": { "lotto": "Loto 6/45", "pension": "Lotre Pensiun" },
-  "options": { "title": "Opsi Pembuatan", "setCount": "Set", "semiAuto": "Mode Semi-Otomatis", "semiAutoHint": "Pilih nomor untuk menguncinya" },
-  "semiAuto": { "title": "Pilih Nomor yang Dikunci", "desc": "Ketuk nomor untuk menguncinya (maks 5)", "label": "Nomor terkunci:", "none": "Tidak ada" },
-  "generate": { "button": "Hasilkan Nomor Keberuntungan", "results": "Nomor yang Dihasilkan", "empty": "Tekan tombol untuk menghasilkan nomor keberuntungan!" },
-  "simulation": { "title": "Simulasi Probabilitas Menang", "desc": "Berdasarkan 100 undian terakhir", "button": "Periksa Tingkat Pemenang" },
-  "premium": { "button": "Analisis Keberuntungan Nomor AI", "badge": "PREMIUM", "title": "Analisis Mendalam Nomor AI" },
-  "saved": { "title": "Nomor Tersimpan", "clear": "Hapus Semua", "empty": "Tidak ada nomor tersimpan" },
-  "stats": { "title": "Statistik", "generated": "Dihasilkan", "saved": "Tersimpan", "luckyDay": "Hari Keberuntungan" },
-  "analysis": { "title": "Analisis Nomor", "oddEven": "Ganjil/Genap", "sum": "Jumlah", "range": "Rentang" },
-  "info": { "title": "📋 Cara Menggunakan", "lotto": "Loto 6/45: Pilih 6 nomor dari 1-45 secara otomatis", "pension": "Lotre Pensiun: Grup 1-5, angka 6 digit", "save": "Simpan: Simpan nomor favorit Anda", "analysisDesc": "Analisis: Rasio ganjil/genap, jumlah, dan lainnya", "note": "Catatan: Semua nomor dihasilkan secara acak" },
-  "footer": { "text": "Semoga beruntung! 🍀" },
-  "ads": { "banner": "Iklan", "interstitial": "Iklan", "close": "Tutup" },
-  "rec": { "title": "Coba juga" },
-  "theme": { "toggle": "Aktifkan mode gelap" },
-  "units": { "sets": "set" },
-  "frequency": { "title": "📊 Analisis Frekuensi Nomor", "frequent": "Nomor sering keluar", "rare": "Nomor jarang keluar" },
-  "alerts": { "duplicate": "Nomor ini sudah tersimpan.", "confirmDelete": "Hapus nomor ini?", "confirmClearAll": "Hapus semua nomor tersimpan?" },
-  "days": { "sun": "Ming", "mon": "Sen", "tue": "Sel", "wed": "Rab", "thu": "Kam", "fri": "Jum", "sat": "Sab", "suffix": "" },
-  "buttons": { "save": "Simpan", "saved": "Tersimpan" },
-  "labels": { "none": "Tidak ada" },
+  "app": {
+    "title": "Generator Nomor Lotre - Nomor Keberuntungan Gratis | DopaBrain",
+    "description": "Generator nomor Loto 6/45, nomor lotre pensiun yang beruntung, dan analisis nomor pemenang."
+  },
+  "header": {
+    "title": "🍀 Nomor Keberuntungan"
+  },
+  "type": {
+    "lotto": "Loto 6/45",
+    "pension": "Lotre Pensiun"
+  },
+  "options": {
+    "title": "Opsi Pembuatan",
+    "setCount": "Set",
+    "semiAuto": "Mode Semi-Otomatis",
+    "semiAutoHint": "Pilih nomor untuk menguncinya"
+  },
+  "semiAuto": {
+    "title": "Pilih Nomor yang Dikunci",
+    "desc": "Ketuk nomor untuk menguncinya (maks 5)",
+    "label": "Nomor terkunci:",
+    "none": "Tidak ada"
+  },
+  "generate": {
+    "button": "Hasilkan Nomor Keberuntungan",
+    "results": "Nomor yang Dihasilkan",
+    "empty": "Tekan tombol untuk menghasilkan nomor keberuntungan!"
+  },
+  "simulation": {
+    "title": "Simulasi Probabilitas Menang",
+    "desc": "Berdasarkan 100 undian terakhir",
+    "button": "Periksa Tingkat Pemenang"
+  },
+  "premium": {
+    "button": "Analisis Keberuntungan Nomor AI",
+    "badge": "PREMIUM",
+    "title": "Analisis Mendalam Nomor AI"
+  },
+  "saved": {
+    "title": "Nomor Tersimpan",
+    "clear": "Hapus Semua",
+    "empty": "Tidak ada nomor tersimpan"
+  },
+  "stats": {
+    "title": "Statistik",
+    "generated": "Dihasilkan",
+    "saved": "Tersimpan",
+    "luckyDay": "Hari Keberuntungan"
+  },
+  "analysis": {
+    "title": "Analisis Nomor",
+    "oddEven": "Ganjil/Genap",
+    "sum": "Jumlah",
+    "range": "Rentang"
+  },
+  "info": {
+    "title": "📋 Cara Menggunakan",
+    "lotto": "Loto 6/45: Pilih 6 nomor dari 1-45 secara otomatis",
+    "pension": "Lotre Pensiun: Grup 1-5, angka 6 digit",
+    "save": "Simpan: Simpan nomor favorit Anda",
+    "analysisDesc": "Analisis: Rasio ganjil/genap, jumlah, dan lainnya",
+    "note": "Catatan: Semua nomor dihasilkan secara acak"
+  },
+  "footer": {
+    "text": "Semoga beruntung! 🍀"
+  },
+  "ads": {
+    "banner": "Iklan",
+    "interstitial": "Iklan",
+    "close": "Tutup"
+  },
+  "rec": {
+    "title": "Coba juga"
+  },
+  "theme": {
+    "toggle": "Aktifkan mode gelap"
+  },
+  "units": {
+    "sets": "set"
+  },
+  "frequency": {
+    "title": "📊 Analisis Frekuensi Nomor",
+    "frequent": "Nomor sering keluar",
+    "rare": "Nomor jarang keluar"
+  },
+  "alerts": {
+    "duplicate": "Nomor ini sudah tersimpan.",
+    "confirmDelete": "Hapus nomor ini?",
+    "confirmClearAll": "Hapus semua nomor tersimpan?"
+  },
+  "days": {
+    "sun": "Ming",
+    "mon": "Sen",
+    "tue": "Sel",
+    "wed": "Rab",
+    "thu": "Kam",
+    "fri": "Jum",
+    "sat": "Sab",
+    "suffix": ""
+  },
+  "buttons": {
+    "save": "Simpan",
+    "saved": "Tersimpan"
+  },
+  "labels": {
+    "none": "Tidak ada"
+  },
   "results": {
     "lotto": "Loto 6/45 - {index}ke",
     "pension": "Lotre Pensiun - {index}ke",
@@ -28,5 +113,86 @@
     "empty": "Tidak ada nomor tersimpan",
     "lottoLabel": "Loto 6/45",
     "pensionLabel": "Lotre Pensiun"
+  },
+  "setOpt": {
+    "1": "1 set",
+    "2": "2 set",
+    "3": "3 set",
+    "5": "5 set",
+    "10": "10 set"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Salin URL",
+    "copied": "✅ Tersalin!"
+  },
+  "nav": {
+    "backHome": "DopaBrain Beranda"
+  },
+  "accessibility": {
+    "skipMain": "Langsung ke konten utama"
+  },
+  "sim": {
+    "heading": "Simulasi Hadiah",
+    "intro": "Hasil simulasi berdasarkan 100 undian terakhir.",
+    "match": "{count} nomor cocok",
+    "expected": "Diperkirakan: ~{freq} kali (per 100 undian)",
+    "prizeAmount": "Hadiah: ~{prize}",
+    "noteTitle": "Informasi",
+    "note": "Simulasi ini berdasarkan nilai statistik. Probabilitas aktual mungkin berbeda."
+  },
+  "prize": {
+    "p1": {
+      "label": "1st (Jackpot!)",
+      "freq": "~0",
+      "amount": "₩2-4M"
+    },
+    "p2": {
+      "label": "2nd (Besar!)",
+      "freq": "~0",
+      "amount": "₩500M-1B"
+    },
+    "p3": {
+      "label": "3rd (Tinggi)",
+      "freq": "~0",
+      "amount": "₩1-2M"
+    },
+    "p4": {
+      "label": "4th (Menang)",
+      "freq": "~0",
+      "amount": "₩50K"
+    },
+    "p5": {
+      "label": "5th (Lumayan)",
+      "freq": "~2",
+      "amount": "₩5K"
+    }
+  },
+  "prem": {
+    "sumTitle": "Analisis Jumlah",
+    "sumOk": "(Rentang optimal ✅)",
+    "sumBad": "(Di luar rentang ⚠️)",
+    "sumNote": "Rata-rata historis jumlah pemenang ~130-140.",
+    "oddEvenTitle": "Rasio Ganjil/Genap",
+    "oddEvenOk": "Rasio seimbang ✅",
+    "oddEvenBad": "Rasio tidak seimbang ⚠️",
+    "highLowTitle": "Rasio Tinggi/Rendah",
+    "consTitle": "Analisis Berurutan",
+    "consFound": "Berurutan: {pairs} termasuk",
+    "consNone": "Tidak ada nomor berurutan",
+    "consNote": "~60% nomor pemenang termasuk berurutan.",
+    "fortuneTitle": "Pesan Keberuntungan AI",
+    "groupTitle": "Analisis Grup",
+    "groupDesc": "Grup {group}. Setiap grup memiliki probabilitas sama.",
+    "numTitle": "Karakteristik Nomor",
+    "numDesc": "Setiap digit diundi secara independen. Semua kombinasi memiliki probabilitas sama.",
+    "fortune": "Keberuntungan berpihak pada yang siap. Nomor hari ini membawa energi positif."
+  },
+  "luckyMsg": {
+    "m1": "Kombinasi ini menunjukkan distribusi seimbang. 70% pemenang memiliki pola serupa.",
+    "m2": "Rasio ganjil/genap stabil. Rasio 3:3 atau 4:2 secara statistik lebih berpeluang.",
+    "m3": "Jumlah dalam rentang optimal (100-175), kombinasi bagus.",
+    "m4": "Nomor berurutan mempengaruhi probabilitas secara positif.",
+    "m5": "Jarak terdistribusi merata, kombinasi ideal."
   }
 }

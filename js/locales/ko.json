@@ -1,26 +1,111 @@
 {
-  "app": { "title": "로또 번호 생성기·연금복권 - 무료 번호 추천 | DopaBrain", "description": "로또 6/45 번호 생성기, 연금복권 행운 번호, 당첨 번호 통계 분석." },
-  "header": { "title": "🍀 행운의 번호" },
-  "type": { "lotto": "로또 6/45", "pension": "연금복권" },
-  "options": { "title": "생성 옵션", "setCount": "세트 수", "semiAuto": "반자동 모드", "semiAutoHint": "고정할 번호를 선택하세요" },
-  "semiAuto": { "title": "고정 번호 선택", "desc": "고정할 번호를 터치하세요 (최대 5개)", "label": "고정 번호:", "none": "없음" },
-  "generate": { "button": "행운의 번호 생성", "results": "생성된 번호", "empty": "버튼을 눌러 행운의 번호를 생성하세요!" },
-  "simulation": { "title": "당첨 확률 시뮬레이션", "desc": "지난 100회차 기반 시뮬레이션", "button": "당첨 등급 확인" },
-  "premium": { "button": "AI 번호 운세 분석", "badge": "PREMIUM", "title": "AI 번호 심층 분석" },
-  "saved": { "title": "저장된 번호", "clear": "전체 삭제", "empty": "저장된 번호가 없습니다" },
-  "stats": { "title": "통계", "generated": "생성한 번호", "saved": "저장한 번호", "luckyDay": "행운의 요일" },
-  "analysis": { "title": "생성된 번호 분석", "oddEven": "홀수/짝수", "sum": "번호 합계", "range": "번호 범위" },
-  "info": { "title": "📋 이용 안내", "lotto": "로또 6/45: 1~45 중 6개 번호 자동 선택", "pension": "연금복권: 1조~5조, 6자리 번호 생성", "save": "저장 기능: 마음에 드는 번호 저장 가능", "analysisDesc": "번호 분석: 홀짝 비율, 합계 등 통계 제공", "note": "참고: 모든 번호는 무작위로 생성됩니다" },
-  "footer": { "text": "행운을 빕니다! 🍀" },
-  "ads": { "banner": "광고 영역", "interstitial": "광고", "close": "닫기" },
-  "rec": { "title": "이것도 해보세요" },
-  "theme": { "toggle": "다크모드 전환" },
-  "units": { "sets": "개" },
-  "frequency": { "title": "📊 번호 빈도 분석", "frequent": "자주 나온 번호", "rare": "아직 안 나온 번호" },
-  "alerts": { "duplicate": "이미 저장된 번호입니다.", "confirmDelete": "이 번호를 삭제하시겠습니까?", "confirmClearAll": "저장된 모든 번호를 삭제하시겠습니까?" },
-  "days": { "sun": "일", "mon": "월", "tue": "화", "wed": "수", "thu": "목", "fri": "금", "sat": "토", "suffix": "요일" },
-  "buttons": { "save": "저장", "saved": "저장됨" },
-  "labels": { "none": "없음" },
+  "app": {
+    "title": "로또 번호 생성기·연금복권 - 무료 번호 추천 | DopaBrain",
+    "description": "로또 6/45 번호 생성기, 연금복권 행운 번호, 당첨 번호 통계 분석."
+  },
+  "header": {
+    "title": "🍀 행운의 번호"
+  },
+  "type": {
+    "lotto": "로또 6/45",
+    "pension": "연금복권"
+  },
+  "options": {
+    "title": "생성 옵션",
+    "setCount": "세트 수",
+    "semiAuto": "반자동 모드",
+    "semiAutoHint": "고정할 번호를 선택하세요"
+  },
+  "semiAuto": {
+    "title": "고정 번호 선택",
+    "desc": "고정할 번호를 터치하세요 (최대 5개)",
+    "label": "고정 번호:",
+    "none": "없음"
+  },
+  "generate": {
+    "button": "행운의 번호 생성",
+    "results": "생성된 번호",
+    "empty": "버튼을 눌러 행운의 번호를 생성하세요!"
+  },
+  "simulation": {
+    "title": "당첨 확률 시뮬레이션",
+    "desc": "지난 100회차 기반 시뮬레이션",
+    "button": "당첨 등급 확인"
+  },
+  "premium": {
+    "button": "AI 번호 운세 분석",
+    "badge": "PREMIUM",
+    "title": "AI 번호 심층 분석"
+  },
+  "saved": {
+    "title": "저장된 번호",
+    "clear": "전체 삭제",
+    "empty": "저장된 번호가 없습니다"
+  },
+  "stats": {
+    "title": "통계",
+    "generated": "생성한 번호",
+    "saved": "저장한 번호",
+    "luckyDay": "행운의 요일"
+  },
+  "analysis": {
+    "title": "생성된 번호 분석",
+    "oddEven": "홀수/짝수",
+    "sum": "번호 합계",
+    "range": "번호 범위"
+  },
+  "info": {
+    "title": "📋 이용 안내",
+    "lotto": "로또 6/45: 1~45 중 6개 번호 자동 선택",
+    "pension": "연금복권: 1조~5조, 6자리 번호 생성",
+    "save": "저장 기능: 마음에 드는 번호 저장 가능",
+    "analysisDesc": "번호 분석: 홀짝 비율, 합계 등 통계 제공",
+    "note": "참고: 모든 번호는 무작위로 생성됩니다"
+  },
+  "footer": {
+    "text": "행운을 빕니다! 🍀"
+  },
+  "ads": {
+    "banner": "광고 영역",
+    "interstitial": "광고",
+    "close": "닫기"
+  },
+  "rec": {
+    "title": "이것도 해보세요"
+  },
+  "theme": {
+    "toggle": "다크모드 전환"
+  },
+  "units": {
+    "sets": "개"
+  },
+  "frequency": {
+    "title": "📊 번호 빈도 분석",
+    "frequent": "자주 나온 번호",
+    "rare": "아직 안 나온 번호"
+  },
+  "alerts": {
+    "duplicate": "이미 저장된 번호입니다.",
+    "confirmDelete": "이 번호를 삭제하시겠습니까?",
+    "confirmClearAll": "저장된 모든 번호를 삭제하시겠습니까?"
+  },
+  "days": {
+    "sun": "일",
+    "mon": "월",
+    "tue": "화",
+    "wed": "수",
+    "thu": "목",
+    "fri": "금",
+    "sat": "토",
+    "suffix": "요일"
+  },
+  "buttons": {
+    "save": "저장",
+    "saved": "저장됨"
+  },
+  "labels": {
+    "none": "없음"
+  },
   "results": {
     "lotto": "로또 6/45 - {index}번째",
     "pension": "연금복권 - {index}번째",
@@ -28,5 +113,86 @@
     "empty": "저장된 번호가 없습니다",
     "lottoLabel": "로또 6/45",
     "pensionLabel": "연금복권"
+  },
+  "setOpt": {
+    "1": "1개",
+    "2": "2개",
+    "3": "3개",
+    "5": "5개",
+    "10": "10개"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 URL 복사",
+    "copied": "✅ 복사됨!"
+  },
+  "nav": {
+    "backHome": "DopaBrain 홈"
+  },
+  "accessibility": {
+    "skipMain": "본문 바로가기"
+  },
+  "sim": {
+    "heading": "당첨 등급 시뮬레이션",
+    "intro": "지난 100회차 기반 시뮬레이션 결과입니다.",
+    "match": "{count}개 번호 일치",
+    "expected": "기댓값: 약 {freq}회 (매 100회당)",
+    "prizeAmount": "당첨금: 약 {prize}",
+    "noteTitle": "분석 정보",
+    "note": "본 시뮬레이션은 통계적 기댓값을 기반으로 합니다. 실제 당첨 확률은 다를 수 있습니다."
+  },
+  "prize": {
+    "p1": {
+      "label": "1등 (대박!)",
+      "freq": "약 0회",
+      "amount": "20~40억원"
+    },
+    "p2": {
+      "label": "2등 (대당첨!)",
+      "freq": "약 0회",
+      "amount": "5~10억원"
+    },
+    "p3": {
+      "label": "3등 (고액당첨)",
+      "freq": "약 0회",
+      "amount": "1~2백만원"
+    },
+    "p4": {
+      "label": "4등 (당첨)",
+      "freq": "약 0회",
+      "amount": "5만원"
+    },
+    "p5": {
+      "label": "5등 (쏠쏠한)",
+      "freq": "약 2회",
+      "amount": "5천원"
+    }
+  },
+  "prem": {
+    "sumTitle": "번호 합계 분석",
+    "sumOk": "(적정 범위 ✅)",
+    "sumBad": "(범위 초과 ⚠️)",
+    "sumNote": "역대 당첨 번호의 합계 평균은 약 130~140입니다.",
+    "oddEvenTitle": "홀짝 비율",
+    "oddEvenOk": "균형 잡힌 비율입니다 ✅",
+    "oddEvenBad": "편중된 비율입니다 ⚠️",
+    "highLowTitle": "고저 비율",
+    "consTitle": "연번 분석",
+    "consFound": "연번: {pairs} 포함",
+    "consNone": "연번 없음",
+    "consNote": "역대 당첨 번호의 약 60%에 연번이 포함되어 있습니다.",
+    "fortuneTitle": "AI 운세 메시지",
+    "groupTitle": "조 분석",
+    "groupDesc": "{group}조 번호입니다. 연금복권은 각 조마다 동일한 당첨 확률을 가집니다.",
+    "numTitle": "번호 특성",
+    "numDesc": "6자리 번호의 각 자리는 독립적으로 추첨됩니다. 모든 조합이 동일한 확률을 가집니다.",
+    "fortune": "행운은 준비된 자에게 찾아옵니다. 오늘의 번호가 좋은 에너지를 담고 있습니다."
+  },
+  "luckyMsg": {
+    "m1": "이 번호 조합은 균형 잡힌 분포를 보입니다. 역대 당첨 번호의 70%가 유사한 패턴입니다.",
+    "m2": "홀짝 비율이 안정적입니다. 통계적으로 3:3 또는 4:2 비율의 당첨 확률이 높습니다.",
+    "m3": "번호 합계가 적정 범위(100~175)에 있어 좋은 조합입니다.",
+    "m4": "연번이 포함되어 있으면 당첨 확률에 긍정적 영향을 줍니다.",
+    "m5": "번호 간 간격이 고르게 분포되어 있어 이상적인 조합입니다."
   }
 }

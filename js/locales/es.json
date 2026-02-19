@@ -1,26 +1,111 @@
 {
-  "app": { "title": "Generador de Números de Lotería - Números de Suerte Gratuitos | DopaBrain", "description": "Generador de números Lotto 6/45, números de suerte de lotería de pensiones y análisis de números ganadores." },
-  "header": { "title": "🍀 Números de Suerte" },
-  "type": { "lotto": "Lotto 6/45", "pension": "Lotería de Pensiones" },
-  "options": { "title": "Opciones de Generación", "setCount": "Juegos", "semiAuto": "Modo Semi-Automático", "semiAutoHint": "Selecciona números para fijar" },
-  "semiAuto": { "title": "Seleccionar Números Fijos", "desc": "Toca números para fijar (máx 5)", "label": "Números fijos:", "none": "Ninguno" },
-  "generate": { "button": "Generar Números de Suerte", "results": "Números Generados", "empty": "¡Presiona el botón para generar números de suerte!" },
-  "simulation": { "title": "Simulación de Probabilidad de Ganancias", "desc": "Basado en los últimos 100 sorteos", "button": "Verificar Grado Ganador" },
-  "premium": { "button": "Análisis de Fortuna de Números de IA", "badge": "PREMIUM", "title": "Análisis Profundo de Números de IA" },
-  "saved": { "title": "Números Guardados", "clear": "Limpiar Todo", "empty": "Sin números guardados" },
-  "stats": { "title": "Estadísticas", "generated": "Generados", "saved": "Guardados", "luckyDay": "Día de Suerte" },
-  "analysis": { "title": "Análisis de Números", "oddEven": "Impar/Par", "sum": "Suma", "range": "Rango" },
-  "info": { "title": "📋 Cómo Usar", "lotto": "Lotto 6/45: Selecciona automáticamente 6 números del 1-45", "pension": "Lotería de Pensiones: Grupo 1-5, número de 6 dígitos", "save": "Guardar: Guarda tus números favoritos", "analysisDesc": "Análisis: Razón impar/par, suma y más", "note": "Nota: Todos los números se generan aleatoriamente" },
-  "footer": { "text": "¡Buena suerte! 🍀" },
-  "ads": { "banner": "Publicidad", "interstitial": "Anuncio", "close": "Cerrar" },
-  "rec": { "title": "Prueba estos también" },
-  "theme": { "toggle": "Alternar modo oscuro" },
-  "units": { "sets": "juegos" },
-  "frequency": { "title": "📊 Análisis de Frecuencia de Números", "frequent": "Números frecuentes", "rare": "Números nunca dibujados" },
-  "alerts": { "duplicate": "Este número ya está guardado.", "confirmDelete": "¿Eliminar este número?", "confirmClearAll": "¿Eliminar todos los números guardados?" },
-  "days": { "sun": "Dom", "mon": "Lun", "tue": "Mar", "wed": "Mié", "thu": "Jue", "fri": "Vie", "sat": "Sáb", "suffix": "" },
-  "buttons": { "save": "Guardar", "saved": "Guardado" },
-  "labels": { "none": "Ninguno" },
+  "app": {
+    "title": "Generador de Números de Lotería - Números de Suerte Gratuitos | DopaBrain",
+    "description": "Generador de números Lotto 6/45, números de suerte de lotería de pensiones y análisis de números ganadores."
+  },
+  "header": {
+    "title": "🍀 Números de Suerte"
+  },
+  "type": {
+    "lotto": "Lotto 6/45",
+    "pension": "Lotería de Pensiones"
+  },
+  "options": {
+    "title": "Opciones de Generación",
+    "setCount": "Juegos",
+    "semiAuto": "Modo Semi-Automático",
+    "semiAutoHint": "Selecciona números para fijar"
+  },
+  "semiAuto": {
+    "title": "Seleccionar Números Fijos",
+    "desc": "Toca números para fijar (máx 5)",
+    "label": "Números fijos:",
+    "none": "Ninguno"
+  },
+  "generate": {
+    "button": "Generar Números de Suerte",
+    "results": "Números Generados",
+    "empty": "¡Presiona el botón para generar números de suerte!"
+  },
+  "simulation": {
+    "title": "Simulación de Probabilidad de Ganancias",
+    "desc": "Basado en los últimos 100 sorteos",
+    "button": "Verificar Grado Ganador"
+  },
+  "premium": {
+    "button": "Análisis de Fortuna de Números de IA",
+    "badge": "PREMIUM",
+    "title": "Análisis Profundo de Números de IA"
+  },
+  "saved": {
+    "title": "Números Guardados",
+    "clear": "Limpiar Todo",
+    "empty": "Sin números guardados"
+  },
+  "stats": {
+    "title": "Estadísticas",
+    "generated": "Generados",
+    "saved": "Guardados",
+    "luckyDay": "Día de Suerte"
+  },
+  "analysis": {
+    "title": "Análisis de Números",
+    "oddEven": "Impar/Par",
+    "sum": "Suma",
+    "range": "Rango"
+  },
+  "info": {
+    "title": "📋 Cómo Usar",
+    "lotto": "Lotto 6/45: Selecciona automáticamente 6 números del 1-45",
+    "pension": "Lotería de Pensiones: Grupo 1-5, número de 6 dígitos",
+    "save": "Guardar: Guarda tus números favoritos",
+    "analysisDesc": "Análisis: Razón impar/par, suma y más",
+    "note": "Nota: Todos los números se generan aleatoriamente"
+  },
+  "footer": {
+    "text": "¡Buena suerte! 🍀"
+  },
+  "ads": {
+    "banner": "Publicidad",
+    "interstitial": "Anuncio",
+    "close": "Cerrar"
+  },
+  "rec": {
+    "title": "Prueba estos también"
+  },
+  "theme": {
+    "toggle": "Alternar modo oscuro"
+  },
+  "units": {
+    "sets": "juegos"
+  },
+  "frequency": {
+    "title": "📊 Análisis de Frecuencia de Números",
+    "frequent": "Números frecuentes",
+    "rare": "Números nunca dibujados"
+  },
+  "alerts": {
+    "duplicate": "Este número ya está guardado.",
+    "confirmDelete": "¿Eliminar este número?",
+    "confirmClearAll": "¿Eliminar todos los números guardados?"
+  },
+  "days": {
+    "sun": "Dom",
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mié",
+    "thu": "Jue",
+    "fri": "Vie",
+    "sat": "Sáb",
+    "suffix": ""
+  },
+  "buttons": {
+    "save": "Guardar",
+    "saved": "Guardado"
+  },
+  "labels": {
+    "none": "Ninguno"
+  },
   "results": {
     "lotto": "Lotto 6/45 - {index}º",
     "pension": "Lotería de Pensiones - {index}º",
@@ -28,5 +113,86 @@
     "empty": "Sin números guardados",
     "lottoLabel": "Lotto 6/45",
     "pensionLabel": "Lotería de Pensiones"
+  },
+  "setOpt": {
+    "1": "1 grupo",
+    "2": "2 grupos",
+    "3": "3 grupos",
+    "5": "5 grupos",
+    "10": "10 grupos"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copiar URL",
+    "copied": "✅ ¡Copiado!"
+  },
+  "nav": {
+    "backHome": "DopaBrain Inicio"
+  },
+  "accessibility": {
+    "skipMain": "Saltar al contenido principal"
+  },
+  "sim": {
+    "heading": "Simulación de premios",
+    "intro": "Resultados basados en los últimos 100 sorteos.",
+    "match": "{count} números coinciden",
+    "expected": "Esperado: ~{freq} veces (cada 100 sorteos)",
+    "prizeAmount": "Premio: ~{prize}",
+    "noteTitle": "Información",
+    "note": "Esta simulación se basa en valores estadísticos. Las probabilidades reales pueden variar."
+  },
+  "prize": {
+    "p1": {
+      "label": "1º (¡Jackpot!)",
+      "freq": "~0",
+      "amount": "₩2-4B"
+    },
+    "p2": {
+      "label": "2º (¡Gran premio!)",
+      "freq": "~0",
+      "amount": "₩500M-1B"
+    },
+    "p3": {
+      "label": "3º (Alto premio)",
+      "freq": "~0",
+      "amount": "₩1-2M"
+    },
+    "p4": {
+      "label": "4º (Ganador)",
+      "freq": "~0",
+      "amount": "₩50K"
+    },
+    "p5": {
+      "label": "5º (Bien)",
+      "freq": "~2",
+      "amount": "₩5K"
+    }
+  },
+  "prem": {
+    "sumTitle": "Análisis de suma",
+    "sumOk": "(Rango óptimo ✅)",
+    "sumBad": "(Fuera de rango ⚠️)",
+    "sumNote": "El promedio histórico de sumas ganadoras es ~130-140.",
+    "oddEvenTitle": "Ratio par/impar",
+    "oddEvenOk": "Ratio equilibrado ✅",
+    "oddEvenBad": "Ratio sesgado ⚠️",
+    "highLowTitle": "Ratio alto/bajo",
+    "consTitle": "Análisis de consecutivos",
+    "consFound": "Consecutivos: {pairs} incluidos",
+    "consNone": "Sin números consecutivos",
+    "consNote": "~60% de números ganadores incluyen consecutivos.",
+    "fortuneTitle": "Mensaje de fortuna AI",
+    "groupTitle": "Análisis de grupo",
+    "groupDesc": "Grupo {group}. Cada grupo tiene igual probabilidad.",
+    "numTitle": "Características del número",
+    "numDesc": "Cada dígito se sortea independientemente. Todas las combinaciones tienen igual probabilidad.",
+    "fortune": "La suerte favorece a los preparados. Los números de hoy tienen energía positiva."
+  },
+  "luckyMsg": {
+    "m1": "Distribución equilibrada. El 70% de ganadores tiene patrones similares.",
+    "m2": "Ratio par/impar estable. Las ratios 3:3 o 4:2 tienen más probabilidades.",
+    "m3": "La suma está en rango óptimo (100-175), buena combinación.",
+    "m4": "Los números consecutivos influyen positivamente.",
+    "m5": "Distribución uniforme del espaciado, combinación ideal."
   }
 }

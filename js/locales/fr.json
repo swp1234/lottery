@@ -1,26 +1,111 @@
 {
-  "app": { "title": "Générateur de Numéros de Loterie - Numéros Chanceux Gratuits | DopaBrain", "description": "Générateur de numéros Lotto 6/45, numéros de loterie retraite chanceux et analyse des numéros gagnants." },
-  "header": { "title": "🍀 Numéros Chanceux" },
-  "type": { "lotto": "Lotto 6/45", "pension": "Loterie Retraite" },
-  "options": { "title": "Options de Génération", "setCount": "Séries", "semiAuto": "Mode Semi-Auto", "semiAutoHint": "Sélectionne les numéros à fixer" },
-  "semiAuto": { "title": "Sélectionne les Numéros Fixes", "desc": "Tape les numéros pour fixer (max 5)", "label": "Numéros fixes:", "none": "Aucun" },
-  "generate": { "button": "Générer les Numéros Chanceux", "results": "Numéros Générés", "empty": "Appuie sur le bouton pour générer les numéros chanceux!" },
-  "simulation": { "title": "Simulation de la Probabilité de Gain", "desc": "Basée sur les 100 derniers tirages", "button": "Vérifier le Classement des Gagnants" },
-  "premium": { "button": "Analyse de Fortune des Numéros IA", "badge": "PREMIUM", "title": "Analyse Profonde des Numéros IA" },
-  "saved": { "title": "Numéros Enregistrés", "clear": "Tout Effacer", "empty": "Aucun numéro enregistré" },
-  "stats": { "title": "Statistiques", "generated": "Générés", "saved": "Enregistrés", "luckyDay": "Jour Chanceux" },
-  "analysis": { "title": "Analyse des Numéros", "oddEven": "Impair/Pair", "sum": "Somme", "range": "Plage" },
-  "info": { "title": "📋 Comment Utiliser", "lotto": "Lotto 6/45: Sélectionne automatiquement 6 numéros de 1 à 45", "pension": "Loterie Retraite: Groupes 1-5, numéro à 6 chiffres", "save": "Enregistrement: Enregistre tes numéros préférés", "analysisDesc": "Analyse: Ratio impair/pair, somme, et plus", "note": "Remarque: Tous les numéros sont générés aléatoirement" },
-  "footer": { "text": "Bonne chance! 🍀" },
-  "ads": { "banner": "Publicité", "interstitial": "Annonce", "close": "Fermer" },
-  "rec": { "title": "Essaie aussi" },
-  "theme": { "toggle": "Basculer le mode sombre" },
-  "units": { "sets": "séries" },
-  "frequency": { "title": "📊 Analyse de la Fréquence des Numéros", "frequent": "Numéros fréquemment tirés", "rare": "Numéros jamais tirés" },
-  "alerts": { "duplicate": "Ce numéro est déjà enregistré.", "confirmDelete": "Supprimer ce numéro?", "confirmClearAll": "Supprimer tous les numéros enregistrés?" },
-  "days": { "sun": "Dim", "mon": "Lun", "tue": "Mar", "wed": "Mer", "thu": "Jeu", "fri": "Ven", "sat": "Sam", "suffix": "" },
-  "buttons": { "save": "Enregistrer", "saved": "Enregistré" },
-  "labels": { "none": "Aucun" },
+  "app": {
+    "title": "Générateur de Numéros de Loterie - Numéros Chanceux Gratuits | DopaBrain",
+    "description": "Générateur de numéros Lotto 6/45, numéros de loterie retraite chanceux et analyse des numéros gagnants."
+  },
+  "header": {
+    "title": "🍀 Numéros Chanceux"
+  },
+  "type": {
+    "lotto": "Lotto 6/45",
+    "pension": "Loterie Retraite"
+  },
+  "options": {
+    "title": "Options de Génération",
+    "setCount": "Séries",
+    "semiAuto": "Mode Semi-Auto",
+    "semiAutoHint": "Sélectionne les numéros à fixer"
+  },
+  "semiAuto": {
+    "title": "Sélectionne les Numéros Fixes",
+    "desc": "Tape les numéros pour fixer (max 5)",
+    "label": "Numéros fixes:",
+    "none": "Aucun"
+  },
+  "generate": {
+    "button": "Générer les Numéros Chanceux",
+    "results": "Numéros Générés",
+    "empty": "Appuie sur le bouton pour générer les numéros chanceux!"
+  },
+  "simulation": {
+    "title": "Simulation de la Probabilité de Gain",
+    "desc": "Basée sur les 100 derniers tirages",
+    "button": "Vérifier le Classement des Gagnants"
+  },
+  "premium": {
+    "button": "Analyse de Fortune des Numéros IA",
+    "badge": "PREMIUM",
+    "title": "Analyse Profonde des Numéros IA"
+  },
+  "saved": {
+    "title": "Numéros Enregistrés",
+    "clear": "Tout Effacer",
+    "empty": "Aucun numéro enregistré"
+  },
+  "stats": {
+    "title": "Statistiques",
+    "generated": "Générés",
+    "saved": "Enregistrés",
+    "luckyDay": "Jour Chanceux"
+  },
+  "analysis": {
+    "title": "Analyse des Numéros",
+    "oddEven": "Impair/Pair",
+    "sum": "Somme",
+    "range": "Plage"
+  },
+  "info": {
+    "title": "📋 Comment Utiliser",
+    "lotto": "Lotto 6/45: Sélectionne automatiquement 6 numéros de 1 à 45",
+    "pension": "Loterie Retraite: Groupes 1-5, numéro à 6 chiffres",
+    "save": "Enregistrement: Enregistre tes numéros préférés",
+    "analysisDesc": "Analyse: Ratio impair/pair, somme, et plus",
+    "note": "Remarque: Tous les numéros sont générés aléatoirement"
+  },
+  "footer": {
+    "text": "Bonne chance! 🍀"
+  },
+  "ads": {
+    "banner": "Publicité",
+    "interstitial": "Annonce",
+    "close": "Fermer"
+  },
+  "rec": {
+    "title": "Essaie aussi"
+  },
+  "theme": {
+    "toggle": "Basculer le mode sombre"
+  },
+  "units": {
+    "sets": "séries"
+  },
+  "frequency": {
+    "title": "📊 Analyse de la Fréquence des Numéros",
+    "frequent": "Numéros fréquemment tirés",
+    "rare": "Numéros jamais tirés"
+  },
+  "alerts": {
+    "duplicate": "Ce numéro est déjà enregistré.",
+    "confirmDelete": "Supprimer ce numéro?",
+    "confirmClearAll": "Supprimer tous les numéros enregistrés?"
+  },
+  "days": {
+    "sun": "Dim",
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mer",
+    "thu": "Jeu",
+    "fri": "Ven",
+    "sat": "Sam",
+    "suffix": ""
+  },
+  "buttons": {
+    "save": "Enregistrer",
+    "saved": "Enregistré"
+  },
+  "labels": {
+    "none": "Aucun"
+  },
   "results": {
     "lotto": "Lotto 6/45 - {index}er",
     "pension": "Loterie Retraite - {index}er",
@@ -28,5 +113,86 @@
     "empty": "Aucun numéro enregistré",
     "lottoLabel": "Lotto 6/45",
     "pensionLabel": "Loterie Retraite"
+  },
+  "setOpt": {
+    "1": "1 groupe",
+    "2": "2 groupes",
+    "3": "3 groupes",
+    "5": "5 groupes",
+    "10": "10 groupes"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copier l'URL",
+    "copied": "✅ Copié !"
+  },
+  "nav": {
+    "backHome": "DopaBrain Accueil"
+  },
+  "accessibility": {
+    "skipMain": "Aller au contenu principal"
+  },
+  "sim": {
+    "heading": "Simulation des gains",
+    "intro": "Résultats basés sur les 100 derniers tirages.",
+    "match": "{count} numéros correspondants",
+    "expected": "Attendu : ~{freq} fois (par 100 tirages)",
+    "prizeAmount": "Prix : ~{prize}",
+    "noteTitle": "Information",
+    "note": "Cette simulation est basée sur des valeurs statistiques. Les probabilités réelles peuvent varier."
+  },
+  "prize": {
+    "p1": {
+      "label": "1er (Jackpot !)",
+      "freq": "~0",
+      "amount": "₩2-4Mrd"
+    },
+    "p2": {
+      "label": "2e (Gros lot !)",
+      "freq": "~0",
+      "amount": "₩500M-1Mrd"
+    },
+    "p3": {
+      "label": "3e (Gros gain)",
+      "freq": "~0",
+      "amount": "₩1-2M"
+    },
+    "p4": {
+      "label": "4e (Gagnant)",
+      "freq": "~0",
+      "amount": "₩50K"
+    },
+    "p5": {
+      "label": "5e (Sympa)",
+      "freq": "~2",
+      "amount": "₩5K"
+    }
+  },
+  "prem": {
+    "sumTitle": "Analyse de la somme",
+    "sumOk": "(Plage optimale ✅)",
+    "sumBad": "(Hors plage ⚠️)",
+    "sumNote": "La moyenne historique des sommes gagnantes est ~130-140.",
+    "oddEvenTitle": "Ratio pair/impair",
+    "oddEvenOk": "Ratio équilibré ✅",
+    "oddEvenBad": "Ratio déséquilibré ⚠️",
+    "highLowTitle": "Ratio haut/bas",
+    "consTitle": "Analyse des consécutifs",
+    "consFound": "Consécutifs : {pairs} inclus",
+    "consNone": "Pas de numéros consécutifs",
+    "consNote": "~60% des numéros gagnants incluent des consécutifs.",
+    "fortuneTitle": "Message de fortune AI",
+    "groupTitle": "Analyse du groupe",
+    "groupDesc": "Groupe {group}. Chaque groupe a la même probabilité.",
+    "numTitle": "Caractéristiques du numéro",
+    "numDesc": "Chaque chiffre est tiré indépendamment. Toutes les combinaisons ont la même probabilité.",
+    "fortune": "La chance sourit aux préparés. Les numéros d'aujourd'hui portent une énergie positive."
+  },
+  "luckyMsg": {
+    "m1": "Distribution équilibrée. 70% des gagnants ont des schémas similaires.",
+    "m2": "Ratio pair/impair stable. Les ratios 3:3 ou 4:2 ont plus de chances.",
+    "m3": "La somme est dans la plage optimale (100-175), bonne combinaison.",
+    "m4": "Les numéros consécutifs influencent positivement la probabilité.",
+    "m5": "Espacement uniformément distribué, combinaison idéale."
   }
 }

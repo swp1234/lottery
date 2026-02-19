@@ -84,10 +84,28 @@
   "units": {
     "sets": "set"
   },
-  "alerts": { "duplicate": "Bu numara zaten kaydedilmiş.", "confirmDelete": "Bu numarayı sil?", "confirmClearAll": "Kayıtlı tüm numaraları sil?" },
-  "days": { "sun": "Paz", "mon": "Pzt", "tue": "Sal", "wed": "Çar", "thu": "Per", "fri": "Cum", "sat": "Cts", "suffix": "" },
-  "buttons": { "save": "Kaydet", "saved": "Kaydedildi" },
-  "labels": { "none": "Hiçbiri" },
+  "alerts": {
+    "duplicate": "Bu numara zaten kaydedilmiş.",
+    "confirmDelete": "Bu numarayı sil?",
+    "confirmClearAll": "Kayıtlı tüm numaraları sil?"
+  },
+  "days": {
+    "sun": "Paz",
+    "mon": "Pzt",
+    "tue": "Sal",
+    "wed": "Çar",
+    "thu": "Per",
+    "fri": "Cum",
+    "sat": "Cts",
+    "suffix": ""
+  },
+  "buttons": {
+    "save": "Kaydet",
+    "saved": "Kaydedildi"
+  },
+  "labels": {
+    "none": "Hiçbiri"
+  },
   "results": {
     "lotto": "Loto 6/45 - {index}inci",
     "pension": "Emeklilik Piyangosу - {index}inci",
@@ -95,5 +113,86 @@
     "empty": "Kaydedilen numara yok",
     "lottoLabel": "Loto 6/45",
     "pensionLabel": "Emeklilik Piyangosу"
+  },
+  "setOpt": {
+    "1": "1 grup",
+    "2": "2 grup",
+    "3": "3 grup",
+    "5": "5 grup",
+    "10": "10 grup"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 URL Kopyala",
+    "copied": "✅ Kopyalandı!"
+  },
+  "nav": {
+    "backHome": "DopaBrain Ana Sayfa"
+  },
+  "accessibility": {
+    "skipMain": "Ana içeriğe atla"
+  },
+  "sim": {
+    "heading": "Kazanma Simülasyonu",
+    "intro": "Son 100 çekilişe dayalı simülasyon sonuçları.",
+    "match": "{count} numara eşleşti",
+    "expected": "Beklenen: ~{freq} kez (100 çekilişte)",
+    "prizeAmount": "Ödül: ~{prize}",
+    "noteTitle": "Bilgi",
+    "note": "Bu simülasyon istatistiksel beklenen değerlere dayanır. Gerçek olasılıklar farklı olabilir."
+  },
+  "prize": {
+    "p1": {
+      "label": "1. (Jackpot!)",
+      "freq": "~0",
+      "amount": "₩2-4Myr"
+    },
+    "p2": {
+      "label": "2. (Büyük!)",
+      "freq": "~0",
+      "amount": "₩500M-1Myr"
+    },
+    "p3": {
+      "label": "3. (Yüksek)",
+      "freq": "~0",
+      "amount": "₩1-2M"
+    },
+    "p4": {
+      "label": "4. (Kazanan)",
+      "freq": "~0",
+      "amount": "₩50K"
+    },
+    "p5": {
+      "label": "5. (İyi)",
+      "freq": "~2",
+      "amount": "₩5K"
+    }
+  },
+  "prem": {
+    "sumTitle": "Toplam Analizi",
+    "sumOk": "(Uygun aralık ✅)",
+    "sumBad": "(Aralık dışı ⚠️)",
+    "sumNote": "Tarihsel kazanan toplamları ortalaması ~130-140.",
+    "oddEvenTitle": "Tek/Çift Oranı",
+    "oddEvenOk": "Dengeli oran ✅",
+    "oddEvenBad": "Dengesiz oran ⚠️",
+    "highLowTitle": "Yüksek/Düşük Oranı",
+    "consTitle": "Ardışık Sayı Analizi",
+    "consFound": "Ardışık: {pairs} dahil",
+    "consNone": "Ardışık sayı yok",
+    "consNote": "Kazanan sayıların ~%60'ı ardışık içerir.",
+    "fortuneTitle": "AI Şans Mesajı",
+    "groupTitle": "Grup Analizi",
+    "groupDesc": "Grup {group}. Her grubun kazanma olasılığı eşittir.",
+    "numTitle": "Sayı Özellikleri",
+    "numDesc": "Her rakam bağımsız çekilir. Tüm kombinasyonlar eşit olasılığa sahiptir.",
+    "fortune": "Şans hazırlıklı olanı bulur. Bugünün sayıları pozitif enerji taşıyor."
+  },
+  "luckyMsg": {
+    "m1": "Dengeli dağılım. Kazananların %70'i benzer kalıplara sahip.",
+    "m2": "Kararlı tek/çift oranı. 3:3 veya 4:2 istatistiksel olarak daha yüksek şans.",
+    "m3": "Toplam uygun aralıkta (100-175), iyi kombinasyon.",
+    "m4": "Ardışık sayılar olasılığı olumlu etkiler.",
+    "m5": "Eşit dağılımlı aralık, ideal kombinasyon."
   }
 }

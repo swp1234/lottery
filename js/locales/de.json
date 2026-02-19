@@ -1,26 +1,111 @@
 {
-  "app": { "title": "Lotto-Zahlengenerator - Kostenlose Glückszahlen | DopaBrain", "description": "Lotto 6/45 Zahlengenerator, Rentenlotterie Glückszahlen und Gewinnzahlanalyse." },
-  "header": { "title": "🍀 Glückszahlen" },
-  "type": { "lotto": "Lotto 6/45", "pension": "Rentenlotterie" },
-  "options": { "title": "Generierungsoptionen", "setCount": "Sätze", "semiAuto": "Halb-Auto-Modus", "semiAutoHint": "Wähle Zahlen zum Fixieren" },
-  "semiAuto": { "title": "Wähle fixierte Zahlen", "desc": "Tippe auf Zahlen zum Fixieren (max 5)", "label": "Fixierte Zahlen:", "none": "Keine" },
-  "generate": { "button": "Glückszahlen generieren", "results": "Generierte Zahlen", "empty": "Drücke den Button um Glückszahlen zu generieren!" },
-  "simulation": { "title": "Gewinnwahrscheinlichkeits-Simulation", "desc": "Basierend auf den letzten 100 Ziehungen", "button": "Gewinnstufe überprüfen" },
-  "premium": { "button": "KI Zahlen-Schicksal-Analyse", "badge": "PREMIUM", "title": "KI Zahlen-Tiefenanalyse" },
-  "saved": { "title": "Gespeicherte Zahlen", "clear": "Alle löschen", "empty": "Keine gespeicherten Zahlen" },
-  "stats": { "title": "Statistik", "generated": "Generiert", "saved": "Gespeichert", "luckyDay": "Glückstag" },
-  "analysis": { "title": "Zahlenanalyse", "oddEven": "Ungerade/Gerade", "sum": "Summe", "range": "Bereich" },
-  "info": { "title": "📋 So verwendest du es", "lotto": "Lotto 6/45: Auto-Wahl von 6 Zahlen von 1-45", "pension": "Rentenlotterie: Gruppe 1-5, 6-stellige Zahl", "save": "Speichern: Speichere deine Lieblingszahlen", "analysisDesc": "Analyse: Ungerade/Gerade-Verhältnis, Summe und mehr", "note": "Hinweis: Alle Zahlen werden zufällig generiert" },
-  "footer": { "text": "Viel Glück! 🍀" },
-  "ads": { "banner": "Werbung", "interstitial": "Anzeige", "close": "Schließen" },
-  "rec": { "title": "Probiere auch diese" },
-  "theme": { "toggle": "Dunklen Modus umschalten" },
-  "units": { "sets": "Sätze" },
-  "frequency": { "title": "📊 Zahlenhäufigkeitsanalyse", "frequent": "Häufig gezogene Zahlen", "rare": "Nie gezogene Zahlen" },
-  "alerts": { "duplicate": "Diese Zahl ist bereits gespeichert.", "confirmDelete": "Diese Zahl löschen?", "confirmClearAll": "Alle gespeicherten Zahlen löschen?" },
-  "days": { "sun": "So", "mon": "Mo", "tue": "Di", "wed": "Mi", "thu": "Do", "fri": "Fr", "sat": "Sa", "suffix": "" },
-  "buttons": { "save": "Speichern", "saved": "Gespeichert" },
-  "labels": { "none": "Keine" },
+  "app": {
+    "title": "Lotto-Zahlengenerator - Kostenlose Glückszahlen | DopaBrain",
+    "description": "Lotto 6/45 Zahlengenerator, Rentenlotterie Glückszahlen und Gewinnzahlanalyse."
+  },
+  "header": {
+    "title": "🍀 Glückszahlen"
+  },
+  "type": {
+    "lotto": "Lotto 6/45",
+    "pension": "Rentenlotterie"
+  },
+  "options": {
+    "title": "Generierungsoptionen",
+    "setCount": "Sätze",
+    "semiAuto": "Halb-Auto-Modus",
+    "semiAutoHint": "Wähle Zahlen zum Fixieren"
+  },
+  "semiAuto": {
+    "title": "Wähle fixierte Zahlen",
+    "desc": "Tippe auf Zahlen zum Fixieren (max 5)",
+    "label": "Fixierte Zahlen:",
+    "none": "Keine"
+  },
+  "generate": {
+    "button": "Glückszahlen generieren",
+    "results": "Generierte Zahlen",
+    "empty": "Drücke den Button um Glückszahlen zu generieren!"
+  },
+  "simulation": {
+    "title": "Gewinnwahrscheinlichkeits-Simulation",
+    "desc": "Basierend auf den letzten 100 Ziehungen",
+    "button": "Gewinnstufe überprüfen"
+  },
+  "premium": {
+    "button": "KI Zahlen-Schicksal-Analyse",
+    "badge": "PREMIUM",
+    "title": "KI Zahlen-Tiefenanalyse"
+  },
+  "saved": {
+    "title": "Gespeicherte Zahlen",
+    "clear": "Alle löschen",
+    "empty": "Keine gespeicherten Zahlen"
+  },
+  "stats": {
+    "title": "Statistik",
+    "generated": "Generiert",
+    "saved": "Gespeichert",
+    "luckyDay": "Glückstag"
+  },
+  "analysis": {
+    "title": "Zahlenanalyse",
+    "oddEven": "Ungerade/Gerade",
+    "sum": "Summe",
+    "range": "Bereich"
+  },
+  "info": {
+    "title": "📋 So verwendest du es",
+    "lotto": "Lotto 6/45: Auto-Wahl von 6 Zahlen von 1-45",
+    "pension": "Rentenlotterie: Gruppe 1-5, 6-stellige Zahl",
+    "save": "Speichern: Speichere deine Lieblingszahlen",
+    "analysisDesc": "Analyse: Ungerade/Gerade-Verhältnis, Summe und mehr",
+    "note": "Hinweis: Alle Zahlen werden zufällig generiert"
+  },
+  "footer": {
+    "text": "Viel Glück! 🍀"
+  },
+  "ads": {
+    "banner": "Werbung",
+    "interstitial": "Anzeige",
+    "close": "Schließen"
+  },
+  "rec": {
+    "title": "Probiere auch diese"
+  },
+  "theme": {
+    "toggle": "Dunklen Modus umschalten"
+  },
+  "units": {
+    "sets": "Sätze"
+  },
+  "frequency": {
+    "title": "📊 Zahlenhäufigkeitsanalyse",
+    "frequent": "Häufig gezogene Zahlen",
+    "rare": "Nie gezogene Zahlen"
+  },
+  "alerts": {
+    "duplicate": "Diese Zahl ist bereits gespeichert.",
+    "confirmDelete": "Diese Zahl löschen?",
+    "confirmClearAll": "Alle gespeicherten Zahlen löschen?"
+  },
+  "days": {
+    "sun": "So",
+    "mon": "Mo",
+    "tue": "Di",
+    "wed": "Mi",
+    "thu": "Do",
+    "fri": "Fr",
+    "sat": "Sa",
+    "suffix": ""
+  },
+  "buttons": {
+    "save": "Speichern",
+    "saved": "Gespeichert"
+  },
+  "labels": {
+    "none": "Keine"
+  },
   "results": {
     "lotto": "Lotto 6/45 - {index}te",
     "pension": "Rentenlotterie - {index}te",
@@ -28,5 +113,86 @@
     "empty": "Keine gespeicherten Zahlen",
     "lottoLabel": "Lotto 6/45",
     "pensionLabel": "Rentenlotterie"
+  },
+  "setOpt": {
+    "1": "1 Gruppe",
+    "2": "2 Gruppen",
+    "3": "3 Gruppen",
+    "5": "5 Gruppen",
+    "10": "10 Gruppen"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 URL kopieren",
+    "copied": "✅ Kopiert!"
+  },
+  "nav": {
+    "backHome": "DopaBrain Start"
+  },
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt springen"
+  },
+  "sim": {
+    "heading": "Gewinnstufen-Simulation",
+    "intro": "Ergebnisse basierend auf den letzten 100 Ziehungen.",
+    "match": "{count} Zahlen stimmen überein",
+    "expected": "Erwartet: ~{freq} Mal (pro 100 Ziehungen)",
+    "prizeAmount": "Gewinn: ~{prize}",
+    "noteTitle": "Information",
+    "note": "Diese Simulation basiert auf statistischen Erwartungswerten. Tatsächliche Wahrscheinlichkeiten können abweichen."
+  },
+  "prize": {
+    "p1": {
+      "label": "1. (Jackpot!)",
+      "freq": "~0",
+      "amount": "₩2-4Mrd"
+    },
+    "p2": {
+      "label": "2. (Großgewinn!)",
+      "freq": "~0",
+      "amount": "₩500M-1Mrd"
+    },
+    "p3": {
+      "label": "3. (Hoher Gewinn)",
+      "freq": "~0",
+      "amount": "₩1-2M"
+    },
+    "p4": {
+      "label": "4. (Gewinner)",
+      "freq": "~0",
+      "amount": "₩50K"
+    },
+    "p5": {
+      "label": "5. (Nett)",
+      "freq": "~2",
+      "amount": "₩5K"
+    }
+  },
+  "prem": {
+    "sumTitle": "Summenanalyse",
+    "sumOk": "(Optimaler Bereich ✅)",
+    "sumBad": "(Außerhalb ⚠️)",
+    "sumNote": "Der historische Durchschnitt der Gewinnsummen beträgt ~130-140.",
+    "oddEvenTitle": "Gerade/Ungerade",
+    "oddEvenOk": "Ausgewogenes Verhältnis ✅",
+    "oddEvenBad": "Unausgewogenes Verhältnis ⚠️",
+    "highLowTitle": "Hoch/Niedrig",
+    "consTitle": "Aufeinanderfolgende Zahlen",
+    "consFound": "Aufeinanderfolgend: {pairs} enthalten",
+    "consNone": "Keine aufeinanderfolgenden Zahlen",
+    "consNote": "~60% der Gewinnzahlen enthalten aufeinanderfolgende.",
+    "fortuneTitle": "AI-Glücksbotschaft",
+    "groupTitle": "Gruppenanalyse",
+    "groupDesc": "Gruppe {group}. Jede Gruppe hat gleiche Wahrscheinlichkeit.",
+    "numTitle": "Zahleneigenschaften",
+    "numDesc": "Jede Ziffer wird unabhängig gezogen. Alle Kombinationen haben gleiche Wahrscheinlichkeit.",
+    "fortune": "Glück begünstigt die Vorbereiteten. Die heutigen Zahlen tragen positive Energie."
+  },
+  "luckyMsg": {
+    "m1": "Ausgewogene Verteilung. 70% der Gewinner haben ähnliche Muster.",
+    "m2": "Stabiles Gerade/Ungerade-Verhältnis. 3:3 oder 4:2 haben höhere Chancen.",
+    "m3": "Summe im optimalen Bereich (100-175), gute Kombination.",
+    "m4": "Aufeinanderfolgende Zahlen beeinflussen die Wahrscheinlichkeit positiv.",
+    "m5": "Gleichmäßig verteilter Abstand, ideale Kombination."
   }
 }

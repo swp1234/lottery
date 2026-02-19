@@ -511,7 +511,7 @@ class LotteryApp {
 
     // 결과 초기화
     document.getElementById('resultsContainer').innerHTML =
-      '<p class="empty-message">버튼을 눌러 행운의 번호를 생성하세요!</p>';
+      `<p class="empty-message">${window.i18n?.t('generate.empty') || 'Press the button to generate lucky numbers!'}</p>`;
   }
 
   // 테마 설정
@@ -561,7 +561,7 @@ class LotteryApp {
         if (seconds <= 0) {
           clearInterval(timer);
           closeBtn.disabled = false;
-          closeBtn.textContent = '닫기';
+          closeBtn.textContent = window.i18n?.t('ads.close') || 'Close';
         }
       }, 1000);
 
@@ -584,31 +584,32 @@ class LotteryApp {
     const simulation = this.simulateLotteryWins(numbers);
 
     const premiumBody = document.getElementById('premiumBody');
+    const _t = (k, fallback) => window.i18n?.t(k) || fallback;
     premiumBody.innerHTML = `
       <div class="premium-analysis-item">
-        <h3>당첨 등급 시뮬레이션</h3>
+        <h3>${_t('sim.heading', 'Winning Grade Simulation')}</h3>
         <p style="font-size: 0.95rem; line-height: 1.8;">
-          지난 100회차 기반 시뮬레이션 결과입니다.
+          ${_t('sim.intro', 'Simulation results based on the last 100 draws.')}
         </p>
       </div>
       ${simulation.map((result, idx) => `
         <div class="premium-analysis-item">
           <h3 style="color: ${result.prizeColor}">${result.prizeLabel}</h3>
           <p style="font-size: 1.2rem; font-weight: 700; color: ${result.prizeColor}; margin: 8px 0;">
-            ${result.matchCount}개 번호 일치
+            ${(_t('sim.match', '{count} numbers matched')).replace('{count}', result.matchCount)}
           </p>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">
-            기댓값: 약 <strong>${result.expectedFrequency}</strong>회 (매 100회당)
+            ${(_t('sim.expected', 'Expected: ~{freq} times (per 100 draws)')).replace('{freq}', result.expectedFrequency)}
           </p>
           <p style="color: var(--gold); font-size: 0.9rem; margin-top: 8px;">
-            당첨금: 약 <strong>${result.estimatedPrize}</strong>원
+            ${(_t('sim.prizeAmount', 'Prize: ~{prize}')).replace('{prize}', result.estimatedPrize)}
           </p>
         </div>
       `).join('')}
       <div class="premium-analysis-item" style="background: rgba(243, 156, 18, 0.1); border-color: var(--gold);">
-        <h3>분석 정보</h3>
+        <h3>${_t('sim.noteTitle', 'Analysis Info')}</h3>
         <p style="font-size: 0.9rem; color: var(--text-secondary);">
-          본 시뮬레이션은 통계적 기댓값을 기반으로 합니다. 실제 당첨 확률은 다를 수 있습니다.
+          ${_t('sim.note', 'This simulation is based on statistical expected values. Actual probabilities may differ.')}
         </p>
       </div>
     `;
@@ -618,52 +619,47 @@ class LotteryApp {
 
   // 로또 당첨 시뮬레이션 함수
   simulateLotteryWins(numbers) {
-    // 최근 100회차의 당첨 번호 시뮬레이션 (현실의 확률 기반)
+    const _t = (k, fallback) => window.i18n?.t(k) || fallback;
     const results = [];
 
-    // 1등: 6개 일치 - 약 1/8,145,060
     results.push({
       matchCount: 6,
-      prizeLabel: '1등 (대박!)',
+      prizeLabel: _t('prize.p1.label', '1st (Jackpot!)'),
       prizeColor: '#f1c40f',
-      expectedFrequency: '약 0회',
-      estimatedPrize: '20~40억'
+      expectedFrequency: _t('prize.p1.freq', '~0'),
+      estimatedPrize: _t('prize.p1.amount', '\u20A92-4B')
     });
 
-    // 2등: 5개 + 보너스 일치 - 약 1/1,357,510
     results.push({
       matchCount: 5,
-      prizeLabel: '2등 (대당첨!)',
+      prizeLabel: _t('prize.p2.label', '2nd (Big Win!)'),
       prizeColor: '#e74c3c',
-      expectedFrequency: '약 0회',
-      estimatedPrize: '5~10억'
+      expectedFrequency: _t('prize.p2.freq', '~0'),
+      estimatedPrize: _t('prize.p2.amount', '\u20A9500M-1B')
     });
 
-    // 3등: 5개 일치 - 약 1/35,724
     results.push({
       matchCount: 5,
-      prizeLabel: '3등 (고액당첨)',
+      prizeLabel: _t('prize.p3.label', '3rd (High Win)'),
       prizeColor: '#f39c12',
-      expectedFrequency: '약 0회',
-      estimatedPrize: '1~2백만'
+      expectedFrequency: _t('prize.p3.freq', '~0'),
+      estimatedPrize: _t('prize.p3.amount', '\u20A91-2M')
     });
 
-    // 4등: 4개 일치 - 약 1/733
     results.push({
       matchCount: 4,
-      prizeLabel: '4등 (당첨)',
+      prizeLabel: _t('prize.p4.label', '4th (Winner)'),
       prizeColor: '#3498db',
-      expectedFrequency: '약 0회',
-      estimatedPrize: '5만원'
+      expectedFrequency: _t('prize.p4.freq', '~0'),
+      estimatedPrize: _t('prize.p4.amount', '\u20A950K')
     });
 
-    // 5등: 3개 일치 - 약 1/45
     results.push({
       matchCount: 3,
-      prizeLabel: '5등 (쏠쏠한)',
+      prizeLabel: _t('prize.p5.label', '5th (Nice)'),
       prizeColor: '#27ae60',
-      expectedFrequency: '약 2회',
-      estimatedPrize: '5천원'
+      expectedFrequency: _t('prize.p5.freq', '~2'),
+      estimatedPrize: _t('prize.p5.amount', '\u20A95K')
     });
 
     return results;
@@ -685,12 +681,13 @@ class LotteryApp {
       const lowCount = numbers.filter(n => n <= 22).length;
       const highCount = 6 - lowCount;
 
+      const _t = (k, fb) => window.i18n?.t(k) || fb;
       const luckyMessages = [
-        '이 번호 조합은 균형 잡힌 분포를 보입니다. 역대 당첨 번호의 70%가 유사한 패턴입니다.',
-        '홀짝 비율이 안정적입니다. 통계적으로 3:3 또는 4:2 비율의 당첨 확률이 높습니다.',
-        '번호 합계가 적정 범위(100~175)에 있어 좋은 조합입니다.',
-        '연번이 포함되어 있으면 당첨 확률에 긍정적 영향을 줍니다.',
-        '번호 간 간격이 고르게 분포되어 있어 이상적인 조합입니다.'
+        _t('luckyMsg.m1', 'This combination shows balanced distribution. 70% of winning numbers have similar patterns.'),
+        _t('luckyMsg.m2', 'Stable odd/even ratio. 3:3 or 4:2 ratios statistically have higher odds.'),
+        _t('luckyMsg.m3', 'The sum is in optimal range (100-175), making it a good combination.'),
+        _t('luckyMsg.m4', 'Consecutive numbers positively affect winning probability.'),
+        _t('luckyMsg.m5', 'Evenly distributed spacing makes this an ideal combination.')
       ];
 
       const consecutivePairs = [];
@@ -705,46 +702,47 @@ class LotteryApp {
           ${numbers.map(n => `<span class="premium-ball">${n}</span>`).join('')}
         </div>
         <div class="premium-analysis-item">
-          <h3>번호 합계 분석</h3>
-          <p>합계: <strong>${sum}</strong> ${sum >= 100 && sum <= 175 ? '(적정 범위 ✅)' : '(범위 초과 ⚠️)'}</p>
-          <p>역대 당첨 번호의 합계 평균은 약 130~140입니다.</p>
+          <h3>${_t('prem.sumTitle', 'Number Sum Analysis')}</h3>
+          <p>${_t('analysis.sum', 'Sum')}: <strong>${sum}</strong> ${sum >= 100 && sum <= 175 ? _t('prem.sumOk', '(Optimal range ✅)') : _t('prem.sumBad', '(Out of range ⚠️)')}</p>
+          <p>${_t('prem.sumNote', 'Historical winning sum averages about 130-140.')}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>홀짝 비율</h3>
-          <p>홀수 ${oddCount}개 / 짝수 ${6 - oddCount}개</p>
-          <p>${oddCount >= 2 && oddCount <= 4 ? '균형 잡힌 비율입니다 ✅' : '편중된 비율입니다 ⚠️'}</p>
+          <h3>${_t('prem.oddEvenTitle', 'Odd/Even Ratio')}</h3>
+          <p>${_t('analysis.oddEven', 'Odd/Even')}: ${oddCount} / ${6 - oddCount}</p>
+          <p>${oddCount >= 2 && oddCount <= 4 ? _t('prem.oddEvenOk', 'Balanced ratio ✅') : _t('prem.oddEvenBad', 'Skewed ratio ⚠️')}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>고저 비율</h3>
-          <p>저번호(1~22) ${lowCount}개 / 고번호(23~45) ${highCount}개</p>
+          <h3>${_t('prem.highLowTitle', 'High/Low Ratio')}</h3>
+          <p>Low(1~22) ${lowCount} / High(23~45) ${highCount}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>연번 분석</h3>
-          <p>${consecutivePairs.length > 0 ? `연번: ${consecutivePairs.join(', ')} 포함` : '연번 없음'}</p>
-          <p>역대 당첨 번호의 약 60%에 연번이 포함되어 있습니다.</p>
+          <h3>${_t('prem.consTitle', 'Consecutive Number Analysis')}</h3>
+          <p>${consecutivePairs.length > 0 ? (_t('prem.consFound', 'Consecutive: {pairs} included')).replace('{pairs}', consecutivePairs.join(', ')) : _t('prem.consNone', 'No consecutive numbers')}</p>
+          <p>${_t('prem.consNote', 'About 60% of winning numbers include consecutive numbers.')}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>AI 운세 메시지</h3>
+          <h3>${_t('prem.fortuneTitle', 'AI Fortune Message')}</h3>
           <p class="lucky-message">${luckyMessages[Math.floor(Math.random() * luckyMessages.length)]}</p>
         </div>
       `;
     } else {
       const { group, numbers } = result.data;
+      const _t = (k, fb) => window.i18n?.t(k) || fb;
       premiumBody.innerHTML = `
         <div class="premium-pension">
-          <p class="pension-display">${group}조 ${numbers.join('')}</p>
+          <p class="pension-display">${(window.i18n?.t('results.group') || 'Group {group}').replace('{group}', group)} ${numbers.join('')}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>조 분석</h3>
-          <p>${group}조 번호입니다. 연금복권은 각 조마다 동일한 당첨 확률을 가집니다.</p>
+          <h3>${_t('prem.groupTitle', 'Group Analysis')}</h3>
+          <p>${(_t('prem.groupDesc', 'Group {group}. Each group has equal winning probability.')).replace('{group}', group)}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>번호 특성</h3>
-          <p>6자리 번호의 각 자리는 독립적으로 추첨됩니다. 모든 조합이 동일한 확률을 가집니다.</p>
+          <h3>${_t('prem.numTitle', 'Number Characteristics')}</h3>
+          <p>${_t('prem.numDesc', 'Each digit is drawn independently. All combinations have equal probability.')}</p>
         </div>
         <div class="premium-analysis-item">
-          <h3>AI 운세 메시지</h3>
-          <p class="lucky-message">행운은 준비된 자에게 찾아옵니다. 오늘의 번호가 좋은 에너지를 담고 있습니다.</p>
+          <h3>${_t('prem.fortuneTitle', 'AI Fortune Message')}</h3>
+          <p class="lucky-message">${_t('prem.fortune', 'Luck comes to those prepared. Today\'s numbers carry positive energy.')}</p>
         </div>
       `;
     }

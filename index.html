@@ -105,7 +105,7 @@
         <span class="emoji">🍀</span>
         <span data-i18n="header.title">행운의 번호</span>
       </h1>
-      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-i18n-aria-label="theme.toggle">
         <span class="theme-icon">🌙</span>
       </button>
     </div>
@@ -158,11 +158,11 @@
         <div class="option-item">
           <label for="setCount" data-i18n="options.setCount">세트 수</label>
           <select id="setCount" class="select-box">
-            <option value="1">1 <span data-i18n="units.sets">개</span></option>
-            <option value="2">2 <span data-i18n="units.sets">개</span></option>
-            <option value="3">3 <span data-i18n="units.sets">개</span></option>
-            <option value="5" selected>5 <span data-i18n="units.sets">개</span></option>
-            <option value="10">10 <span data-i18n="units.sets">개</span></option>
+            <option value="1" data-i18n="setOpt.1">1개</option>
+            <option value="2" data-i18n="setOpt.2">2개</option>
+            <option value="3" data-i18n="setOpt.3">3개</option>
+            <option value="5" selected data-i18n="setOpt.5">5개</option>
+            <option value="10" data-i18n="setOpt.10">10개</option>
           </select>
         </div>
         <div class="option-item">
@@ -308,19 +308,15 @@
 
     <!-- Social Share Buttons -->
     <div class="share-section" id="share-section">
-        <button class="share-btn share-twitter" id="shareTwitterBtn" aria-label="Share on Twitter">
-            <span>𝕏</span> Twitter
-        </button>
-        <button class="share-btn share-url" id="shareUrlBtn" aria-label="Copy URL">
-            📋 Copy URL
-        </button>
+        <button class="share-btn share-twitter" id="shareTwitterBtn" aria-label="Share on Twitter" data-i18n="share.twitter">𝕏 Twitter</button>
+        <button class="share-btn share-url" id="shareUrlBtn" aria-label="Copy URL" data-i18n="share.copyUrl">📋 Copy URL</button>
     </div>
 
     <!-- Footer -->
     <footer class="game-footer">
-        <a href="https://dopabrain.com/portal/" class="back-link" data-i18n="game.back">
+        <a href="https://dopabrain.com/portal/" class="back-link" data-i18n="nav.backHome">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m15 18-6-6 6-6"></path></svg>
-            DopaBrain 홈
+            DopaBrain Home
         </a>
     </footer>
   </main>
@@ -346,7 +342,7 @@
   </style>
   <script>
       document.getElementById('shareTwitterBtn')?.addEventListener('click',function(){var t=document.title+' '+window.location.href;window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(t),'_blank');if(typeof gtag!=='undefined')gtag('event','share',{method:'twitter'})});
-      document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent='✅ Copied!';setTimeout(function(){b.innerHTML='📋 Copy URL'},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
+      document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent=window.i18n?.t('share.copied')||'✅ Copied!';setTimeout(function(){b.textContent=window.i18n?.t('share.copyUrl')||'📋 Copy URL'},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
   </script>
   <script>
     if ('serviceWorker' in navigator) {

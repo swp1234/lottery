@@ -51,6 +51,9 @@ class I18n {
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             el.placeholder = this.t(el.getAttribute('data-i18n-placeholder'));
         });
+        document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+            el.setAttribute('aria-label', this.t(el.getAttribute('data-i18n-aria-label')));
+        });
         document.title = this.t('app.title');
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.content = this.t('app.description');
