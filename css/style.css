@@ -1210,6 +1210,15 @@ body {
 [data-theme="light"] .lang-option:hover { background: rgba(231,76,60,0.1); }
 [data-theme="light"] .lang-option.active { background: rgba(231,76,60,0.2); }
 
+/* Light theme rec/back-link overrides */
+[data-theme="light"] .rec-card { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+[data-theme="light"] .rec-card:hover { background: rgba(0,0,0,0.06); }
+[data-theme="light"] .rec-title { color: rgba(26,26,46,0.5); }
+[data-theme="light"] .rec-name { color: #1a1a2e; }
+[data-theme="light"] .rec-desc { color: #555; }
+[data-theme="light"] .back-link { color: rgba(26,26,46,0.4); }
+[data-theme="light"] .back-link:hover { color: rgba(26,26,46,0.7); }
+
 /* Footer with Back Link */
 .back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; padding: 12px 0; transition: color 0.2s; margin-top: 12px; }
 .back-link:hover { color: rgba(255,255,255,0.7); }
