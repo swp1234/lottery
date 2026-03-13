@@ -194,5 +194,12 @@
     "m3": "Summe im optimalen Bereich (100-175), gute Kombination.",
     "m4": "Aufeinanderfolgende Zahlen beeinflussen die Wahrscheinlichkeit positiv.",
     "m5": "Gleichmäßig verteilter Abstand, ideale Kombination."
+  },
+  "related": {
+    "title": "Mehr entdecken",
+    "luckMeter": "Glücksmesser",
+    "fortuneCookie": "Glückskeks",
+    "numerology": "Numerologie",
+    "dailyTarot": "Tagestarot"
   }
 }

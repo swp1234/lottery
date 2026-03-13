@@ -194,5 +194,12 @@
     "m3": "Jumlah dalam rentang optimal (100-175), kombinasi bagus.",
     "m4": "Nomor berurutan mempengaruhi probabilitas secara positif.",
     "m5": "Jarak terdistribusi merata, kombinasi ideal."
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "luckMeter": "Pengukur Keberuntungan",
+    "fortuneCookie": "Kue Keberuntungan",
+    "numerology": "Numerologi",
+    "dailyTarot": "Tarot Harian"
   }
 }

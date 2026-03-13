@@ -194,5 +194,12 @@
     "m3": "La suma está en rango óptimo (100-175), buena combinación.",
     "m4": "Los números consecutivos influyen positivamente.",
     "m5": "Distribución uniforme del espaciado, combinación ideal."
+  },
+  "related": {
+    "title": "Explora más",
+    "luckMeter": "Medidor de Suerte",
+    "fortuneCookie": "Galleta de la Fortuna",
+    "numerology": "Numerología",
+    "dailyTarot": "Tarot Diario"
   }
 }

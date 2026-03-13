@@ -194,5 +194,12 @@
     "m3": "A soma está na faixa ótima (100-175), boa combinação.",
     "m4": "Números consecutivos influenciam positivamente.",
     "m5": "Espaçamento uniformemente distribuído, combinação ideal."
+  },
+  "related": {
+    "title": "Explore mais",
+    "luckMeter": "Medidor de Sorte",
+    "fortuneCookie": "Biscoito da Sorte",
+    "numerology": "Numerologia",
+    "dailyTarot": "Tarot Diário"
   }
 }

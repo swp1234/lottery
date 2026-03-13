@@ -194,5 +194,12 @@
     "m3": "The sum is in optimal range (100-175), making it a good combination.",
     "m4": "Consecutive numbers positively affect winning probability.",
     "m5": "Evenly distributed spacing makes this an ideal combination."
+  },
+  "related": {
+    "title": "More to Explore",
+    "luckMeter": "Luck Meter",
+    "fortuneCookie": "Fortune Cookie",
+    "numerology": "Numerology",
+    "dailyTarot": "Daily Tarot"
   }
 }

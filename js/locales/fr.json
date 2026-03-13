@@ -194,5 +194,12 @@
     "m3": "La somme est dans la plage optimale (100-175), bonne combinaison.",
     "m4": "Les numéros consécutifs influencent positivement la probabilité.",
     "m5": "Espacement uniformément distribué, combinaison idéale."
+  },
+  "related": {
+    "title": "À découvrir",
+    "luckMeter": "Indice de Chance",
+    "fortuneCookie": "Fortune Cookie",
+    "numerology": "Numérologie",
+    "dailyTarot": "Tarot du Jour"
   }
 }

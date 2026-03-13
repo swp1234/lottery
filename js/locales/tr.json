@@ -194,5 +194,12 @@
     "m3": "Toplam uygun aralıkta (100-175), iyi kombinasyon.",
     "m4": "Ardışık sayılar olasılığı olumlu etkiler.",
     "m5": "Eşit dağılımlı aralık, ideal kombinasyon."
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "luckMeter": "Şans Ölçer",
+    "fortuneCookie": "Şans Kurabiyesi",
+    "numerology": "Numeroloji",
+    "dailyTarot": "Günlük Tarot"
   }
 }
