@@ -1,89 +1,31 @@
 class I18n {
-    constructor() {
-        this.translations = {};
-        this.supportedLanguages = ['ko', 'en', 'ja', 'es', 'pt', 'zh', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
-        this.currentLang = this.detectLanguage();
-        document.documentElement.lang = this.currentLang;
-    }
-
-    detectLanguage() {
-        try {
-            const params = new URLSearchParams(window.location.search || '');
-            const urlLang = params.get('lang');
-            if (urlLang && this.supportedLanguages.includes(urlLang)) return urlLang;
-        } catch (e) {}
-        const savedLang = localStorage.getItem('app_language');
-        if (savedLang && this.supportedLanguages.includes(savedLang)) return savedLang;
-        const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
-        if (this.supportedLanguages.includes(browserLang)) return browserLang;
-        return 'en';
-    }
-
-    async loadTranslations(lang) {
-        try {
-            const response = await fetch(`js/locales/${lang}.json`);
-            if (!response.ok) throw new Error('Not found');
-            this.translations[lang] = await response.json();
-            return true;
-        } catch (e) {
-            if (lang !== 'en') return this.loadTranslations('en');
-            return false;
-        }
-    }
-
-    t(key) {
-        const keys = key.split('.');
-        let value = this.translations[this.currentLang];
-        for (const k of keys) {
-            if (value && value[k]) value = value[k]; else return key;
-        }
-        return value;
-    }
-
-    async setLanguage(lang) {
-        if (!this.supportedLanguages.includes(lang)) return false;
-        if (!this.translations[lang]) await this.loadTranslations(lang);
-        this.currentLang = lang;
-        localStorage.setItem('app_language', lang);
-        document.documentElement.lang = lang;
-        this.updateUI();
-        return true;
-    }
-
-    updateUI() {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            el.textContent = this.t(el.getAttribute('data-i18n'));
-        });
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            el.placeholder = this.t(el.getAttribute('data-i18n-placeholder'));
-        });
-        document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
-            el.setAttribute('aria-label', this.t(el.getAttribute('data-i18n-aria-label')));
-        });
-        document.title = this.t('app.title');
-        const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.content = this.t('app.description');
-    }
-
-    getCurrentLanguage() { return this.currentLang; }
-
-    getLanguageName(lang) {
-        const names = {
-            'ko': '한국어',
-            'en': 'English',
-            'ja': '日本語',
-            'es': 'Español',
-            'pt': 'Português',
-            'zh': '简体中文',
-            'id': 'Bahasa Indonesia',
-            'tr': 'Türkçe',
-            'de': 'Deutsch',
-            'fr': 'Français',
-            'hi': 'हिन्दी',
-            'ru': 'Русский'
-        };
-        return names[lang] || lang;
-    }
+  constructor() {
+    this.supportedLanguages=['ko','en','ja','es','pt','zh','id','tr','de','fr','hi','ru'];
+    this.translations={};
+    this.currentLang=this.detectLanguage();
+    this.safeCopy={
+      en:{title:'6/45 Random Number Picker | DopaBrain',description:'Pick six unique numbers from 1 to 45 with browser-provided random values. No prediction, winning analysis, or guarantee.',header:'6/45 Random Number Picker',subtitle:'Choose six unique numbers with browser-provided randomness. This tool does not predict a draw or improve the chance of winning.',language:'Language',fixedNote:'You can keep up to five numbers. Fixed numbers express a preference; they do not improve the odds.',generate:'Generate random numbers',share:'Share this tool',localOnly:'Saved sets stay in this browser. Generated or saved numbers are never included in analytics events or shared URLs.',probabilityTitle:'Every combination has the same chance',probability:'A neat-looking pattern and a scattered-looking set are equally likely. The picker uses Web Crypto values and rejection sampling to avoid modulo bias; it does not use past draws, hot numbers, AI, or winning statistics.',boundaryTitle:'Entertainment and probability learning only.',boundary:'DopaBrain does not sell tickets, accept wagers, connect to gambling operators, or guarantee any result.',relatedGuide:'How 6/45 randomness works',relatedGames:'Free browser games without wagering',cryptoError:'Secure random values are unavailable in this browser. No numbers were generated.',shareText:'Try this transparent 6/45 random number picker.',remove:'Remove'},
+      id:{title:'Pengacak Angka 6/45 | DopaBrain',description:'Pilih enam angka unik dari 1–45 dengan nilai acak dari peramban. Tanpa prediksi, analisis pemenang, atau jaminan.',header:'Pengacak Angka 6/45',subtitle:'Pilih enam angka unik dengan sumber acak dari peramban. Alat ini tidak memprediksi undian atau meningkatkan peluang menang.',language:'Bahasa',fixedNote:'Kamu dapat mempertahankan hingga lima angka. Angka tetap hanya menyatakan pilihan; tidak meningkatkan peluang.',generate:'Buat angka acak',share:'Bagikan alat ini',localOnly:'Set tersimpan tetap di peramban ini. Angka yang dibuat atau disimpan tidak pernah dimasukkan ke event analitik atau URL berbagi.',probabilityTitle:'Setiap kombinasi memiliki peluang yang sama',probability:'Pola yang rapi dan set yang tersebar sama mungkinnya. Pengacak memakai nilai Web Crypto dan rejection sampling untuk menghindari bias modulo; tidak memakai undian lama, angka panas, AI, atau statistik pemenang.',boundaryTitle:'Hanya untuk hiburan dan belajar probabilitas.',boundary:'DopaBrain tidak menjual tiket, menerima taruhan, menghubungkan ke operator perjudian, atau menjamin hasil apa pun.',relatedGuide:'Cara kerja keacakan 6/45',relatedGames:'Game browser gratis tanpa taruhan',cryptoError:'Nilai acak aman tidak tersedia di peramban ini. Tidak ada angka yang dibuat.',shareText:'Coba pengacak angka 6/45 yang transparan ini.',remove:'Hapus'},
+      ko:{title:'6/45 무작위 번호 선택기 | DopaBrain',description:'브라우저 난수로 1부터 45 중 중복 없는 여섯 숫자를 선택합니다. 예측, 당첨 분석, 보장은 없습니다.',header:'6/45 무작위 번호 선택기',subtitle:'브라우저가 제공하는 난수로 중복 없는 숫자 여섯 개를 고릅니다. 추첨을 예측하거나 당첨 확률을 높이지 않습니다.',language:'언어',fixedNote:'숫자를 최대 5개까지 고정할 수 있습니다. 선호를 반영할 뿐 당첨 확률은 높이지 않습니다.',generate:'무작위 번호 만들기',share:'이 도구 공유',localOnly:'저장한 조합은 이 브라우저에만 남습니다. 생성·저장 번호는 분석 이벤트나 공유 URL에 포함되지 않습니다.',probabilityTitle:'모든 조합의 확률은 같습니다',probability:'규칙적으로 보이는 조합과 흩어져 보이는 조합의 확률은 같습니다. Web Crypto 값과 편향 없는 표본 추출을 사용하며 과거 추첨, 인기 번호, AI, 당첨 통계를 사용하지 않습니다.',boundaryTitle:'오락 및 확률 학습 전용입니다.',boundary:'DopaBrain은 복권을 판매하거나 베팅을 받거나 도박 사업자로 연결하거나 결과를 보장하지 않습니다.',relatedGuide:'6/45 무작위 선택 원리',relatedGames:'베팅 없는 무료 브라우저 게임',cryptoError:'이 브라우저에서 안전한 난수를 사용할 수 없어 번호를 만들지 않았습니다.',shareText:'투명한 6/45 무작위 번호 선택기를 사용해 보세요.',remove:'삭제'},
+      ja:{title:'6/45ランダム番号選択 | DopaBrain',description:'ブラウザの乱数で1～45から重複しない6個を選びます。予測・当選分析・保証はありません。',header:'6/45 ランダム番号選択',subtitle:'ブラウザ提供の乱数で重複しない6個を選びます。抽選を予測したり、当選確率を上げたりするものではありません。',language:'言語',fixedNote:'最大5個を固定できます。好みを反映するだけで、確率は上がりません。',generate:'ランダム番号を作る',share:'このツールを共有',localOnly:'保存した組み合わせはこのブラウザ内だけに残ります。番号は分析イベントや共有URLに含めません。',probabilityTitle:'すべての組み合わせは同じ確率',probability:'整った並びも散らばった並びも同確率です。Web Cryptoと偏りを避ける抽出を使い、過去抽選・ホット番号・AI・当選統計は使いません。',boundaryTitle:'娯楽と確率学習専用です。',boundary:'DopaBrainは券の販売、賭けの受付、ギャンブル事業者への接続、結果保証を行いません。',relatedGuide:'6/45乱数の仕組み',relatedGames:'賭けなしの無料ブラウザゲーム',cryptoError:'安全な乱数を利用できないため、番号を生成しませんでした。',shareText:'透明性のある6/45ランダム選択を試してください。',remove:'削除'},
+      zh:{title:'6/45 随机号码选择器 | DopaBrain',description:'使用浏览器随机值从1到45选出6个不重复号码。不预测、不分析中奖、不作保证。',header:'6/45 随机号码选择器',subtitle:'使用浏览器提供的随机值选出6个不重复号码。本工具不预测开奖，也不提高中奖概率。',language:'语言',fixedNote:'最多可固定5个号码。固定号码只表达偏好，不会提高概率。',generate:'生成随机号码',share:'分享此工具',localOnly:'保存的组合仅留在此浏览器。生成或保存的号码不会进入分析事件或分享网址。',probabilityTitle:'每种组合的概率相同',probability:'整齐的组合和分散的组合概率相同。工具使用 Web Crypto 和无模偏差抽样，不使用历史开奖、冷热号、AI 或中奖统计。',boundaryTitle:'仅用于娱乐和概率学习。',boundary:'DopaBrain 不售票、不接受下注、不连接赌博运营商，也不保证任何结果。',relatedGuide:'6/45 随机原理',relatedGames:'无需下注的免费网页游戏',cryptoError:'此浏览器无法提供安全随机值，因此未生成号码。',shareText:'试试透明的6/45随机号码选择器。',remove:'删除'},
+      es:{title:'Selector aleatorio 6/45 | DopaBrain',description:'Elige seis números únicos del 1 al 45 con valores aleatorios del navegador. Sin predicción ni garantía.',header:'Selector aleatorio 6/45',subtitle:'Elige seis números únicos con aleatoriedad del navegador. No predice sorteos ni mejora las probabilidades.',language:'Idioma',fixedNote:'Puedes fijar hasta cinco números. Solo expresa una preferencia; no mejora las probabilidades.',generate:'Generar números aleatorios',share:'Compartir herramienta',localOnly:'Los grupos guardados quedan en este navegador. Los números no se incluyen en analítica ni en enlaces compartidos.',probabilityTitle:'Cada combinación tiene la misma probabilidad',probability:'Un patrón ordenado y uno disperso son igual de probables. Usa Web Crypto y muestreo sin sesgo; no usa sorteos pasados, números calientes, IA ni estadísticas ganadoras.',boundaryTitle:'Solo entretenimiento y aprendizaje de probabilidad.',boundary:'DopaBrain no vende boletos, acepta apuestas, enlaza operadores de juego ni garantiza resultados.',relatedGuide:'Cómo funciona el azar 6/45',relatedGames:'Juegos web gratis sin apuestas',cryptoError:'Este navegador no ofrece valores aleatorios seguros. No se generaron números.',shareText:'Prueba este selector aleatorio 6/45 transparente.',remove:'Eliminar'},
+      pt:{title:'Seletor aleatório 6/45 | DopaBrain',description:'Escolha seis números únicos de 1 a 45 com valores aleatórios do navegador. Sem previsão ou garantia.',header:'Seletor aleatório 6/45',subtitle:'Escolha seis números únicos com aleatoriedade do navegador. Não prevê sorteios nem aumenta as chances.',language:'Idioma',fixedNote:'Você pode fixar até cinco números. Isso expressa preferência e não aumenta as chances.',generate:'Gerar números aleatórios',share:'Compartilhar ferramenta',localOnly:'Os conjuntos salvos ficam neste navegador. Números não entram em eventos analíticos nem em URLs compartilhadas.',probabilityTitle:'Toda combinação tem a mesma chance',probability:'Um padrão organizado e um conjunto disperso têm a mesma chance. Usa Web Crypto e amostragem sem viés; não usa sorteios passados, números quentes, IA ou estatísticas vencedoras.',boundaryTitle:'Apenas entretenimento e aprendizado de probabilidade.',boundary:'A DopaBrain não vende bilhetes, aceita apostas, conecta operadores de jogos ou garante resultados.',relatedGuide:'Como funciona o acaso 6/45',relatedGames:'Jogos grátis sem apostas',cryptoError:'Valores aleatórios seguros não estão disponíveis. Nenhum número foi gerado.',shareText:'Experimente este seletor aleatório 6/45 transparente.',remove:'Remover'},
+      de:{title:'6/45-Zufallszahlenauswahl | DopaBrain',description:'Wählt sechs eindeutige Zahlen von 1 bis 45 mit Browser-Zufallswerten. Keine Vorhersage oder Garantie.',header:'6/45-Zufallszahlenauswahl',subtitle:'Wähle sechs eindeutige Zahlen mit Browser-Zufall. Das Tool sagt keine Ziehung voraus und erhöht keine Gewinnchance.',language:'Sprache',fixedNote:'Bis zu fünf Zahlen können festgelegt werden. Das zeigt nur eine Vorliebe und erhöht keine Chance.',generate:'Zufallszahlen erzeugen',share:'Tool teilen',localOnly:'Gespeicherte Sätze bleiben in diesem Browser. Zahlen werden weder an Analyse-Events noch an geteilte URLs angehängt.',probabilityTitle:'Jede Kombination hat dieselbe Chance',probability:'Ordentliche und verstreute Muster sind gleich wahrscheinlich. Verwendet Web Crypto und unverzerrte Auswahl; keine alten Ziehungen, heißen Zahlen, KI oder Gewinnstatistiken.',boundaryTitle:'Nur Unterhaltung und Wahrscheinlichkeitslernen.',boundary:'DopaBrain verkauft keine Lose, nimmt keine Wetten an, verlinkt keine Glücksspielanbieter und garantiert kein Ergebnis.',relatedGuide:'So funktioniert 6/45-Zufall',relatedGames:'Kostenlose Browsergames ohne Einsatz',cryptoError:'Sichere Zufallswerte sind nicht verfügbar. Es wurden keine Zahlen erzeugt.',shareText:'Probiere diese transparente 6/45-Zufallsauswahl.',remove:'Entfernen'},
+      fr:{title:'Sélecteur aléatoire 6/45 | DopaBrain',description:'Choisissez six nombres uniques de 1 à 45 avec le hasard du navigateur. Sans prédiction ni garantie.',header:'Sélecteur aléatoire 6/45',subtitle:'Choisissez six nombres uniques avec le hasard du navigateur. Cet outil ne prédit aucun tirage et n’améliore pas les chances.',language:'Langue',fixedNote:'Vous pouvez fixer jusqu’à cinq nombres. Cela exprime une préférence sans améliorer les chances.',generate:'Générer des nombres aléatoires',share:'Partager cet outil',localOnly:'Les séries enregistrées restent dans ce navigateur. Les nombres ne figurent ni dans les événements analytiques ni dans les URL partagées.',probabilityTitle:'Chaque combinaison a la même chance',probability:'Un motif régulier et une série dispersée ont la même probabilité. Web Crypto et un échantillonnage sans biais sont utilisés, sans anciens tirages, numéros chauds, IA ni statistiques gagnantes.',boundaryTitle:'Divertissement et apprentissage des probabilités uniquement.',boundary:'DopaBrain ne vend pas de billets, n’accepte pas de paris, ne relie aucun opérateur de jeu et ne garantit aucun résultat.',relatedGuide:'Fonctionnement du hasard 6/45',relatedGames:'Jeux gratuits sans mise',cryptoError:'Le navigateur ne fournit pas de valeurs aléatoires sûres. Aucun nombre n’a été généré.',shareText:'Essayez ce sélecteur aléatoire 6/45 transparent.',remove:'Supprimer'},
+      tr:{title:'6/45 rastgele sayı seçici | DopaBrain',description:'Tarayıcı rastgeleliğiyle 1-45 arasından altı benzersiz sayı seçer. Tahmin veya garanti yoktur.',header:'6/45 rastgele sayı seçici',subtitle:'Tarayıcının sağladığı rastgelelikle altı benzersiz sayı seçin. Çekilişi tahmin etmez veya kazanma şansını artırmaz.',language:'Dil',fixedNote:'En fazla beş sayı sabitlenebilir. Bu yalnızca tercihtir; olasılığı artırmaz.',generate:'Rastgele sayı üret',share:'Aracı paylaş',localOnly:'Kaydedilen setler bu tarayıcıda kalır. Sayılar analiz olaylarına veya paylaşılan URL’lere eklenmez.',probabilityTitle:'Her kombinasyonun şansı aynıdır',probability:'Düzenli ve dağınık görünen setler eşit olasılıktadır. Web Crypto ve tarafsız örnekleme kullanır; geçmiş çekiliş, sıcak sayı, yapay zekâ veya kazanan istatistiği kullanmaz.',boundaryTitle:'Yalnızca eğlence ve olasılık öğrenimi içindir.',boundary:'DopaBrain bilet satmaz, bahis kabul etmez, kumar operatörlerine bağlanmaz veya sonuç garantilemez.',relatedGuide:'6/45 rastgeleliği nasıl çalışır',relatedGames:'Bahissiz ücretsiz tarayıcı oyunları',cryptoError:'Güvenli rastgele değerler kullanılamıyor. Sayı üretilmedi.',shareText:'Bu şeffaf 6/45 rastgele seçiciyi deneyin.',remove:'Kaldır'},
+      hi:{title:'6/45 रैंडम नंबर चयन | DopaBrain',description:'ब्राउज़र रैंडम मानों से 1–45 में छह अलग नंबर चुनें। कोई भविष्यवाणी या गारंटी नहीं।',header:'6/45 रैंडम नंबर चयन',subtitle:'ब्राउज़र से मिले रैंडम मानों द्वारा छह अलग नंबर चुनें। यह ड्रॉ की भविष्यवाणी या जीत की संभावना नहीं बढ़ाता।',language:'भाषा',fixedNote:'अधिकतम पाँच नंबर तय रख सकते हैं। यह केवल पसंद है, संभावना नहीं बढ़ती।',generate:'रैंडम नंबर बनाएँ',share:'यह टूल साझा करें',localOnly:'सहेजे सेट इसी ब्राउज़र में रहते हैं। नंबर analytics event या साझा URL में नहीं जाते।',probabilityTitle:'हर संयोजन की संभावना समान है',probability:'साफ पैटर्न और बिखरे सेट की संभावना समान है। Web Crypto और निष्पक्ष sampling का उपयोग होता है; पुराने ड्रॉ, hot numbers, AI या winning statistics का नहीं।',boundaryTitle:'केवल मनोरंजन और probability सीखने के लिए।',boundary:'DopaBrain टिकट नहीं बेचता, दाँव नहीं लेता, gambling operator से नहीं जोड़ता और परिणाम की गारंटी नहीं देता।',relatedGuide:'6/45 randomness कैसे काम करती है',relatedGames:'बिना दाँव के मुफ्त browser games',cryptoError:'इस ब्राउज़र में सुरक्षित random values उपलब्ध नहीं हैं। नंबर नहीं बनाए गए।',shareText:'यह पारदर्शी 6/45 रैंडम चयन आज़माएँ।',remove:'हटाएँ'},
+      ru:{title:'Случайные числа 6/45 | DopaBrain',description:'Выбор шести разных чисел от 1 до 45 на основе случайных значений браузера. Без прогноза и гарантий.',header:'Случайные числа 6/45',subtitle:'Выберите шесть разных чисел с помощью случайных значений браузера. Инструмент не предсказывает тираж и не повышает шансы.',language:'Язык',fixedNote:'Можно закрепить до пяти чисел. Это лишь предпочтение и не повышает вероятность.',generate:'Создать случайные числа',share:'Поделиться инструментом',localOnly:'Сохранённые наборы остаются в этом браузере. Числа не попадают в аналитику или общие URL.',probabilityTitle:'У каждой комбинации одинаковый шанс',probability:'Аккуратный узор и разбросанный набор равновероятны. Используются Web Crypto и выборка без смещения; прошлые тиражи, горячие числа, ИИ и выигрышная статистика не применяются.',boundaryTitle:'Только для развлечения и изучения вероятности.',boundary:'DopaBrain не продаёт билеты, не принимает ставки, не связывает с операторами азартных игр и не гарантирует результат.',relatedGuide:'Как работает случайность 6/45',relatedGames:'Бесплатные игры без ставок',cryptoError:'Безопасные случайные значения недоступны. Числа не созданы.',shareText:'Попробуйте прозрачный выбор случайных чисел 6/45.',remove:'Удалить'}
+    };
+    document.documentElement.lang=this.currentLang;
+  }
+  detectLanguage(){try{const q=new URLSearchParams(location.search).get('lang');if(this.supportedLanguages.includes(q))return q}catch(e){}try{const saved=localStorage.getItem('app_language');if(this.supportedLanguages.includes(saved))return saved}catch(e){}const browser=(navigator.language||'en').split('-')[0];return this.supportedLanguages.includes(browser)?browser:'en'}
+  async loadTranslations(lang){if(this.translations[lang])return true;try{const response=await fetch(`js/locales/${lang}.json`);if(!response.ok)throw Error('locale');this.translations[lang]=await response.json();return true}catch(e){if(lang!=='en')return this.loadTranslations('en');return false}}
+  t(key){let value=this.translations[this.currentLang]||this.translations.en;for(const part of key.split('.')){if(value&&Object.prototype.hasOwnProperty.call(value,part))value=value[part];else return key}return value}
+  safe(key){return(this.safeCopy[this.currentLang]||this.safeCopy.en)[key]||this.safeCopy.en[key]||key}
+  async init(){await this.loadTranslations(this.currentLang);await this.loadTranslations('en');this.updateUI()}
+  async setLanguage(lang){if(!this.supportedLanguages.includes(lang))return false;await this.loadTranslations(lang);this.currentLang=lang;try{localStorage.setItem('app_language',lang)}catch(e){}document.documentElement.lang=lang;this.updateUI();document.dispatchEvent(new CustomEvent('lotterylanguagechange'));return true}
+  updateUI(){document.querySelectorAll('[data-i18n]').forEach(el=>{const value=this.t(el.dataset.i18n);if(value!==el.dataset.i18n)el.textContent=value});document.querySelectorAll('[data-safe-i18n]').forEach(el=>{el.textContent=this.safe(el.dataset.safeI18n)});document.title=this.safe('title');const description=document.querySelector('meta[name="description"]');if(description)description.content=this.safe('description');const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.content=this.safe('title');const ogDescription=document.querySelector('meta[property="og:description"]');if(ogDescription)ogDescription.content=this.safe('description');const select=document.getElementById('languageSelect');if(select)select.value=this.currentLang}
+  getCurrentLanguage(){return this.currentLang}
 }
-
-const i18n = new I18n();
+window.i18n=new I18n();
