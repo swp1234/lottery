@@ -201,5 +201,16 @@
     "fortuneCookie": "Şans Kurabiyesi",
     "numerology": "Numeroloji",
     "dailyTarot": "Günlük Tarot"
+  },
+  "faq": {
+    "title": "Olasılık ve Gerçek Rastgelelik Rehberi",
+    "q1": "6/45 rastgele sayı seçici gerçek tarafsızlığı nasıl sağlar?",
+    "a1": "Tarayıcının kriptografik Web Crypto API'sini (crypto.getRandomValues) red örneklemesi (rejection sampling) ile birlikte kullanarak modülo yanlılığını tamamen ortadan kaldırır. 1'den 45'e kadar her sayının seçilme olasılığı eşit ve homojendir.",
+    "q2": "Geçmiş çekiliş verileri veya yapay zekâ sonraki sayıları tahmin edebilir mi?",
+    "a2": "Matematiksel olarak hayır. Her 6/45 çekilişi 8.145.060 olası kombinasyon içeren bağımsız bir rastgele olaydır. Geçmiş sayıların geleceği etkilediğine inanmak kumarbaz yanılgısıdır; hiçbir formül olasılığı değiştiremez.",
+    "q3": "Ardışık veya simetrik sayıların çıkma olasılığı daha mı düşüktür?",
+    "a3": "[1, 2, 3, 4, 5, 6] gibi ardışık bir dizi ile rastgele dağılmış bir kümenin matematiksel çıkma olasılığı tamamen aynıdır: 8.145.060'ta 1 (yaklaşık %0,0000123).",
+    "q4": "Üretilen veya kaydedilen sayılar gizli tutuluyor mu?",
+    "a4": "Evet. Tüm sayı üretimi ve kayıtlar yalnızca yerel tarayıcınızın belleğinde kalır. Hiçbir sayı verisi harici sunuculara veya analiz araçlarına aktarılmaz."
   }
 }

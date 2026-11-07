@@ -2,3 +2,14 @@
 @media(max-width:650px){.site-header,.shell{width:min(100% - 1rem,850px)}.hero{padding-top:3rem}.generator,.results,.saved,.explain{padding:1rem;border-radius:15px}.controls,.related-grid{grid-template-columns:1fr}.number-picker{grid-template-columns:repeat(7,1fr)}.pick-number{min-height:39px}.result-row,.saved-row{align-items:flex-start}.ball{width:38px;height:38px}.equal-badge{font-size:.72rem}}
 @media(max-width:380px){.number-picker{grid-template-columns:repeat(5,1fr)}.section-head{flex-direction:column}.result-row,.saved-row{flex-wrap:wrap}.balls{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.about-section{margin:1rem 0;padding:1.4rem;border:1px solid var(--line);border-radius:20px;background:rgba(16,31,53,.95)}
+.faq-list{display:flex;flex-direction:column;gap:.75rem;margin-top:.75rem}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:var(--panel2);overflow:hidden}
+.faq-item summary{padding:.85rem 1.1rem;min-height:48px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:750;color:var(--text)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.25rem;color:var(--mint);line-height:1}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item summary h3{margin:0;font-size:1rem;font-weight:750;color:var(--text);display:inline}
+.faq-answer{padding:.2rem 1.1rem 1rem;border-top:1px solid rgba(110,231,198,.12)}
+.faq-answer p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.65}

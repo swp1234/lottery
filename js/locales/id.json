@@ -201,5 +201,16 @@
     "fortuneCookie": "Kue Keberuntungan",
     "numerology": "Numerologi",
     "dailyTarot": "Tarot Harian"
+  },
+  "faq": {
+    "title": "Panduan Probabilitas & Keacakan Matematika",
+    "q1": "Bagaimana pemilih angka 6/45 menjamin keadilan yang nyata?",
+    "a1": "Alat ini memanfaatkan Web Crypto API standar peramban (crypto.getRandomValues) dengan teknik rejection sampling untuk menghilangkan modulo bias secara mutlak. Setiap bilangan dari 1 hingga 45 memiliki peluang seragam yang setara.",
+    "q2": "Bisakah pola kemenangan masa lalu atau AI memprediksi angka berikutnya?",
+    "a2": "Secara matematis tidak bisa. Setiap undian 6/45 adalah peristiwa acak independen dari 8.145.060 kombinasi. Berasumsi bahwa angka masa lalu memengaruhi masa depan adalah kekeliruan penjudi (Gambler's Fallacy); tidak ada rumus yang mengubah peluang.",
+    "q3": "Apakah kombinasi angka berurutan memiliki kemungkinan lebih kecil?",
+    "a3": "Setiap kombinasi valid, baik berurutan seperti [1, 2, 3, 4, 5, 6] maupun acak tersebar, memiliki probabilitas matematis yang persis sama: 1 banding 8.145.060 (sekitar 0,0000123%).",
+    "q4": "Apakah angka yang dibuat atau disimpan terlindungi privasinya?",
+    "a4": "Ya. Semua proses dan daftar nomor tersimpan tetap berada di penyimpanan lokal peramban Anda dan tidak pernah dikirim ke server luar."
   }
 }

@@ -201,5 +201,16 @@
     "fortuneCookie": "Galleta de la Fortuna",
     "numerology": "Numerología",
     "dailyTarot": "Tarot Diario"
+  },
+  "faq": {
+    "title": "Guía de Probabilidad y Azar Matemático",
+    "q1": "¿Cómo garantiza la imparcialidad el selector aleatorio 6/45?",
+    "a1": "Utiliza la API Web Crypto del navegador (crypto.getRandomValues) junto con muestreo por rechazo. Esto elimina por completo el sesgo de módulo, garantizando que cada número del 1 al 45 tenga una probabilidad idéntica y uniforme.",
+    "q2": "¿Pueden los patrones históricos o la IA predecir sorteos futuros?",
+    "a2": "Matemáticamente no. Cada sorteo 6/45 es un evento aleatorio independiente entre 8,145,060 combinaciones posibles. Creer que los resultados pasados alteran los futuros es la falacia del jugador; ninguna fórmula o estadística altera las probabilidades.",
+    "q3": "¿Tienen las combinaciones consecutivas menor probabilidad de salir?",
+    "a3": "Cualquier combinación válida, ya sea consecutiva como [1, 2, 3, 4, 5, 6] o dispersa como [7, 14, 21, 33, 39, 44], tiene exactamente la misma probabilidad matemática: 1 en 8,145,060 (aprox. 0.0000123%).",
+    "q4": "¿Se transmiten o guardan los números en servidores externos?",
+    "a4": "No. Toda la generación y el almacenamiento se realizan estrictamente en la memoria local de su navegador. No se envía ningún dato numérico a servidores externos."
   }
 }

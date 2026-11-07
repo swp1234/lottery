@@ -5,9 +5,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#081426">
+  <meta name="dateModified" content="2026-11-07">
   <meta name="description" content="Pick six unique numbers from 1 to 45 with browser-provided random values. No prediction, winning analysis, or guarantee.">
   <title>6/45 Random Number Picker | DopaBrain</title>
-  <link rel="canonical" href="https://dopabrain.com/lottery/">
+    <link rel="canonical" href="https://dopabrain.com/lottery/">
+  <link rel="alternate" hreflang="en" href="https://dopabrain.com/lottery/">
+  <link rel="alternate" hreflang="ko" href="https://dopabrain.com/lottery/?lang=ko">
+  <link rel="alternate" hreflang="ja" href="https://dopabrain.com/lottery/?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://dopabrain.com/lottery/?lang=zh">
+  <link rel="alternate" hreflang="es" href="https://dopabrain.com/lottery/?lang=es">
+  <link rel="alternate" hreflang="pt" href="https://dopabrain.com/lottery/?lang=pt">
+  <link rel="alternate" hreflang="id" href="https://dopabrain.com/lottery/?lang=id">
+  <link rel="alternate" hreflang="tr" href="https://dopabrain.com/lottery/?lang=tr">
+  <link rel="alternate" hreflang="de" href="https://dopabrain.com/lottery/?lang=de">
+  <link rel="alternate" hreflang="fr" href="https://dopabrain.com/lottery/?lang=fr">
+  <link rel="alternate" hreflang="hi" href="https://dopabrain.com/lottery/?lang=hi">
+  <link rel="alternate" hreflang="ru" href="https://dopabrain.com/lottery/?lang=ru">
+  <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/lottery/">
   <meta property="og:type" content="website"><meta property="og:site_name" content="DopaBrain">
   <meta property="og:title" content="6/45 Random Number Picker | DopaBrain">
   <meta property="og:description" content="A transparent 6/45 random picker—not a prediction or winning strategy.">
@@ -24,6 +38,46 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="icon-192.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the 6/45 random number picker ensure true fairness?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The picker utilizes the browser's cryptographic Web Crypto API (crypto.getRandomValues) combined with rejection sampling. This completely eliminates modulo bias, ensuring every integer from 1 to 45 has an exact, uniform probability of selection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can past winning patterns or AI predict future lottery numbers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mathematically, no. Each 6/45 draw is an independent random event with exactly 8,145,060 possible combinations. Believing past numbers influence future outcomes is the classic Gambler's Fallacy; no algorithmic formula or statistical trend alters the odds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are consecutive or symmetric number combinations less likely to occur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every valid combination, whether consecutive like [1, 2, 3, 4, 5, 6] or dispersed like [7, 14, 21, 33, 39, 44], carries the exact same mathematical probability of 1 in 8,145,060 (approximately 0.0000123%)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are generated or saved number sets private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All number generation and saved sets remain strictly inside your browser's local storage. No numbers, seeds, or user selections are transmitted to external servers or recorded in telemetry."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-lottery-random-contract="2026-09-01">
   <a class="skip skip-link" href="#main-content" data-i18n="accessibility.skipMain">Skip to main content</a>
@@ -78,6 +132,41 @@
       <p class="formula">C(45, 6) = 8,145,060</p>
       <p data-safe-i18n="probability">A neat-looking pattern and a scattered-looking set are equally likely. The picker uses Web Crypto values and rejection sampling to avoid modulo bias; it does not use past draws, hot numbers, AI, or winning statistics.</p>
       <div class="boundary"><strong data-safe-i18n="boundaryTitle">Entertainment and probability learning only.</strong><span data-safe-i18n="boundary">DopaBrain does not sell tickets, accept wagers, connect to gambling operators, or guarantee any result.</span></div>
+    </section>
+
+        <section class="explain about-section collapsible-section" id="about-section" aria-labelledby="faq-title">
+      <div class="section-head">
+        <div>
+          <span class="step-label">FAQ</span>
+          <h2 id="faq-title" data-i18n="faq.title">Probability &amp; Randomness Guide</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><h3 data-i18n="faq.q1">How does the 6/45 random number picker ensure true fairness?</h3></summary>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">The picker utilizes the browser's cryptographic Web Crypto API (crypto.getRandomValues) combined with rejection sampling. This completely eliminates modulo bias, ensuring every integer from 1 to 45 has an exact, uniform probability of selection.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><h3 data-i18n="faq.q2">Can past winning patterns or AI predict future lottery numbers?</h3></summary>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">Mathematically, no. Each 6/45 draw is an independent random event with exactly 8,145,060 possible combinations. Believing past numbers influence future outcomes is the classic Gambler's Fallacy; no algorithmic formula or statistical trend alters the odds.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><h3 data-i18n="faq.q3">Are consecutive or symmetric number combinations less likely to occur?</h3></summary>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">Every valid combination, whether consecutive like [1, 2, 3, 4, 5, 6] or dispersed like [7, 14, 21, 33, 39, 44], carries the exact same mathematical probability of 1 in 8,145,060 (approximately 0.0000123%).</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><h3 data-i18n="faq.q4">Are generated or saved number sets private?</h3></summary>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4">Yes. All number generation and saved sets remain strictly inside your browser's local storage. No numbers, seeds, or user selections are transmitted to external servers or recorded in telemetry.</p>
+          </div>
+        </details>
+      </div>
     </section>
 
     <section class="related" aria-labelledby="related-title">

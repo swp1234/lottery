@@ -201,5 +201,16 @@
     "fortuneCookie": "Glückskeks",
     "numerology": "Numerologie",
     "dailyTarot": "Tagestarot"
+  },
+  "faq": {
+    "title": "Leitfaden zu Wahrscheinlichkeit und echtem Zufall",
+    "q1": "Wie garantiert der 6/45-Zufallsgenerator echte mathematische Fairness?",
+    "a1": "Der Generator nutzt die kryptografische Web Crypto API des Browsers (crypto.getRandomValues) mit Rejection Sampling. Dies verhindert Modulo-Verzerrungen und stellt sicher, dass jede Zahl von 1 bis 45 absolut gleich wahrscheinlich ist.",
+    "q2": "Können historische Ziehungsmuster oder KI künftige Zahlen vorhersagen?",
+    "a2": "Mathematisch gesehen nein. Jede 6/45-Ziehung ist ein unabhängiges Zufallsereignis aus 8.145.060 möglichen Kombinationen. Der Glaube an Vorhersagbarkeit ist der klassische Spielerfehlschluss (Gambler's Fallacy); kein Algorithmus kann die Quoten beeinflussen.",
+    "q3": "Sind aufeinanderfolgende Zahlenfolgen unwahrscheinlicher?",
+    "a3": "Jede gültige Kombination – ob [1, 2, 3, 4, 5, 6] oder [7, 14, 21, 33, 39, 44] – besitzt exakt dieselbe mathematische Wahrscheinlichkeit von 1 zu 8.145.060 (ca. 0,0000123 %).",
+    "q4": "Werden generierte oder gespeicherte Zahlen übertragen?",
+    "a4": "Nein. Alle Berechnungen und Speicherungen erfolgen rein lokal in Ihrem Browser. Keine Zahlendaten werden an externe Server oder Analysedienste übertragen."
   }
 }

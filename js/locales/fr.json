@@ -201,5 +201,16 @@
     "fortuneCookie": "Fortune Cookie",
     "numerology": "Numérologie",
     "dailyTarot": "Tarot du Jour"
+  },
+  "faq": {
+    "title": "Guide de Probabilité et du Hasard Mathématique",
+    "q1": "Comment le générateur 6/45 garantit-il une impartialité absolue ?",
+    "a1": "Il exploite l'API cryptographique standard Web Crypto (crypto.getRandomValues) associée à un échantillonnage par rejet, éliminant tout biais de modulo. Chaque entier de 1 à 45 dispose d'une probabilité rigoureusement uniforme.",
+    "q2": "L'historique des tirages ou l'IA peuvent-ils prédire les numéros futurs ?",
+    "a2": "Mathématiquement non. Chaque tirage 6/45 est une épreuve indépendante parmi 8 145 060 combinaisons. Croire que le passé influence le futur relève du sophisme du joueur ; aucun algorithme ne modifie les lois de la probabilité.",
+    "q3": "Les séries consécutives ont-elles moins de chances de sortir ?",
+    "a3": "Toute combinaison valide, qu'elle soit consécutive comme [1, 2, 3, 4, 5, 6] ou dispersée, possède très exactement la même probabilité mathématique : 1 chance sur 8 145 060 (environ 0,0000123%).",
+    "q4": "Les combinaisons générées ou enregistrées sont-elles privées ?",
+    "a4": "Oui. Toutes les opérations s'exécutent exclusivement dans votre navigateur local. Aucun numéro généré n'est transmis à des serveurs externes ou consigné dans les statistiques."
   }
 }

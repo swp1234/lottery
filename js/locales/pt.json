@@ -201,5 +201,16 @@
     "fortuneCookie": "Biscoito da Sorte",
     "numerology": "Numerologia",
     "dailyTarot": "Tarot Diário"
+  },
+  "faq": {
+    "title": "Guia de Probabilidade e Aleatoriedade Real",
+    "q1": "Como o gerador 6/45 assegura imparcialidade matemática genuína?",
+    "a1": "Ele emprega a API criptográfica Web Crypto do navegador (crypto.getRandomValues) e amostragem por rejeição. Isso elimina por completo o viés de módulo, conferindo a cada número de 1 a 45 probabilidade perfeitamente uniforme.",
+    "q2": "Padrões passados ou IA podem prever os próximos sorteios?",
+    "a2": "Matematicamente não. Cada sorteio 6/45 é um evento independente com 8.145.060 combinações equiprováveis. A crença de que números anteriores influenciam o futuro é a falácia do apostador; nenhum modelo altera essas probabilidades.",
+    "q3": "Combinações consecutivas têm probabilidade menor de serem sorteadas?",
+    "a3": "Qualquer sequência específica, seja [1, 2, 3, 4, 5, 6] ou aleatoriamente espaçada, possui exatamente a mesma probabilidade matemática de 1 em 8.145.060 (cerca de 0,0000123%).",
+    "q4": "Os números gerados ou salvos são privados?",
+    "a4": "Sim. Toda a geração e histórico permanecem confinados ao armazenamento local do seu navegador, sem envio de dados a servidores externos."
   }
 }
