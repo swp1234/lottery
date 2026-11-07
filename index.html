@@ -38,46 +38,6 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="icon-192.svg" type="image/svg+xml">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How does the 6/45 random number picker ensure true fairness?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The picker utilizes the browser's cryptographic Web Crypto API (crypto.getRandomValues) combined with rejection sampling. This completely eliminates modulo bias, ensuring every integer from 1 to 45 has an exact, uniform probability of selection."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can past winning patterns or AI predict future lottery numbers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mathematically, no. Each 6/45 draw is an independent random event with exactly 8,145,060 possible combinations. Believing past numbers influence future outcomes is the classic Gambler's Fallacy; no algorithmic formula or statistical trend alters the odds."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are consecutive or symmetric number combinations less likely to occur?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every valid combination, whether consecutive like [1, 2, 3, 4, 5, 6] or dispersed like [7, 14, 21, 33, 39, 44], carries the exact same mathematical probability of 1 in 8,145,060 (approximately 0.0000123%)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are generated or saved number sets private?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. All number generation and saved sets remain strictly inside your browser's local storage. No numbers, seeds, or user selections are transmitted to external servers or recorded in telemetry."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body data-lottery-random-contract="2026-09-01">
   <a class="skip skip-link" href="#main-content" data-i18n="accessibility.skipMain">Skip to main content</a>
